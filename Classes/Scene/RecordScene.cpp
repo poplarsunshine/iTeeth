@@ -62,8 +62,10 @@ void RecordScene::loadView()
     float infobgWidth = visibleSize.width - offsetX;
     float infobgHeight = 260;
     float infobgY = 100;
-    float yOffset = 20.0;
+    float offsetY = 20.0;
     
+    float recordbgHeight = 580;
+
     //account info
     Scale9Sprite *accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     accountInfoBg->setContentSize(cocos2d::Size(infobgWidth, infobgHeight));
@@ -185,6 +187,50 @@ void RecordScene::loadView()
     auto menu = Menu::create(backItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
+    
+    //record
+    float recordLbHeight = recordbgHeight / 7;
+    Scale9Sprite *recordInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "calendar-bg.png");
+    recordInfoBg->setContentSize(cocos2d::Size(infobgWidth, recordbgHeight));
+    recordInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, accountInfoBg->getPosition().y - (accountInfoBg->getContentSize().height / 2 + offsetY) - recordInfoBg->getContentSize().height / 2));
+    this->addChild(recordInfoBg, 0);
+    
+    month_lb = Label::createWithSystemFont("五月记录",
+                                         fontName,
+                                         fontSize,
+                                         cocos2d::Size(200, recordLbHeight),
+                                         TextHAlignment::CENTER,
+                                         TextVAlignment::CENTER
+                                         );
+    month_lb->setTextColor(color2);
+    month_lb->setPosition(Vec2(recordInfoBg->getContentSize().width / 2, recordInfoBg->getContentSize().height - month_lb->getContentSize().height/2));
+    recordInfoBg->addChild(month_lb,0);
+    
+    //add week lb
+    std::vector<std::string> titles;
+    titles.push_back("日");
+    titles.push_back("一");
+    titles.push_back("二");
+    titles.push_back("三");
+    titles.push_back("四");
+    titles.push_back("五");
+    titles.push_back("六");
+    float weekTitleWidth = recordInfoBg->getContentSize().width / 8;
+    float weekTitleY = recordInfoBg->getContentSize().height - recordLbHeight*1.4;
+    for (int i=0; i<titles.size(); i++)
+    {
+        std::string title = titles.at(i);
+        auto week_lb = Label::createWithSystemFont(title.c_str(),
+                                               fontName,
+                                               fontSize,
+                                               cocos2d::Size(weekTitleWidth, recordLbHeight),
+                                               TextHAlignment::CENTER,
+                                               TextVAlignment::CENTER
+                                               );
+        week_lb->setTextColor(color2);
+        week_lb->setPosition(Vec2(weekTitleWidth * (i + 1), weekTitleY));
+        recordInfoBg->addChild(week_lb,0);
+    }
 }
 
 void RecordScene::updateAccountView()

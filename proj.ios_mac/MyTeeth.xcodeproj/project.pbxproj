@@ -87,6 +87,7 @@
 		AFF50A6F1AFBA46C0064BDB7 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF50A6D1AFBA46C0064BDB7 /* girl.png */; };
 		AFF50A721AFBA8430064BDB7 /* right-boy.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF50A701AFBA8430064BDB7 /* right-boy.png */; };
 		AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF50A711AFBA8430064BDB7 /* right-girl.png */; };
+		BC78362B1B03ACEB008766CE /* calendar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78362A1B03ACEB008766CE /* calendar-bg.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -217,6 +218,7 @@
 		AFF50A6D1AFBA46C0064BDB7 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		AFF50A701AFBA8430064BDB7 /* right-boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-boy.png"; sourceTree = "<group>"; };
 		AFF50A711AFBA8430064BDB7 /* right-girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-girl.png"; sourceTree = "<group>"; };
+		BC78362A1B03ACEB008766CE /* calendar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-bg.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -443,6 +445,7 @@
 		AFF509D41AF7AEB40064BDB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BC78362A1B03ACEB008766CE /* calendar-bg.png */,
 				AFF50A701AFBA8430064BDB7 /* right-boy.png */,
 				AFF50A711AFBA8430064BDB7 /* right-girl.png */,
 				AFF50A6C1AFBA46C0064BDB7 /* boy.png */,
@@ -582,6 +585,7 @@
 			files = (
 				AFF50A3C1AF92B0E0064BDB7 /* panda.png in Resources */,
 				AFF50A461AF92B0E0064BDB7 /* toothbrush.png in Resources */,
+				BC78362B1B03ACEB008766CE /* calendar-bg.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				AFF50A581AFA79A60064BDB7 /* bbs_bg.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,

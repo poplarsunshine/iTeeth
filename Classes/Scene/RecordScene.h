@@ -39,6 +39,8 @@ private:
     cocos2d::Label* age_lb;
     cocos2d::Label* score_lb;
     
+    cocos2d::Label* month_lb;
+
     void updateAccountView();
 };
 #endif /* defined(__MyTeeth__RecordScene__) */
