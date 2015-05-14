@@ -9,6 +9,7 @@
 #include "GameScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
+#include "MessageBox.h"
 
 USING_NS_CC;
 

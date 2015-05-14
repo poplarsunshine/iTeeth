@@ -15,6 +15,7 @@
 #include "BBSScene.h"
 
 #include "CustomViewTools.h"
+#include "MessageBox.h"
 
 USING_NS_CC;
 
@@ -140,24 +141,44 @@ void MainScene::menuGoSetting(cocos2d::Ref* pSender)
     sManager->runScene(SettingScene::createScene(), true);
 }
 
-void MainScene::menuGoPlay(cocos2d::Ref* pSender)
-{
-    SceneManager *sManager = SceneManager::sharedSceneManager();
-    sManager->runScene(GameScene::createScene(), true);
-}
-
 void MainScene::menuGoSound(cocos2d::Ref* pSender)
 {
-
+    log("MainScene menuGoSound.. ");
 }
 
 void MainScene::menuGoBlueTooth(cocos2d::Ref* pSender)
 {
-    
+
 }
 
 void MainScene::menuGoBBS(cocos2d::Ref* pSender)
 {
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(BBSScene::createScene(), true);
+}
+
+void MainScene::menuGoPlay(cocos2d::Ref* pSender)
+{
+    CMessageBox* pBox = CMessageBox::createBy(0,
+                                              this,
+                                              "",
+                                              "",
+                                              "确定",
+                                              "取消",
+                                              boxHandler_selector(MainScene::goToLearn),
+                                              boxHandler_selector(MainScene::goToPlay),
+                                              NULL);
+    this->addChild(pBox, 2);
+}
+
+void MainScene::goToPlay()
+{
+    SceneManager *sManager = SceneManager::sharedSceneManager();
+    sManager->runScene(GameScene::createScene(), true);
+}
+
+void MainScene::goToLearn()
+{
+    SceneManager *sManager = SceneManager::sharedSceneManager();
+    sManager->runScene(CoachScene::createScene(), true);
 }

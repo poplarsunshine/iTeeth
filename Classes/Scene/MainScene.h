@@ -34,6 +34,11 @@ public:
 
     // implement the "static create()" method manually
     CREATE_FUNC(MainScene);
+    
+    //
+    void goToPlay();
+    void goToLearn();
+
 };
 
 #endif /* defined(__MyTeeth__MainScene__) */

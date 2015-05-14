@@ -88,6 +88,7 @@
 		AFF50A721AFBA8430064BDB7 /* right-boy.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF50A701AFBA8430064BDB7 /* right-boy.png */; };
 		AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF50A711AFBA8430064BDB7 /* right-girl.png */; };
 		BC78362B1B03ACEB008766CE /* calendar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78362A1B03ACEB008766CE /* calendar-bg.png */; };
+		BC78365A1B04F82F008766CE /* MessageBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7836581B04F82F008766CE /* MessageBox.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -219,6 +220,8 @@
 		AFF50A701AFBA8430064BDB7 /* right-boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-boy.png"; sourceTree = "<group>"; };
 		AFF50A711AFBA8430064BDB7 /* right-girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-girl.png"; sourceTree = "<group>"; };
 		BC78362A1B03ACEB008766CE /* calendar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-bg.png"; sourceTree = "<group>"; };
+		BC7836581B04F82F008766CE /* MessageBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MessageBox.cpp; sourceTree = "<group>"; };
+		BC7836591B04F82F008766CE /* MessageBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBox.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -362,6 +365,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC7836571B04F82F008766CE /* Layer */,
 				AFF50A4B1AFA68870064BDB7 /* Tools */,
 				AF53BC451AF133C800348AE1 /* Manager */,
 				AF53BC481AF133C800348AE1 /* Scene */,
@@ -481,6 +485,15 @@
 				AFF50A4D1AFA689D0064BDB7 /* CustomViewTools.h */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		BC7836571B04F82F008766CE /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				BC7836581B04F82F008766CE /* MessageBox.cpp */,
+				BC7836591B04F82F008766CE /* MessageBox.h */,
+			);
+			path = Layer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,6 +669,7 @@
 				AF53BC491AF133C800348AE1 /* SceneManager.cpp in Sources */,
 				AFF509EE1AF7BD030064BDB7 /* BBSScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				BC78365A1B04F82F008766CE /* MessageBox.cpp in Sources */,
 				AF53BC4C1AF1372100348AE1 /* MainScene.cpp in Sources */,
 				AFF509F01AF7BD030064BDB7 /* SettingScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
