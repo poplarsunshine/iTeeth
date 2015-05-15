@@ -89,6 +89,10 @@
 		AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF50A711AFBA8430064BDB7 /* right-girl.png */; };
 		BC78362B1B03ACEB008766CE /* calendar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78362A1B03ACEB008766CE /* calendar-bg.png */; };
 		BC78365A1B04F82F008766CE /* MessageBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7836581B04F82F008766CE /* MessageBox.cpp */; };
+		BC7836601B0653FD008766CE /* button-green-default.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78365C1B0653FD008766CE /* button-green-default.png */; };
+		BC7836611B0653FD008766CE /* button-green-press.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78365D1B0653FD008766CE /* button-green-press.png */; };
+		BC7836621B0653FD008766CE /* button-yellow-default.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78365E1B0653FD008766CE /* button-yellow-default.png */; };
+		BC7836631B0653FD008766CE /* button-yellow-press.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78365F1B0653FD008766CE /* button-yellow-press.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -222,6 +226,10 @@
 		BC78362A1B03ACEB008766CE /* calendar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-bg.png"; sourceTree = "<group>"; };
 		BC7836581B04F82F008766CE /* MessageBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MessageBox.cpp; sourceTree = "<group>"; };
 		BC7836591B04F82F008766CE /* MessageBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBox.h; sourceTree = "<group>"; };
+		BC78365C1B0653FD008766CE /* button-green-default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-green-default.png"; sourceTree = "<group>"; };
+		BC78365D1B0653FD008766CE /* button-green-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-green-press.png"; sourceTree = "<group>"; };
+		BC78365E1B0653FD008766CE /* button-yellow-default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-yellow-default.png"; sourceTree = "<group>"; };
+		BC78365F1B0653FD008766CE /* button-yellow-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-yellow-press.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -449,6 +457,10 @@
 		AFF509D41AF7AEB40064BDB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BC78365C1B0653FD008766CE /* button-green-default.png */,
+				BC78365D1B0653FD008766CE /* button-green-press.png */,
+				BC78365E1B0653FD008766CE /* button-yellow-default.png */,
+				BC78365F1B0653FD008766CE /* button-yellow-press.png */,
 				BC78362A1B03ACEB008766CE /* calendar-bg.png */,
 				AFF50A701AFBA8430064BDB7 /* right-boy.png */,
 				AFF50A711AFBA8430064BDB7 /* right-girl.png */,
@@ -598,15 +610,18 @@
 			files = (
 				AFF50A3C1AF92B0E0064BDB7 /* panda.png in Resources */,
 				AFF50A461AF92B0E0064BDB7 /* toothbrush.png in Resources */,
+				BC7836601B0653FD008766CE /* button-green-default.png in Resources */,
 				BC78362B1B03ACEB008766CE /* calendar-bg.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				AFF50A581AFA79A60064BDB7 /* bbs_bg.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				BC7836621B0653FD008766CE /* button-yellow-default.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				AFF50A641AFA79B30064BDB7 /* background-icon02.png in Resources */,
 				AFF50A6B1AFB9FEB0064BDB7 /* button-press.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				BC7836631B0653FD008766CE /* button-yellow-press.png in Resources */,
 				AFF50A3F1AF92B0E0064BDB7 /* return.png in Resources */,
 				AFF50A5E1AFA79A60064BDB7 /* set_bg.png in Resources */,
 				AFF50A651AFA79B30064BDB7 /* background-icon03.png in Resources */,
@@ -618,6 +633,7 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				AFF50A721AFBA8430064BDB7 /* right-boy.png in Resources */,
 				AFF50A371AF92B0E0064BDB7 /* cloud.png in Resources */,
+				BC7836611B0653FD008766CE /* button-green-press.png in Resources */,
 				AFF50A3E1AF92B0E0064BDB7 /* record.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				AFF509F21AF7CDCC0064BDB7 /* play.png in Resources */,

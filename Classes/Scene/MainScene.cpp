@@ -163,8 +163,8 @@ void MainScene::menuGoPlay(cocos2d::Ref* pSender)
                                               this,
                                               "",
                                               "",
-                                              "确定",
-                                              "取消",
+                                              "教程",
+                                              "游戏",
                                               boxHandler_selector(MainScene::goToLearn),
                                               boxHandler_selector(MainScene::goToPlay),
                                               NULL);

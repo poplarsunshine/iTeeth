@@ -60,8 +60,8 @@ bool CMessageBox::init(int type,
                        Node* pLayerTarget,
                        std::string title,
                        std::string con,
-                       std::string leftLabel,
-                       std::string rightLabel,
+                       std::string leftLabelTitle,
+                       std::string rightLabelTitle,
                        SEL_MessageBoxHandler leftBtnSel,
                        SEL_MessageBoxHandler rightBtnSel,
                        SEL_MessageBoxHandler backBtnSel)
@@ -76,25 +76,49 @@ bool CMessageBox::init(int type,
     this->addChild(pLayerColor);
     
     Size bgSize = Size(visibleSize.width - 80, 300);
+    Size btnSize = Size(visibleSize.width / 3, 100);
+
     m_pBackgroundSpr = Scale9Sprite::create(Rect(70, 70, 20, 20), "white-background.png");
     m_pBackgroundSpr->setContentSize(bgSize);
     m_pBackgroundSpr->setPosition(Vec2(origin.x + visibleSize.width/2, origin.y + visibleSize.height/2));
     this->addChild(m_pBackgroundSpr, 0);
     
-    if ("" != leftLabel)
+    if ("" != leftLabelTitle)
     {
-        m_pLeftSpr = Sprite::create( "button-default.png" );
-        m_pLeftSpr->setPosition(Vec2(visibleSize.width / 4, m_pBackgroundSpr->getPosition().y));
+        m_pLeftSpr = Scale9Sprite::create( Rect(20, 20, 20, 20), "button-yellow-default.png" );
+        m_pLeftSpr->setContentSize(btnSize);
+        m_pLeftSpr->setPosition(Vec2(visibleSize.width * 0.3, m_pBackgroundSpr->getPosition().y));
         this->addChild(m_pLeftSpr);
         m_leftCallback = leftBtnSel;
+        
+        auto label = Label::createWithSystemFont(leftLabelTitle.c_str(),
+                                                     "Arial",
+                                                     40,
+                                                     btnSize,
+                                                     TextHAlignment::CENTER,
+                                                     TextVAlignment::CENTER
+                                                     );
+        label->setPosition(Vec2(m_pLeftSpr->getPosition().x, m_pLeftSpr->getPosition().y));
+        this->addChild(label,0);
     }
     
-    if ("" != rightLabel)
+    if ("" != rightLabelTitle)
     {
-        m_pRightSpr = Sprite::create( "button-default.png" );
-        m_pRightSpr->setPosition(Vec2(visibleSize.width * 3 / 4, m_pBackgroundSpr->getPosition().y));
+        m_pRightSpr = Scale9Sprite::create( Rect(20, 20, 20, 20), "button-green-default.png" );
+        m_pRightSpr->setContentSize(btnSize);
+        m_pRightSpr->setPosition(Vec2(visibleSize.width * 0.7, m_pBackgroundSpr->getPosition().y));
         this->addChild(m_pRightSpr);
         m_rightCallback = rightBtnSel;
+        
+        auto label = Label::createWithSystemFont(rightLabelTitle.c_str(),
+                                                 "Arial",
+                                                 40,
+                                                 btnSize,
+                                                 TextHAlignment::CENTER,
+                                                 TextVAlignment::CENTER
+                                                 );
+        label->setPosition(Vec2(m_pRightSpr->getPosition().x, m_pRightSpr->getPosition().y));
+        this->addChild(label,0);
     }
     
     if (1 == type)

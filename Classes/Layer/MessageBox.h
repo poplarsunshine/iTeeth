@@ -55,8 +55,8 @@ private:
     cocos2d::Node           *m_pTarget;
     
     Scale9Sprite            *m_pBackgroundSpr;
-    cocos2d::Sprite         *m_pLeftSpr;
-    cocos2d::Sprite         *m_pRightSpr;
+    Scale9Sprite            *m_pLeftSpr;
+    Scale9Sprite            *m_pRightSpr;
     cocos2d::Sprite         *m_pBackSpr;
     std::string               m_strTitle;
     std::string               m_strConnent;
