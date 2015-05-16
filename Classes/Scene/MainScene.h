@@ -9,7 +9,7 @@
 #ifndef __MyTeeth__MainScene__
 #define __MyTeeth__MainScene__
 
-#include "cocos2d.h"
+#include "Header.h"
 
 class MainScene : public cocos2d::Layer
 {
@@ -36,9 +36,16 @@ public:
     CREATE_FUNC(MainScene);
     
     //
+    cocos2d::MenuItemToggle *soundItem;
+    
     void goToPlay();
     void goToLearn();
+    
+    void setCurMusicPlay(bool play);
 
+private:
+    
+    bool isPlaying = false;
 };
 
 #endif /* defined(__MyTeeth__MainScene__) */

@@ -9,11 +9,9 @@
 #include "SettingScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
-#include "CustomViewTools.h"
-//#include "../../cocos2d/cocos/ui/UIScale9Sprite.h"
-
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* SettingScene::createScene()
 {
@@ -173,12 +171,15 @@ void SettingScene::loadView()
 
 void SettingScene::menuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
 }
 
 void SettingScene::manMenuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     if (sex == 0) {
         sex = 1;
         this->setSexDisplay(sex);
@@ -187,6 +188,7 @@ void SettingScene::manMenuCallback(Ref* pSender)
 
 void SettingScene::womMenuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     if (sex == 1) {
         sex = 0;
         this->setSexDisplay(sex);
@@ -213,6 +215,8 @@ void SettingScene::setSexDisplay(int sexNum)
 
 void SettingScene::confirmMenuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     log("confirmMenuCallback");
 }
 

@@ -9,9 +9,9 @@
 #include "RecordScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
-#include "CustomViewTools.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* RecordScene::createScene()
 {
@@ -243,6 +243,8 @@ void RecordScene::updateAccountView()
 
 void RecordScene::menuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
 }

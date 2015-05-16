@@ -9,7 +9,7 @@
 #ifndef __MyTeeth__GameScene__
 #define __MyTeeth__GameScene__
 
-#include "cocos2d.h"
+#include "Header.h"
 #include "TeethLayer.h"
 
 typedef enum

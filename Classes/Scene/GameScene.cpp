@@ -9,10 +9,10 @@
 #include "GameScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
-#include "MessageBox.h"
-#include "CustomViewTools.h"
+
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* GameScene::createScene()
 {
@@ -170,7 +170,9 @@ void GameScene::onEnter()
     };
     
     listener->onTouchEnded = [=](Touch* touch, Event* event){
-        log("sprite onTouchesEnded.. ");
+
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
         cocos2d::Blink *action = cocos2d::Blink::create(0.4, 2);
         p_panda->runAction(action);
         
@@ -192,6 +194,8 @@ void GameScene::onExit()
 
 void GameScene::menuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
 }

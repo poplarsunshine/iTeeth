@@ -9,9 +9,7 @@
 #ifndef __MyTeeth__MessageBox__
 #define __MyTeeth__MessageBox__
 
-#include "cocos2d.h"
-#include "extensions/cocos-ext.h"
-#include "ui/CocosGUI.h"
+#include "Header.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;

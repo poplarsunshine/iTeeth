@@ -9,9 +9,7 @@
 #ifndef __MyTeeth__SettingScene__
 #define __MyTeeth__SettingScene__
 
-#include "cocos2d.h"
-#include "extensions/cocos-ext.h"
-USING_NS_CC_EXT;
+#include "Header.h"
 
 class SettingScene : public cocos2d::Layer, public cocos2d::ui::EditBoxDelegate
 {

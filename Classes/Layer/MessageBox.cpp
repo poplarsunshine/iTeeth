@@ -8,8 +8,6 @@
 
 #include "MessageBox.h"
 
-using namespace cocos2d;
-
 //CMessageBox::CMessageBox():
 //m_pTarget(NULL),
 //m_leftCallback(NULL),
@@ -183,6 +181,7 @@ void CMessageBox::myTouchEnded( Touch *pTouch, Event *pEvent )
         {
             if ( NULL != m_leftCallback && NULL != m_pTarget)
             {
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
                 (m_pTarget->*m_leftCallback)();
                 needDis = true;
             }
@@ -191,6 +190,7 @@ void CMessageBox::myTouchEnded( Touch *pTouch, Event *pEvent )
         {
             if ( NULL != m_rightCallback && NULL != m_pTarget)
             {
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
                 (m_pTarget->*m_rightCallback)();
                 this->dismissThisLayer();
             }

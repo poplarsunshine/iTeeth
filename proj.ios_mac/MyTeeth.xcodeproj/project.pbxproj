@@ -122,6 +122,8 @@
 		BC78369B1B07CFEF008766CE /* panda-02.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7836991B07CFEF008766CE /* panda-02.png */; };
 		BC78369F1B07D715008766CE /* flyPanda.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC78369D1B07D715008766CE /* flyPanda.plist */; };
 		BC7836A01B07D715008766CE /* flyPanda.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78369E1B07D715008766CE /* flyPanda.png */; };
+		BC7836A71B07DF5E008766CE /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC7836A51B07DF5E008766CE /* background.mp3 */; };
+		BC7836A81B07DF5E008766CE /* rotate.wav in Resources */ = {isa = PBXBuildFile; fileRef = BC7836A61B07DF5E008766CE /* rotate.wav */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -289,6 +291,10 @@
 		BC7836991B07CFEF008766CE /* panda-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-02.png"; sourceTree = "<group>"; };
 		BC78369D1B07D715008766CE /* flyPanda.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flyPanda.plist; sourceTree = "<group>"; };
 		BC78369E1B07D715008766CE /* flyPanda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flyPanda.png; sourceTree = "<group>"; };
+		BC7836A51B07DF5E008766CE /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		BC7836A61B07DF5E008766CE /* rotate.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rotate.wav; sourceTree = "<group>"; };
+		BC7836AA1B07E04E008766CE /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		BC7836AB1B07E064008766CE /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -413,6 +419,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BC7836A41B07DF5E008766CE /* audio */,
 				BC78369C1B07D715008766CE /* plistImage */,
 				AFF50A501AFA79A60064BDB7 /* bbs_bg.png */,
 				AFF50A511AFA79A60064BDB7 /* chooseModle.png */,
@@ -433,6 +440,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC7836A91B07E040008766CE /* config */,
 				BC7836571B04F82F008766CE /* Layer */,
 				AFF50A4B1AFA68870064BDB7 /* Tools */,
 				AF53BC451AF133C800348AE1 /* Manager */,
@@ -605,6 +613,24 @@
 			path = plistImage;
 			sourceTree = "<group>";
 		};
+		BC7836A41B07DF5E008766CE /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				BC7836A51B07DF5E008766CE /* background.mp3 */,
+				BC7836A61B07DF5E008766CE /* rotate.wav */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		BC7836A91B07E040008766CE /* config */ = {
+			isa = PBXGroup;
+			children = (
+				BC7836AA1B07E04E008766CE /* Header.h */,
+				BC7836AB1B07E064008766CE /* Macro.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -748,6 +774,7 @@
 				BC78369B1B07CFEF008766CE /* panda-02.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				BC7836681B079587008766CE /* bg-b.png in Resources */,
+				BC7836A71B07DF5E008766CE /* background.mp3 in Resources */,
 				AFF509F21AF7CDCC0064BDB7 /* play.png in Resources */,
 				BC78368F1B07A8FC008766CE /* tooth-7.png in Resources */,
 				BC78369A1B07CFEF008766CE /* panda-01.png in Resources */,
@@ -761,6 +788,7 @@
 				AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */,
 				AFF50A351AF92B0E0064BDB7 /* bluetooth-open.png in Resources */,
 				AFF50A3B1AF92B0E0064BDB7 /* music-open.png in Resources */,
+				BC7836A81B07DF5E008766CE /* rotate.wav in Resources */,
 				AFF50A5A1AFA79A60064BDB7 /* data_bg.png in Resources */,
 				BC78368A1B07A8FC008766CE /* tooth-9.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,

@@ -9,12 +9,8 @@
 #ifndef __MyTeeth__RecordScene__
 #define __MyTeeth__RecordScene__
 
-#include "cocos2d.h"
-#include "extensions/cocos-ext.h"
-#include "ui/CocosGUI.h"
+#include "Header.h"
 
-USING_NS_CC;
-USING_NS_CC_EXT;
 using namespace cocos2d::ui;
 
 class RecordScene : public cocos2d::Layer

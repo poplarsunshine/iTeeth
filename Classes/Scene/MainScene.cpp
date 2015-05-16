@@ -14,10 +14,8 @@
 #include "SettingScene.h"
 #include "BBSScene.h"
 
-#include "CustomViewTools.h"
-#include "MessageBox.h"
-
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* MainScene::createScene()
 {
@@ -104,11 +102,26 @@ void MainScene::loadView()
     auto playItem = CustomViewTools::creatMyMenuItemSprite("play.png", CC_CALLBACK_1(MainScene::menuGoPlay, this));
     playItem->setPosition(Vec2(origin.x + visibleSize.width * 0.84,
                                  origin.y + visibleSize.height * 0.3));
-    auto soundItem = MenuItemImage::create("music-open.png",
-                                            "music-open.png",
-                                            CC_CALLBACK_1(MainScene::menuGoSound, this));
+    
+    //musice----_ ——
+    auto openSprite = Sprite::create("music-open.png");
+    auto closeSprite = Sprite::create("music-close.png");
+    auto openToggleMenuItem = MenuItemSprite::create(openSprite, openSprite);
+    auto closeToggleMenuItem = MenuItemSprite::create(closeSprite,closeSprite);
+    soundItem = MenuItemToggle::createWithCallback(CC_CALLBACK_1(MainScene::menuGoSound, this),
+                                                        closeToggleMenuItem,
+                                                        openToggleMenuItem,
+                                                        NULL);
+    
+    bool bgMusicOn = false;
+    this->setCurMusicPlay(bgMusicOn);
+    
+//    auto soundItem = MenuItemImage::create("music-open.png",
+//                                            "music-open.png",
+//                                            CC_CALLBACK_1(MainScene::menuGoSound, this));
     soundItem->setPosition(Vec2(origin.x + visibleSize.width * 0.11,
                                  origin.y + visibleSize.height * 0.30));
+    
     auto blueToothItem = MenuItemImage::create("bluetooth-close.png",
                                            "bluetooth-close.png",
                                            CC_CALLBACK_1(MainScene::menuGoBlueTooth, this));
@@ -143,36 +156,65 @@ void MainScene::loadView()
 //    this->addChild(mn);
 }
 
+void MainScene::setCurMusicPlay(bool play)
+{
+    isPlaying = play;
+    if (play)
+        soundItem->setSelectedIndex(1);
+    else
+        soundItem->setSelectedIndex(0);
+}
+
 void MainScene::menuGoRecord(cocos2d::Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(RecordScene::createScene(), true);
 }
 
 void MainScene::menuGoSetting(cocos2d::Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(SettingScene::createScene(), true);
 }
 
 void MainScene::menuGoSound(cocos2d::Ref* pSender)
 {
-    log("MainScene menuGoSound.. ");
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+    
+    if (isPlaying) {
+        CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    }
+    else
+    {
+        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(FileName_AudioBg, true);
+    }
+    isPlaying = !isPlaying;
+    
+    //default save
+    //...
 }
 
 void MainScene::menuGoBlueTooth(cocos2d::Ref* pSender)
 {
-
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
 }
 
 void MainScene::menuGoBBS(cocos2d::Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(BBSScene::createScene(), true);
 }
 
 void MainScene::menuGoPlay(cocos2d::Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     CMessageBox* pBox = CMessageBox::createBy(0,
                                               this,
                                               "",

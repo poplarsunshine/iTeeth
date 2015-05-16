@@ -9,9 +9,6 @@
 #include "CoachScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
-#include "CustomViewTools.h"
-
-#include "extensions/cocos-ext.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -119,7 +116,8 @@ void CoachScene::onEnter()
     
     listener->onTouchEnded = [=](Touch* touch, Event* event){
         log("sprite onTouchesEnded.. ");
-        
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
         model++;
         
         m_teethLy->setCurTooth((E_Tooth_SPACE)(model % Tooth_Space_Type_Max));
@@ -136,6 +134,8 @@ void CoachScene::onExit()
 
 void CoachScene::menuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
 }

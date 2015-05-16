@@ -9,7 +9,7 @@
 #ifndef __MyTeeth__CoachScene__
 #define __MyTeeth__CoachScene__
 
-#include "cocos2d.h"
+#include "Header.h"
 #include "TeethLayer.h"
 
 class CoachScene : public cocos2d::Layer, public TeethLayerDelegate

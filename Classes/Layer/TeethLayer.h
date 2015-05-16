@@ -9,8 +9,6 @@
 #ifndef __MyTeeth__ToothLayer__
 #define __MyTeeth__ToothLayer__
 
-#include <stdio.h>
-
 typedef enum
 {
     Tooth_down_left_inside      = 0,

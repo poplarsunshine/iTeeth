@@ -9,9 +9,9 @@
 #include "BBSScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
-#include "CustomViewTools.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* BBSScene::createScene()
 {
@@ -99,6 +99,8 @@ void BBSScene::loadView()
 
 void BBSScene::menuCallback(Ref* pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
 }
