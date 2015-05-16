@@ -56,7 +56,10 @@ void SettingScene::loadView()
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 //    this->addChild(bgSprite, 0);
     
-    auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255), visibleSize.width, visibleSize.height, true);
+    auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255),
+                                                      visibleSize.width,
+                                                      visibleSize.height,
+                                                      true);
     colorLy->setPosition(Vec2(origin.x, origin.y));
     this->addChild(colorLy, 0);
     
@@ -67,7 +70,7 @@ void SettingScene::loadView()
     float inputBgHeight = 140.0;
     float yOffset = 20.0;
 
-    Scale9Sprite *accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
+    auto accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     accountInfoBg->setContentSize(cocos2d::Size(infobgWidth, infobgHeight));
     accountInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - accountInfoBg->getContentSize().height / 2 - infobgY));
     this->addChild(accountInfoBg, 0);
@@ -77,7 +80,7 @@ void SettingScene::loadView()
     std::string fontName = "Arial";
     Color4B color = Color4B(233,223,32,255);
 
-    Scale9Sprite *nameInputBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
+    auto nameInputBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     nameInputBg->setContentSize(cocos2d::Size(infobgWidth, inputBgHeight));
     nameInputBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - nameInputBg->getContentSize().height / 2 - (infobgY + infobgHeight + yOffset)));
     this->addChild(nameInputBg, 0);
@@ -106,7 +109,7 @@ void SettingScene::loadView()
     nameInputBg->addChild(_editName);
     
     //age
-    Scale9Sprite *ageInputBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
+    auto ageInputBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     ageInputBg->setContentSize(cocos2d::Size(infobgWidth, inputBgHeight));
     ageInputBg->setPosition(Vec2(visibleSize.width/2 + origin.x, nameInputBg->getPosition().y - ageInputBg->getContentSize().height - yOffset));
     this->addChild(ageInputBg, 0);
@@ -133,9 +136,9 @@ void SettingScene::loadView()
     ageInputBg->addChild(_editAge);
     
     //confirm
-    Scale9Sprite *btnBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 4, 4), "button-default.png");
+    auto btnBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 4, 4), "button-default.png");
     btnBg->setContentSize(cocos2d::Size(infobgWidth, inputBgHeight));
-    Scale9Sprite *btnSelBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 4, 4), "button-press.png");
+    auto btnSelBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 4, 4), "button-press.png");
     btnSelBg->setContentSize(cocos2d::Size(infobgWidth, inputBgHeight));
     auto confirmBtn = MenuItemSprite::create(btnBg, btnSelBg, CC_CALLBACK_1(SettingScene::confirmMenuCallback, this));
     confirmBtn->setPosition(Vec2(visibleSize.width/2 + origin.x, ageInputBg->getPosition().y - btnSelBg->getContentSize().height - yOffset));

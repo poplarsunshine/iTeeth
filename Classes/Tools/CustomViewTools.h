@@ -19,7 +19,11 @@ public:
     static cocos2d::MenuItemSprite * creatMyMenuItemSprite(const std::string& filename, const cocos2d::ccMenuCallback& callback);
     
     //利用一张图片创建 MenuItemSprite, 点击改变透明度
-    static cocos2d::LayerColor * creatMyLayerColor(const cocos2d::Color4B& color, GLfloat width, GLfloat height, bool showSprites = false);
+    static cocos2d::LayerColor * creatMyLayerColor(const cocos2d::Color4B& color,
+                                                   GLfloat width,
+                                                   GLfloat height,
+                                                   bool showSprites,
+                                                   int spriteCount = 10);
 };
 
 #endif /* defined(__MyTeeth__CustomViewTools__) */

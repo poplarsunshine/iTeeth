@@ -10,26 +10,26 @@
 
 using namespace cocos2d;
 
-CMessageBox::CMessageBox():
-m_pTarget(NULL),
-m_leftCallback(NULL),
-m_rightCallback(NULL),
-m_backCallback(NULL),
-m_strTitle(""),
-m_strConnent(""),
-m_pLeftSpr(NULL),
-m_pRightSpr(NULL),
-m_pBackSpr(NULL)
-{
-    
-}
+//CMessageBox::CMessageBox():
+//m_pTarget(NULL),
+//m_leftCallback(NULL),
+//m_rightCallback(NULL),
+//m_backCallback(NULL),
+//m_strTitle(""),
+//m_strConnent(""),
+//m_pLeftSpr(NULL),
+//m_pRightSpr(NULL),
+//m_pBackSpr(NULL)
+//{
+//    
+//}
+//
+//CMessageBox::~CMessageBox( void )
+//{
+//    
+//}
 
-CMessageBox::~CMessageBox( void )
-{
-    
-}
-
-CMessageBox* CMessageBox::createBy(int type,
+CMessageBox *CMessageBox::createBy(int type,
                                    Node* pLayerTarget,
                                    std::string title,
                                    std::string con,
@@ -39,21 +39,26 @@ CMessageBox* CMessageBox::createBy(int type,
                                    SEL_MessageBoxHandler rightBtnSel,
                                    SEL_MessageBoxHandler backBtnSel)
 {
-    CMessageBox* pBox = new CMessageBox;
-    if (pBox && pBox->init(type,
-                            pLayerTarget,
-                            title,
-                            con,
-                            leftLabel,
-                            rightLabel,
-                            leftBtnSel,
-                            rightBtnSel,
-                            backBtnSel))
+    CMessageBox *pRet = new(std::nothrow) CMessageBox();
+    if (pRet && pRet->init(type,
+                           pLayerTarget,
+                           title,
+                           con,
+                           leftLabel,
+                           rightLabel,
+                           leftBtnSel,
+                           rightBtnSel,
+                           backBtnSel))
     {
-        pBox->autorelease();
-        return pBox;
+        pRet->autorelease();
+        return pRet;
     }
-    return NULL;
+    else
+    {
+        delete pRet;
+        pRet = NULL;
+        return NULL;
+    }
 }
 
 bool CMessageBox::init(int type,
@@ -71,7 +76,7 @@ bool CMessageBox::init(int type,
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    LayerColor* pLayerColor = LayerColor::create(Color4B(0, 0, 0, 255), visibleSize.width * 2, visibleSize.height * 2);
+    auto pLayerColor = LayerColor::create(Color4B(0, 0, 0, 255), visibleSize.width * 2, visibleSize.height * 2);
     pLayerColor->setOpacity(50);
     this->addChild(pLayerColor);
     
@@ -89,6 +94,8 @@ bool CMessageBox::init(int type,
         m_pLeftSpr->setContentSize(btnSize);
         m_pLeftSpr->setPosition(Vec2(visibleSize.width * 0.3, m_pBackgroundSpr->getPosition().y));
         this->addChild(m_pLeftSpr);
+        //m_pLeftSpr->autorelease();
+        
         m_leftCallback = leftBtnSel;
         
         auto label = Label::createWithSystemFont(leftLabelTitle.c_str(),
@@ -108,6 +115,8 @@ bool CMessageBox::init(int type,
         m_pRightSpr->setContentSize(btnSize);
         m_pRightSpr->setPosition(Vec2(visibleSize.width * 0.7, m_pBackgroundSpr->getPosition().y));
         this->addChild(m_pRightSpr);
+        //m_pRightSpr->autorelease();
+
         m_rightCallback = rightBtnSel;
         
         auto label = Label::createWithSystemFont(rightLabelTitle.c_str(),
@@ -123,12 +132,7 @@ bool CMessageBox::init(int type,
     
     if (1 == type)
     {
-//        m_pBackSpr = CCSprite::createWithSpriteFrameName( "common_backBtn.png" );
-//        CCSize btSize = m_pBackSpr->getContentSize();
-//        m_pBackSpr->setPosition(ccp(215, -backSize.height/2+2*btSize.height+50));
-//        m_pBackSpr->setScale(0.8);
-//        this->addChild(m_pBackSpr);
-//        m_backCallback = backBtnSel;
+
     }
     
     return true;

@@ -127,6 +127,20 @@ void MainScene::loadView()
                              NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
+    
+    //
+    //toggle菜单
+//    auto goSprite = Sprite::createWithSpriteFrameName("go.png");
+//    auto stopSprite = Sprite::createWithSpriteFrameName("stop.png");
+//    auto goToggleMenuItem = MenuItemSprite::create(goSprite, goSprite);
+//    auto stopToggleMenuItem = MenuItemSprite::create(stopSprite,stopSprite);
+//    auto toggleMenuItem = MenuItemToggle::createWithCallback(
+//                                                             CC_CALLBACK_1(MainScene::menuGoSound,this),
+//                                                             goToggleMenuItem , stopToggleMenuItem, NULL);
+//    toggleMenuItem->setPosition(Director::getInstance()->convertToGL(Point(930,540)));
+//    auto mn = Menu::create(toggleMenuItem, NULL);
+//    mn->setPosition(Point::ZERO);
+//    this->addChild(mn);
 }
 
 void MainScene::menuGoRecord(cocos2d::Ref* pSender)

@@ -54,7 +54,10 @@ void RecordScene::loadView()
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 //    this->addChild(bgSprite, 0);
     
-    auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255), visibleSize.width, visibleSize.height, true);
+    auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255),
+                                                      visibleSize.width,
+                                                      visibleSize.height,
+                                                      true);
     colorLy->setPosition(Vec2(origin.x, origin.y));
     this->addChild(colorLy, 0);
     
@@ -67,7 +70,7 @@ void RecordScene::loadView()
     float recordbgHeight = 580;
 
     //account info
-    Scale9Sprite *accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
+    auto accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     accountInfoBg->setContentSize(cocos2d::Size(infobgWidth, infobgHeight));
     accountInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - accountInfoBg->getContentSize().height / 2 - infobgY));
     this->addChild(accountInfoBg, 0);
@@ -190,7 +193,7 @@ void RecordScene::loadView()
     
     //record
     float recordLbHeight = recordbgHeight / 7;
-    Scale9Sprite *recordInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "calendar-bg.png");
+    auto recordInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "calendar-bg.png");
     recordInfoBg->setContentSize(cocos2d::Size(infobgWidth, recordbgHeight));
     recordInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, accountInfoBg->getPosition().y - (accountInfoBg->getContentSize().height / 2 + offsetY) - recordInfoBg->getContentSize().height / 2));
     this->addChild(recordInfoBg, 0);

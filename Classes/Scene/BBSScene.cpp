@@ -52,7 +52,10 @@ void BBSScene::loadView()
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 //    this->addChild(bgSprite, 0);
     
-    auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255), visibleSize.width, visibleSize.height, true);
+    auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255),
+                                                      visibleSize.width,
+                                                      visibleSize.height,
+                                                      true);
     colorLy->setPosition(Vec2(origin.x, origin.y));
     this->addChild(colorLy, 0);
     
@@ -65,7 +68,7 @@ void BBSScene::loadView()
     std::string fontName = "Arial";
     Color4B color = Color4B(255,255,255,255);
 
-    ui::ScrollView* scrollView = ui::ScrollView::create();
+    auto scrollView = ui::ScrollView::create();
     scrollView->setContentSize(Size(width, height));
     scrollView->setPosition(Vec2(offset,offset));
     this->addChild(scrollView);

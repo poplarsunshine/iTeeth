@@ -22,9 +22,12 @@ cocos2d::MenuItemSprite * CustomViewTools::creatMyMenuItemSprite(const std::stri
     return settingBtnOkItem;
 }
 
-cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B& color, GLfloat width, GLfloat height, bool showSprites)
+cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B& color,
+                                                         GLfloat width,
+                                                         GLfloat height,
+                                                         bool showSprites,
+                                                         int spriteCount)
 {
-    int spriteCount = 12;
     auto colorLy = LayerColor::create(color, width, height);
     if (showSprites == true) {
         for (int i = 0; i < spriteCount; i++) {
@@ -33,7 +36,8 @@ cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B&
             float randomy = CCRANDOM_0_1();
             std::string filename = StringUtils::format("background-icon0%d.png", index);
             auto sprite = Sprite::create(filename);
-            sprite->setPosition(Vec2(width * randomx, height * randomy));
+            float y = (height / spriteCount) * (i + randomy);
+            sprite->setPosition(Vec2(width * randomx, y));
             sprite->setScale(0.3 + (randomx + randomy) / 2);
             sprite->setOpacity(25 + 100 * (randomx + randomy) / 2);
             if (index != 1) {

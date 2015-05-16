@@ -23,9 +23,6 @@ typedef void (cocos2d::Node::*SEL_MessageBoxHandler)();
 class CMessageBox : public cocos2d::Layer
 {
 public:
-    CMessageBox(void);
-    ~CMessageBox(void);
-    
     static CMessageBox* createBy(int type,
                                  cocos2d::Node* pLayerTarget,
                                  std::string title,
@@ -36,7 +33,6 @@ public:
                                  SEL_MessageBoxHandler rightBtnSel,
                                  SEL_MessageBoxHandler backBtnSel);
     
-private:
     bool init(int type,
               cocos2d::Node* pLayerTarget,
               std::string title,
