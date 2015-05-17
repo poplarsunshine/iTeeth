@@ -89,9 +89,7 @@ void CoachScene::loadView()
     timerBgSprite->addChild(p_timerLb,0);
     
     //add backBtn
-    auto backItem = MenuItemImage::create("return.png",
-                                            "return.png",
-                                            CC_CALLBACK_1(CoachScene::menuCallback, this));
+    auto backItem = CustomViewTools::creatMyMenuItemSprite("return.png", CC_CALLBACK_1(CoachScene::menuCallback, this));
     backItem->setPosition(Vec2(origin.x + backItem->getContentSize().width ,
                                  origin.y + visibleSize.height - backItem->getContentSize().height));
     auto menu = Menu::create(backItem, NULL);
@@ -128,8 +126,9 @@ void CoachScene::onEnter()
 
 void CoachScene::onExit()
 {
-    Layer::onExit();
     cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(listener);
+
+    Layer::onExit();
 }
 
 void CoachScene::menuCallback(Ref* pSender)

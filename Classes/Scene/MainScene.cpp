@@ -113,7 +113,7 @@ void MainScene::loadView()
                                                         openToggleMenuItem,
                                                         NULL);
     
-    bool bgMusicOn = false;
+    bool bgMusicOn = UserDefault::getInstance()->getBoolForKey(MusicIsPlayKey);
     this->setCurMusicPlay(bgMusicOn);
     
 //    auto soundItem = MenuItemImage::create("music-open.png",
@@ -160,9 +160,17 @@ void MainScene::setCurMusicPlay(bool play)
 {
     isPlaying = play;
     if (play)
+    {
         soundItem->setSelectedIndex(1);
+        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(FileName_AudioBg);
+    }
     else
+    {
         soundItem->setSelectedIndex(0);
+        CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    }
+    //default save
+    UserDefault::getInstance()->setBoolForKey(MusicIsPlayKey, isPlaying);
 }
 
 void MainScene::menuGoRecord(cocos2d::Ref* pSender)
@@ -185,17 +193,9 @@ void MainScene::menuGoSound(cocos2d::Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     
-    if (isPlaying) {
-        CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-    }
-    else
-    {
-        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(FileName_AudioBg, true);
-    }
     isPlaying = !isPlaying;
     
-    //default save
-    //...
+    this->setCurMusicPlay(isPlaying);
 }
 
 void MainScene::menuGoBlueTooth(cocos2d::Ref* pSender)

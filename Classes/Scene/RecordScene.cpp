@@ -9,6 +9,7 @@
 #include "RecordScene.h"
 #include "SceneManager.h"
 #include "MainScene.h"
+#include "AccountData.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -50,6 +51,12 @@ void RecordScene::loadView()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    std::string name = UserDefault::getInstance()->getStringForKey(User_Name_Key);
+    std::string age  = UserDefault::getInstance()->getStringForKey(User_Age_Key);
+    std::string score = UserDefault::getInstance()->getStringForKey(User_Score_Key);
+    int sexIndex = UserDefault::getInstance()->getIntegerForKey(User_Sex_Key);
+    std::string sex = AccountData::getSexWithInt(sexIndex);
+    
 //    auto bgSprite = Sprite::create("score_bg.png");
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 //    this->addChild(bgSprite, 0);
@@ -75,13 +82,18 @@ void RecordScene::loadView()
     accountInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - accountInfoBg->getContentSize().height / 2 - infobgY));
     this->addChild(accountInfoBg, 0);
     
-    manSprite = Sprite::create("boy.png");
-    manSprite->setPosition(Vec2(105, accountInfoBg->getContentSize().height/2));
-    accountInfoBg->addChild(manSprite, 0);
-    
-    womSprite = Sprite::create("girl.png");
-    womSprite->setPosition(Vec2(105, accountInfoBg->getContentSize().height/2));
-    accountInfoBg->addChild(womSprite, 0);
+    //sex
+    if (sexIndex == 1) {
+        manSprite = Sprite::create("boy.png");
+        manSprite->setPosition(Vec2(105, accountInfoBg->getContentSize().height/2));
+        accountInfoBg->addChild(manSprite, 0);
+    }
+    else
+    {
+        womSprite = Sprite::create("girl.png");
+        womSprite->setPosition(Vec2(105, accountInfoBg->getContentSize().height/2));
+        accountInfoBg->addChild(womSprite, 0);
+    }
     
     float fontSize = 36.0;
     float labelHeight = infobgHeight / 4;
@@ -104,7 +116,7 @@ void RecordScene::loadView()
     nameTitleLabel->setPosition(Vec2(labelX1, accountInfoBg->getContentSize().height/2 + labelHeight));
     accountInfoBg->addChild(nameTitleLabel,0);
     
-    name_lb = Label::createWithSystemFont("哎呀",
+    name_lb = Label::createWithSystemFont(name,
                                           fontName,
                                           fontSize,
                                           cocos2d::Size(200, labelHeight),
@@ -126,7 +138,7 @@ void RecordScene::loadView()
     sexTitleLabel->setPosition(Vec2(labelX1, accountInfoBg->getContentSize().height/2));
     accountInfoBg->addChild(sexTitleLabel,0);
     
-    sex_lb = Label::createWithSystemFont("男",
+    sex_lb = Label::createWithSystemFont(sex,
                                           fontName,
                                           fontSize,
                                           cocos2d::Size(200, labelHeight),
@@ -148,7 +160,7 @@ void RecordScene::loadView()
     ageTitleLabel->setPosition(Vec2(labelX3, accountInfoBg->getContentSize().height/2));
     accountInfoBg->addChild(ageTitleLabel,0);
     
-    age_lb = Label::createWithSystemFont("108",
+    age_lb = Label::createWithSystemFont(age,
                                          fontName,
                                          fontSize,
                                          cocos2d::Size(200, labelHeight),
@@ -170,7 +182,7 @@ void RecordScene::loadView()
     scoreTitleLabel->setPosition(Vec2(labelX1, accountInfoBg->getContentSize().height/2 - labelHeight));
     accountInfoBg->addChild(scoreTitleLabel,0);
     
-    score_lb = Label::createWithSystemFont("1088653",
+    score_lb = Label::createWithSystemFont(score,
                                          fontName,
                                          fontSize,
                                          cocos2d::Size(200, labelHeight),
@@ -182,9 +194,7 @@ void RecordScene::loadView()
     accountInfoBg->addChild(score_lb,0);
     
     //add backBtn
-    auto backItem = MenuItemImage::create("return.png",
-                                            "return.png",
-                                            CC_CALLBACK_1(RecordScene::menuCallback, this));
+    auto backItem = CustomViewTools::creatMyMenuItemSprite("return.png", CC_CALLBACK_1(RecordScene::menuCallback, this));
     backItem->setPosition(Vec2(origin.x + backItem->getContentSize().width ,
                                  origin.y + visibleSize.height - backItem->getContentSize().height));
     auto menu = Menu::create(backItem, NULL);

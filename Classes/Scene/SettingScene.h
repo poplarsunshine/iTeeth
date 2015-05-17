@@ -15,7 +15,9 @@ class SettingScene : public cocos2d::Layer, public cocos2d::ui::EditBoxDelegate
 {
 public:
     
-    int sex = 0;
+    int i_sex;
+    std::string nameStr;
+    std::string ageStr;
     
     cocos2d::Sprite *manSelectSpreite;
     
@@ -45,6 +47,7 @@ public:
     virtual void editBoxReturn(cocos2d::ui::EditBox* editBox);
 
 protected:
+
     cocos2d::ui::EditBox* _editName;
     cocos2d::ui::EditBox* _editAge;
     

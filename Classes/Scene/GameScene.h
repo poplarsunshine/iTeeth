@@ -56,15 +56,34 @@ public:
     cocos2d::Sprite *p_panda;
     
     TeethLayer *m_teethLy;
+    
+    bool b_gameIsStart;
 
     void setGameModel(E_GAME_MODEL);
     
+    void setGameStart(bool isStart);
+    
+    void update(float dt);
+
+    void updateCustom(float dt);
+    
+    void menuUpCallback(cocos2d::Ref* pSender);
+    void menuDownCallback(cocos2d::Ref* pSender);
+
+    void backToMain();
+    void goonGame();
+
 private:
     
     cocos2d::EventListenerTouchOneByOne* listener;
 
     cocos2d::Vector<cocos2d::Sprite*> m_starList;
-
+    
+    float f_mid_y;
+    float f_offset_y;
+    float f_starSpeed;
+    float f_starOffsetX;
+    
     int model;
 };
 #endif /* defined(__MyTeeth__GameScene__) */

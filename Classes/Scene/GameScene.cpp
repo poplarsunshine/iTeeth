@@ -43,6 +43,8 @@ bool GameScene::init()
     
     this->setGameModel(GAME_STATE_DAY);
     
+    //this->setGameStart(true);
+    
     return true;
 }
 
@@ -51,6 +53,10 @@ void GameScene::loadView()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    f_mid_y = visibleSize.height * 0.65 + origin.y;
+    f_starOffsetX = 80.0;
+    f_starSpeed = 8.0;
+
 //    auto bgSprite = Sprite::create("play_bg.png");
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 //    this->addChild(bgSprite, 0);
@@ -70,13 +76,21 @@ void GameScene::loadView()
     
     //add star
     m_starList = cocos2d::Vector<Sprite*>();
+    float beginX = visibleSize.width / 2;
+    float beginY = f_mid_y;
     for (int i=0; i<10; i++) {
-        
+        auto star = Sprite::create("star.png");
+        star->setPosition(Vec2(beginX + f_starOffsetX * i, beginY));
+        this->addChild(star, 0);
+        m_starList.pushBack(star);
     }
     
     //panda
     p_panda = Sprite::create("panda-02.png");
-    p_panda->setPosition(Vec2(visibleSize.width * 0.26 + origin.x, visibleSize.height * 0.65 + origin.y));
+
+    f_offset_y = p_panda->getContentSize().height;
+    
+    p_panda->setPosition(Vec2(visibleSize.width * 0.26 + origin.x, f_mid_y));
     this->addChild(p_panda, 0);
     
     Animation*animation = Animation::create();
@@ -141,17 +155,25 @@ void GameScene::loadView()
     m_teethLy->setScale(0.77);
     this->addChild(m_teethLy, 0);
 
+    //temp contrl
+    auto upItem = CustomViewTools::creatMyMenuItemSprite("background-icon01.png", CC_CALLBACK_1(GameScene::menuUpCallback, this));
+    upItem->setPosition(Vec2(origin.x + upItem->getContentSize().width / 2,
+                               origin.y + visibleSize.height * 0.3));
+    
+    auto downItem = CustomViewTools::creatMyMenuItemSprite("background-icon01.png", CC_CALLBACK_1(GameScene::menuDownCallback, this));
+    downItem->setPosition(Vec2(origin.x + downItem->getContentSize().width / 2,
+                             origin.y + visibleSize.height * 0.15));
+    
     //add backBtn
-    auto backItem = MenuItemImage::create("return.png",
-                                          "return.png",
-                                          CC_CALLBACK_1(GameScene::menuCallback, this));
+    auto backItem = CustomViewTools::creatMyMenuItemSprite("return.png", CC_CALLBACK_1(GameScene::menuCallback, this));
     backItem->setPosition(Vec2(origin.x + backItem->getContentSize().width ,
                                origin.y + visibleSize.height - backItem->getContentSize().height));
-    auto menu = Menu::create(backItem, NULL);
+    auto menu = Menu::create(backItem, upItem, downItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
     
     //add listener
+    
 }
 
 void GameScene::onEnter()
@@ -172,9 +194,6 @@ void GameScene::onEnter()
     listener->onTouchEnded = [=](Touch* touch, Event* event){
 
         CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
-
-        cocos2d::Blink *action = cocos2d::Blink::create(0.4, 2);
-        p_panda->runAction(action);
         
         model++;
         
@@ -184,20 +203,106 @@ void GameScene::onEnter()
     };
     
     cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    
+    //
+    schedule(schedule_selector(GameScene::updateCustom), 1.0f / 30.0, kRepeatForever, 0);
+    setGameStart(true);
 }
 
 void GameScene::onExit()
 {
-    Layer::onExit();
+    unschedule(schedule_selector(GameScene::updateCustom));
+
     cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(listener);
+
+    Layer::onExit();
+}
+
+void GameScene::setGameStart(bool isStart)
+{
+    b_gameIsStart = isStart;
+    if (isStart) {
+        resume();
+    }
+    else{
+        pause();
+    }
+}
+
+void GameScene::update(float dt)
+{
+    log("update dt=%f", dt);
+}
+
+void GameScene::updateCustom(float dt)
+{
+    //log("updateCustom dt=%f", dt);
+    for (int i=0; i<m_starList.size(); i++) {
+        Sprite *star = m_starList.at(i);
+        //如果出左边界 置于末尾
+        float curx = star->getPosition().x;
+        if (curx < -80) {
+            star->setPosition(curx + m_starList.size() * f_starOffsetX, star->getPosition().y);
+        }
+        else
+        {
+            star->setPosition(curx - f_starSpeed, star->getPosition().y);
+        }
+    }
 }
 
 void GameScene::menuCallback(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
 
+    this->setGameStart(false);
+    CMessageBox* pBox = CMessageBox::createBy(0,
+                                              this,
+                                              "",
+                                              "",
+                                              "退出",
+                                              "继续",
+                                              boxHandler_selector(GameScene::backToMain),
+                                              boxHandler_selector(GameScene::goonGame),
+                                              NULL);
+    this->addChild(pBox, 2);
+}
+
+void GameScene::backToMain()
+{
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
+}
+
+void GameScene::goonGame()
+{
+    this->setGameStart(true);
+}
+
+void GameScene::menuUpCallback(Ref* pSender)
+{
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+    
+    float curY = p_panda->getPosition().y;
+    if (curY != f_mid_y + f_offset_y) {
+        p_panda->setPosition(Vec2(p_panda->getPosition().x, curY + f_offset_y));
+        
+        cocos2d::Blink *action = cocos2d::Blink::create(0.2, 1);
+        p_panda->runAction(action);
+    }
+}
+
+void GameScene::menuDownCallback(Ref* pSender)
+{
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+    
+    float curY = p_panda->getPosition().y;
+    if (curY != f_mid_y - f_offset_y) {
+        p_panda->setPosition(Vec2(p_panda->getPosition().x, curY - f_offset_y));
+        
+        cocos2d::Blink *action = cocos2d::Blink::create(0.2, 1);
+        p_panda->runAction(action);
+    }
 }
 
 void GameScene::setGameModel(E_GAME_MODEL model)

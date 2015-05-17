@@ -73,7 +73,7 @@ void BBSScene::loadView()
     scrollView->setPosition(Vec2(offset,offset));
     this->addChild(scrollView);
     
-    auto ageLabel = Label::createWithSystemFont("年sdoifusajdlj代理副驾驶上来的就发生地方洛杉矶的方式的发的啥链接发来撒龄:",
+    auto ageLabel = Label::createWithSystemFont("    是一家“健康舒适、优质生活”的多元化公司，致力于通过及时地推出有意义的创新来改善人们的生活质量。作为全球医疗保健、优质生活和照明领域的领导者，飞利浦基于对客户需求的了解以及“精于心 简于形”的品牌承诺，将技术和设计融入到了以人为本的解决方案中。",
                                                 fontName,
                                                 fontSize,
                                                 cocos2d::Size(width, 0),

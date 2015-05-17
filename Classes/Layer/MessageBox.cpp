@@ -162,8 +162,9 @@ void CMessageBox::onEnter()
 
 void CMessageBox::onExit()
 {
-    Layer::onExit();
     Director::getInstance()->getEventDispatcher()->removeEventListener(listener);
+
+    Layer::onExit();
 }
 
 void CMessageBox::myTouchEnded( Touch *pTouch, Event *pEvent )

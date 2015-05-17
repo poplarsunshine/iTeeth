@@ -124,6 +124,8 @@
 		BC7836A01B07D715008766CE /* flyPanda.png in Resources */ = {isa = PBXBuildFile; fileRef = BC78369E1B07D715008766CE /* flyPanda.png */; };
 		BC7836A71B07DF5E008766CE /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC7836A51B07DF5E008766CE /* background.mp3 */; };
 		BC7836A81B07DF5E008766CE /* rotate.wav in Resources */ = {isa = PBXBuildFile; fileRef = BC7836A61B07DF5E008766CE /* rotate.wav */; };
+		BC7836AE1B08FCB0008766CE /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7836AD1B08FCB0008766CE /* star.png */; };
+		BC7836B21B090D94008766CE /* AccountData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7836B01B090D94008766CE /* AccountData.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -295,6 +297,9 @@
 		BC7836A61B07DF5E008766CE /* rotate.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rotate.wav; sourceTree = "<group>"; };
 		BC7836AA1B07E04E008766CE /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		BC7836AB1B07E064008766CE /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		BC7836AD1B08FCB0008766CE /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		BC7836B01B090D94008766CE /* AccountData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AccountData.cpp; sourceTree = "<group>"; };
+		BC7836B11B090D94008766CE /* AccountData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountData.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -578,6 +583,7 @@
 				AFF50A2D1AF92B0E0064BDB7 /* setting.png */,
 				AFF50A2E1AF92B0E0064BDB7 /* sun.png */,
 				AFF50A301AF92B0E0064BDB7 /* tooth.png */,
+				BC7836AD1B08FCB0008766CE /* star.png */,
 				AFF50A311AF92B0E0064BDB7 /* toothbrush.png */,
 				AFF509F11AF7CDCC0064BDB7 /* play.png */,
 			);
@@ -589,6 +595,8 @@
 			children = (
 				AFF50A4C1AFA689D0064BDB7 /* CustomViewTools.cpp */,
 				AFF50A4D1AFA689D0064BDB7 /* CustomViewTools.h */,
+				BC7836B01B090D94008766CE /* AccountData.cpp */,
+				BC7836B11B090D94008766CE /* AccountData.h */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -812,6 +820,7 @@
 				AFF50A6A1AFB9FEB0064BDB7 /* button-default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				AFF50A5B1AFA79A60064BDB7 /* main_bg.png in Resources */,
+				BC7836AE1B08FCB0008766CE /* star.png in Resources */,
 				BC78366E1B079EC4008766CE /* tooth-bg-b.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,6 +844,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				AFF509EF1AF7BD030064BDB7 /* CoachScene.cpp in Sources */,
+				BC7836B21B090D94008766CE /* AccountData.cpp in Sources */,
 				AF53BC491AF133C800348AE1 /* SceneManager.cpp in Sources */,
 				AFF509EE1AF7BD030064BDB7 /* BBSScene.cpp in Sources */,
 				BC7836731B07A45A008766CE /* TeethLayer.cpp in Sources */,

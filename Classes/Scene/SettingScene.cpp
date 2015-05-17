@@ -38,9 +38,13 @@ bool SettingScene::init()
         return false;
     }
     
+    nameStr =  UserDefault::getInstance()->getStringForKey(User_Name_Key);
+    ageStr =  UserDefault::getInstance()->getStringForKey(User_Age_Key);
+    i_sex = UserDefault::getInstance()->getIntegerForKey(User_Sex_Key);
+    
     this->loadView();
     
-    this->setSexDisplay(sex);
+    this->setSexDisplay(i_sex);
 
     return true;
 }
@@ -100,6 +104,7 @@ void SettingScene::loadView()
     _editName->setPosition(Vec2(infobgWidth - editBoxSize.width/2 - 20, nameInputBg->getContentSize().height / 2));
     _editName->setFontColor(color);
     _editName->setPlaceHolder("请输入姓名");
+    _editName->setText(nameStr.c_str());
     //_editName->setInputMode(ui::EditBox::InputMode::EMAIL_ADDRESS);
     _editName->setMaxLength(16);
     _editName->setReturnType(cocos2d::ui::EditBox::KeyboardReturnType::DONE);
@@ -127,6 +132,7 @@ void SettingScene::loadView()
     _editAge->setPosition(Vec2(infobgWidth - editBoxSize.width/2 - 20, ageInputBg->getContentSize().height / 2));
     _editAge->setFontColor(color);
     _editAge->setPlaceHolder("请输入年龄");
+    _editAge->setText(ageStr.c_str());
     _editAge->setInputMode(ui::EditBox::InputMode::NUMERIC);
     _editAge->setMaxLength(3);
     _editAge->setReturnType(cocos2d::ui::EditBox::KeyboardReturnType::DONE);
@@ -180,18 +186,18 @@ void SettingScene::menuCallback(Ref* pSender)
 void SettingScene::manMenuCallback(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
-    if (sex == 0) {
-        sex = 1;
-        this->setSexDisplay(sex);
+    if (i_sex == 0) {
+        i_sex = 1;
+        this->setSexDisplay(i_sex);
     }
 }
 
 void SettingScene::womMenuCallback(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
-    if (sex == 1) {
-        sex = 0;
-        this->setSexDisplay(sex);
+    if (i_sex == 1) {
+        i_sex = 0;
+        this->setSexDisplay(i_sex);
     }
 }
 
@@ -218,6 +224,12 @@ void SettingScene::confirmMenuCallback(Ref* pSender)
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
 
     log("confirmMenuCallback");
+    nameStr = _editName->getText();
+    ageStr = _editAge->getText();
+    
+    UserDefault::getInstance()->setStringForKey(User_Name_Key, nameStr);
+    UserDefault::getInstance()->setStringForKey(User_Age_Key, ageStr);
+    UserDefault::getInstance()->setIntegerForKey(User_Sex_Key, i_sex);
 }
 
 #pragma Editbox
