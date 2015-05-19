@@ -24,6 +24,8 @@ public:
                                                    GLfloat height,
                                                    bool showSprites,
                                                    int spriteCount = 10);
+    
+    static cocos2d::Label * creatTitleWith(GLfloat height, const std::string& title);
 };
 
 #endif /* defined(__MyTeeth__CustomViewTools__) */

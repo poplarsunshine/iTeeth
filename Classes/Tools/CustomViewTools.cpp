@@ -7,6 +7,7 @@
 //
 
 #include "CustomViewTools.h"
+#include "header.h"
 
 USING_NS_CC;
 
@@ -47,4 +48,18 @@ cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B&
         }
     }
     return colorLy;
+}
+
+cocos2d::Label * CustomViewTools::creatTitleWith(GLfloat height, const std::string &title)
+{
+    cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
+
+    auto titleLabel = cocos2d::Label::createWithTTF(title, Default_Font_Name, Font_Size_LargeXX);
+    titleLabel->setDimensions(visibleSize.width, height);
+    titleLabel->setHorizontalAlignment(TextHAlignment::CENTER);
+    titleLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    titleLabel->setTextColor(Color4B::WHITE);
+    titleLabel->enableOutline(ColorT2, 6.0);
+    titleLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - height / 2));
+    return titleLabel;
 }

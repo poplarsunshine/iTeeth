@@ -72,6 +72,9 @@ void SettingScene::loadView()
     float inputBgHeight = 140.0;
     float yOffset = 20.0;
 
+    auto titleLabel = CustomViewTools::creatTitleWith(infobgY, "设置");
+    this->addChild(titleLabel, 0);
+    
     auto accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     accountInfoBg->setContentSize(cocos2d::Size(infobgWidth, infobgHeight));
     accountInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - accountInfoBg->getContentSize().height / 2 - infobgY));

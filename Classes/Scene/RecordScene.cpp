@@ -76,6 +76,10 @@ void RecordScene::loadView()
     
     float recordbgHeight = 580;
 
+    //title
+    auto titleLabel = CustomViewTools::creatTitleWith(infobgY, "积分记录");
+    this->addChild(titleLabel, 0);
+    
     //account info
     auto accountInfoBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     accountInfoBg->setContentSize(cocos2d::Size(infobgWidth, infobgHeight));

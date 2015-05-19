@@ -65,13 +65,7 @@ void BBSScene::loadView()
     float width = visibleSize.width - offset * 2;
     float height = visibleSize.height - topY - offset;
     
-    auto titleLabel = Label::createWithTTF("社区论坛", Default_Font_Name, Font_Size_LargeXX);
-    titleLabel->setDimensions(visibleSize.width, topY);
-    titleLabel->setHorizontalAlignment(TextHAlignment::CENTER);
-    titleLabel->setVerticalAlignment(TextVAlignment::CENTER);
-    titleLabel->setTextColor(Color4B::WHITE);
-    titleLabel->enableOutline(ColorT2, 6.0);
-    titleLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - topY / 2));
+    auto titleLabel = CustomViewTools::creatTitleWith(topY, "社区论坛");
     this->addChild(titleLabel, 0);
     
     auto scrollView = ui::ScrollView::create();
