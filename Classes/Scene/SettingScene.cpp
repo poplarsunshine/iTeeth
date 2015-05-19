@@ -72,6 +72,7 @@ void SettingScene::loadView()
     float inputBgHeight = 140.0;
     float yOffset = 20.0;
 
+    //title
     auto titleLabel = CustomViewTools::creatTitleWith(infobgY, "设置");
     this->addChild(titleLabel, 0);
     
@@ -81,22 +82,19 @@ void SettingScene::loadView()
     this->addChild(accountInfoBg, 0);
     
     //name
-    float fontSize = 40.0;
-    std::string fontName = "Arial";
-    Color4B color = Color4B(233,223,32,255);
+    float fontSize = Font_Size_Large;
+    std::string fontName = Default_Font_Name;
+    Color4B color = ColorT1;
 
     auto nameInputBg = Scale9Sprite::create(cocos2d::Rect(70, 70, 20, 20), "white-background.png");
     nameInputBg->setContentSize(cocos2d::Size(infobgWidth, inputBgHeight));
     nameInputBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - nameInputBg->getContentSize().height / 2 - (infobgY + infobgHeight + yOffset)));
     this->addChild(nameInputBg, 0);
     
-    auto nameLabel = Label::createWithSystemFont("姓名:",
-                                                   fontName,
-                                                   fontSize,
-                                                   cocos2d::Size(160, inputBgHeight),
-                                                   TextHAlignment::RIGHT,
-                                                   TextVAlignment::CENTER
-                                                   );
+    auto nameLabel = Label::createWithTTF("姓名:", fontName, fontSize);
+    nameLabel->setDimensions(160, inputBgHeight);
+    nameLabel->setHorizontalAlignment(TextHAlignment::RIGHT);
+    nameLabel->setVerticalAlignment(TextVAlignment::CENTER);
     nameLabel->setTextColor(color);
     nameLabel->setPosition(Vec2(nameLabel->getContentSize().width/2, nameLabel->getContentSize().height/2));
     nameInputBg->addChild(nameLabel,0);
@@ -120,13 +118,10 @@ void SettingScene::loadView()
     ageInputBg->setPosition(Vec2(visibleSize.width/2 + origin.x, nameInputBg->getPosition().y - ageInputBg->getContentSize().height - yOffset));
     this->addChild(ageInputBg, 0);
     
-    auto ageLabel = Label::createWithSystemFont("年龄:",
-                                                 fontName,
-                                                 fontSize,
-                                                 cocos2d::Size(160, inputBgHeight),
-                                                 TextHAlignment::RIGHT,
-                                                 TextVAlignment::CENTER
-                                                 );
+    auto ageLabel = Label::createWithTTF("年龄:", fontName, fontSize);
+    ageLabel->setDimensions(160, inputBgHeight);
+    ageLabel->setHorizontalAlignment(TextHAlignment::RIGHT);
+    ageLabel->setVerticalAlignment(TextVAlignment::CENTER);
     ageLabel->setTextColor(color);
     ageLabel->setPosition(Vec2(ageLabel->getContentSize().width/2, ageLabel->getContentSize().height/2));
     ageInputBg->addChild(ageLabel,0);
@@ -137,7 +132,7 @@ void SettingScene::loadView()
     _editAge->setPlaceHolder("请输入年龄");
     _editAge->setText(ageStr.c_str());
     _editAge->setInputMode(ui::EditBox::InputMode::NUMERIC);
-    _editAge->setMaxLength(3);
+    _editAge->setMaxLength(2);
     _editAge->setReturnType(cocos2d::ui::EditBox::KeyboardReturnType::DONE);
     _editAge->setDelegate(this);
     ageInputBg->addChild(_editAge);
@@ -150,6 +145,13 @@ void SettingScene::loadView()
     auto confirmBtn = MenuItemSprite::create(btnBg, btnSelBg, CC_CALLBACK_1(SettingScene::confirmMenuCallback, this));
     confirmBtn->setPosition(Vec2(visibleSize.width/2 + origin.x, ageInputBg->getPosition().y - btnSelBg->getContentSize().height - yOffset));
 
+    auto saveLabel = Label::createWithTTF("保存", fontName, Font_Size_LargeX);
+    saveLabel->setDimensions(confirmBtn->getContentSize().width, confirmBtn->getContentSize().height);
+    saveLabel->setHorizontalAlignment(TextHAlignment::CENTER);
+    saveLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    saveLabel->setPosition(Vec2(confirmBtn->getContentSize().width/2, confirmBtn->getContentSize().height/2));
+    confirmBtn->addChild(saveLabel,0);
+    
     float iconOffsetX = (visibleSize.width/2 - offsetX) / 2;
     //man sex btn
     auto manItem = CustomViewTools::creatMyMenuItemSprite("boy.png", CC_CALLBACK_1(SettingScene::manMenuCallback, this));

@@ -90,8 +90,8 @@ void BBSScene::loadView()
     contentLabel->setDimensions(width, numOfline * lineHeight);
     contentLabel->setHorizontalAlignment(TextHAlignment::LEFT);
     contentLabel->setVerticalAlignment(TextVAlignment::CENTER);
-    contentLabel->setLineHeight(lineHeight);
     contentLabel->setTextColor(ColorT1);
+    contentLabel->setLineHeight(lineHeight);
     float lbHeight = contentLabel->getContentSize().height;
     float scrollViewConHeight = lbHeight > height ? lbHeight : height;
     contentLabel->setPosition(Vec2(contentLabel->getContentSize().width/2, scrollViewConHeight - contentLabel->getContentSize().height/2));

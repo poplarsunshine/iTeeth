@@ -99,101 +99,77 @@ void RecordScene::loadView()
         accountInfoBg->addChild(womSprite, 0);
     }
     
-    float fontSize = 36.0;
     float labelHeight = infobgHeight / 4;
     float labelX1 = accountInfoBg->getContentSize().width * 0.5;
     float labelX2 = accountInfoBg->getContentSize().width * 0.67;
     float labelX3 = accountInfoBg->getContentSize().width * 0.8;
     float labelX4 = accountInfoBg->getContentSize().width * 0.97;
-    std::string fontName = "Arial";
-    Color4B color = Color4B(233,223,32,255);
-    Color4B color2 = Color4B(233,0,32,255);
+    std::string fontName = Default_Font_Name;
+    float fontSize = Font_Size_Normal;
+    Color4B color1 = ColorT1;
+    Color4B color2 = ColorT2;
 
-    auto nameTitleLabel = Label::createWithSystemFont("姓名:",
-                                                fontName,
-                                                fontSize,
-                                                cocos2d::Size(200, labelHeight),
-                                                TextHAlignment::LEFT,
-                                                TextVAlignment::CENTER
-                                                );
-    nameTitleLabel->setTextColor(color);
+    auto nameTitleLabel = Label::createWithTTF("姓名:", fontName, fontSize);
+    nameTitleLabel->setDimensions(200, labelHeight);
+    nameTitleLabel->setHorizontalAlignment(TextHAlignment::LEFT);
+    nameTitleLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    nameTitleLabel->setTextColor(color2);
     nameTitleLabel->setPosition(Vec2(labelX1, accountInfoBg->getContentSize().height/2 + labelHeight));
     accountInfoBg->addChild(nameTitleLabel,0);
     
-    name_lb = Label::createWithSystemFont(name,
-                                          fontName,
-                                          fontSize,
-                                          cocos2d::Size(200, labelHeight),
-                                          TextHAlignment::LEFT,
-                                          TextVAlignment::CENTER
-                                          );
-    name_lb->setTextColor(color2);
+    name_lb = Label::createWithTTF(name, fontName, fontSize);
+    name_lb->setDimensions(200, labelHeight);
+    name_lb->setHorizontalAlignment(TextHAlignment::LEFT);
+    name_lb->setVerticalAlignment(TextVAlignment::CENTER);
+    name_lb->setTextColor(color1);
     name_lb->setPosition(Vec2(labelX2, accountInfoBg->getContentSize().height/2 + labelHeight));
     accountInfoBg->addChild(name_lb,0);
     
-    auto sexTitleLabel = Label::createWithSystemFont("姓别:",
-                                                      fontName,
-                                                      fontSize,
-                                                      cocos2d::Size(200, labelHeight),
-                                                      TextHAlignment::LEFT,
-                                                      TextVAlignment::CENTER
-                                                      );
-    sexTitleLabel->setTextColor(color);
+    auto sexTitleLabel = Label::createWithTTF("姓别:", fontName, fontSize);
+    sexTitleLabel->setDimensions(200, labelHeight);
+    sexTitleLabel->setHorizontalAlignment(TextHAlignment::LEFT);
+    sexTitleLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    sexTitleLabel->setTextColor(color2);
     sexTitleLabel->setPosition(Vec2(labelX1, accountInfoBg->getContentSize().height/2));
     accountInfoBg->addChild(sexTitleLabel,0);
     
-    sex_lb = Label::createWithSystemFont(sex,
-                                          fontName,
-                                          fontSize,
-                                          cocos2d::Size(200, labelHeight),
-                                          TextHAlignment::LEFT,
-                                          TextVAlignment::CENTER
-                                          );
-    sex_lb->setTextColor(color2);
+    sex_lb = Label::createWithTTF(sex, fontName, fontSize);
+    sex_lb->setDimensions(200, labelHeight);
+    sex_lb->setHorizontalAlignment(TextHAlignment::LEFT);
+    sex_lb->setVerticalAlignment(TextVAlignment::CENTER);
+    sex_lb->setTextColor(color1);
     sex_lb->setPosition(Vec2(labelX2, accountInfoBg->getContentSize().height/2));
     accountInfoBg->addChild(sex_lb,0);
     
-    auto ageTitleLabel = Label::createWithSystemFont("年龄:",
-                                                fontName,
-                                                fontSize,
-                                                cocos2d::Size(200, labelHeight),
-                                                TextHAlignment::LEFT,
-                                                TextVAlignment::CENTER
-                                                );
-    ageTitleLabel->setTextColor(color);
+    auto ageTitleLabel = Label::createWithTTF("年龄:", fontName, fontSize);
+    ageTitleLabel->setDimensions(200, labelHeight);
+    ageTitleLabel->setHorizontalAlignment(TextHAlignment::LEFT);
+    ageTitleLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    ageTitleLabel->setTextColor(color2);
     ageTitleLabel->setPosition(Vec2(labelX3, accountInfoBg->getContentSize().height/2));
     accountInfoBg->addChild(ageTitleLabel,0);
-    
-    age_lb = Label::createWithSystemFont(age,
-                                         fontName,
-                                         fontSize,
-                                         cocos2d::Size(200, labelHeight),
-                                         TextHAlignment::LEFT,
-                                         TextVAlignment::CENTER
-                                         );
-    age_lb->setTextColor(color2);
+
+    age_lb = Label::createWithTTF(age, fontName, fontSize);
+    age_lb->setDimensions(200, labelHeight);
+    age_lb->setHorizontalAlignment(TextHAlignment::LEFT);
+    age_lb->setVerticalAlignment(TextVAlignment::CENTER);
+    age_lb->setTextColor(color1);
     age_lb->setPosition(Vec2(labelX4, accountInfoBg->getContentSize().height/2));
     accountInfoBg->addChild(age_lb,0);
     
-    auto scoreTitleLabel = Label::createWithSystemFont("星星积分:",
-                                                     fontName,
-                                                     fontSize,
-                                                     cocos2d::Size(200, labelHeight),
-                                                     TextHAlignment::LEFT,
-                                                     TextVAlignment::CENTER
-                                                     );
-    scoreTitleLabel->setTextColor(color);
+    auto scoreTitleLabel = Label::createWithTTF("星星积分:", fontName, fontSize);
+    scoreTitleLabel->setDimensions(200, labelHeight);
+    scoreTitleLabel->setHorizontalAlignment(TextHAlignment::LEFT);
+    scoreTitleLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    scoreTitleLabel->setTextColor(color2);
     scoreTitleLabel->setPosition(Vec2(labelX1, accountInfoBg->getContentSize().height/2 - labelHeight));
     accountInfoBg->addChild(scoreTitleLabel,0);
     
-    score_lb = Label::createWithSystemFont(score,
-                                         fontName,
-                                         fontSize,
-                                         cocos2d::Size(200, labelHeight),
-                                         TextHAlignment::LEFT,
-                                         TextVAlignment::CENTER
-                                         );
-    score_lb->setTextColor(color2);
+    score_lb = Label::createWithTTF("sdfsdf", fontName, fontSize);
+    score_lb->setDimensions(200, labelHeight);
+    score_lb->setHorizontalAlignment(TextHAlignment::LEFT);
+    score_lb->setVerticalAlignment(TextVAlignment::CENTER);
+    score_lb->setTextColor(color1);
     score_lb->setPosition(Vec2(labelX3, accountInfoBg->getContentSize().height/2 - labelHeight));
     accountInfoBg->addChild(score_lb,0);
     
@@ -212,13 +188,10 @@ void RecordScene::loadView()
     recordInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, accountInfoBg->getPosition().y - (accountInfoBg->getContentSize().height / 2 + offsetY) - recordInfoBg->getContentSize().height / 2));
     this->addChild(recordInfoBg, 0);
     
-    month_lb = Label::createWithSystemFont("五月记录",
-                                         fontName,
-                                         fontSize,
-                                         cocos2d::Size(200, recordLbHeight),
-                                         TextHAlignment::CENTER,
-                                         TextVAlignment::CENTER
-                                         );
+    month_lb = Label::createWithTTF("五月记录", fontName, fontSize);
+    month_lb->setDimensions(200, recordLbHeight);
+    month_lb->setHorizontalAlignment(TextHAlignment::CENTER);
+    month_lb->setVerticalAlignment(TextVAlignment::CENTER);
     month_lb->setTextColor(color2);
     month_lb->setPosition(Vec2(recordInfoBg->getContentSize().width / 2, recordInfoBg->getContentSize().height - month_lb->getContentSize().height/2));
     recordInfoBg->addChild(month_lb,0);
@@ -237,13 +210,10 @@ void RecordScene::loadView()
     for (int i=0; i<titles.size(); i++)
     {
         std::string title = titles.at(i);
-        auto week_lb = Label::createWithSystemFont(title.c_str(),
-                                               fontName,
-                                               fontSize,
-                                               cocos2d::Size(weekTitleWidth, recordLbHeight),
-                                               TextHAlignment::CENTER,
-                                               TextVAlignment::CENTER
-                                               );
+        auto week_lb = Label::createWithTTF(title.c_str(), fontName, fontSize);
+        week_lb->setDimensions(weekTitleWidth, recordLbHeight);
+        week_lb->setHorizontalAlignment(TextHAlignment::CENTER);
+        week_lb->setVerticalAlignment(TextVAlignment::CENTER);
         week_lb->setTextColor(color2);
         week_lb->setPosition(Vec2(weekTitleWidth * (i + 1), weekTitleY));
         recordInfoBg->addChild(week_lb,0);
