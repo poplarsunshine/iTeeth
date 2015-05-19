@@ -43,8 +43,6 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
-		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
-		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		AF53BC491AF133C800348AE1 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF53BC461AF133C800348AE1 /* SceneManager.cpp */; };
@@ -126,6 +124,9 @@
 		BC7836A81B07DF5E008766CE /* rotate.wav in Resources */ = {isa = PBXBuildFile; fileRef = BC7836A61B07DF5E008766CE /* rotate.wav */; };
 		BC7836AE1B08FCB0008766CE /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7836AD1B08FCB0008766CE /* star.png */; };
 		BC7836B21B090D94008766CE /* AccountData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7836B01B090D94008766CE /* AccountData.cpp */; };
+		BC7838B61B0B6FAD008766CE /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC7838B41B0B6FAD008766CE /* arial.ttf */; };
+		BC7838B71B0B6FAD008766CE /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC7838B51B0B6FAD008766CE /* Marker Felt.ttf */; };
+		BC7838BB1B0B70D7008766CE /* Simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7838B91B0B70D7008766CE /* Simple.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -205,7 +206,6 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
-		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AF53BC461AF133C800348AE1 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
@@ -300,6 +300,11 @@
 		BC7836AD1B08FCB0008766CE /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		BC7836B01B090D94008766CE /* AccountData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AccountData.cpp; sourceTree = "<group>"; };
 		BC7836B11B090D94008766CE /* AccountData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountData.h; sourceTree = "<group>"; };
+		BC7838B41B0B6FAD008766CE /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
+		BC7838B51B0B6FAD008766CE /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
+		BC7838B81B0B6FBA008766CE /* FZSEJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZSEJW.TTF; sourceTree = "<group>"; };
+		BC7838B91B0B70D7008766CE /* Simple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simple.cpp; sourceTree = "<group>"; };
+		BC7838BA1B0B70D7008766CE /* Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simple.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -424,6 +429,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BC7838B31B0B6FAD008766CE /* fonts */,
 				BC7836A41B07DF5E008766CE /* audio */,
 				BC78369C1B07D715008766CE /* plistImage */,
 				AFF50A501AFA79A60064BDB7 /* bbs_bg.png */,
@@ -435,7 +441,6 @@
 				AFF50A561AFA79A60064BDB7 /* set_bg.png */,
 				AFF50A571AFA79A60064BDB7 /* tooth_bg.png */,
 				AFF509D41AF7AEB40064BDB7 /* images */,
-				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 			);
 			name = Resources;
@@ -445,6 +450,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC7838B91B0B70D7008766CE /* Simple.cpp */,
+				BC7838BA1B0B70D7008766CE /* Simple.h */,
 				BC7836A91B07E040008766CE /* config */,
 				BC7836571B04F82F008766CE /* Layer */,
 				AFF50A4B1AFA68870064BDB7 /* Tools */,
@@ -639,6 +646,16 @@
 			path = config;
 			sourceTree = "<group>";
 		};
+		BC7838B31B0B6FAD008766CE /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BC7838B81B0B6FBA008766CE /* FZSEJW.TTF */,
+				BC7838B41B0B6FAD008766CE /* arial.ttf */,
+				BC7838B51B0B6FAD008766CE /* Marker Felt.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -766,13 +783,13 @@
 				BC78369F1B07D715008766CE /* flyPanda.plist in Resources */,
 				AFF50A651AFA79B30064BDB7 /* background-icon03.png in Resources */,
 				AFF50A331AF92B0E0064BDB7 /* BBS.png in Resources */,
-				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				AFF50A671AFB96930064BDB7 /* white-background.png in Resources */,
 				BC7836851B07A8FC008766CE /* tooth-14.png in Resources */,
 				AFF50A631AFA79B30064BDB7 /* background-icon01.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				AFF50A721AFBA8430064BDB7 /* right-boy.png in Resources */,
+				BC7838B61B0B6FAD008766CE /* arial.ttf in Resources */,
 				BC7836921B07A8FC008766CE /* tooth-0.png in Resources */,
 				AFF50A371AF92B0E0064BDB7 /* cloud.png in Resources */,
 				BC78368E1B07A8FC008766CE /* tooth-6.png in Resources */,
@@ -822,6 +839,7 @@
 				AFF50A5B1AFA79A60064BDB7 /* main_bg.png in Resources */,
 				BC7836AE1B08FCB0008766CE /* star.png in Resources */,
 				BC78366E1B079EC4008766CE /* tooth-bg-b.png in Resources */,
+				BC7838B71B0B6FAD008766CE /* Marker Felt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +849,6 @@
 			files = (
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
-				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +864,7 @@
 				BC7836B21B090D94008766CE /* AccountData.cpp in Sources */,
 				AF53BC491AF133C800348AE1 /* SceneManager.cpp in Sources */,
 				AFF509EE1AF7BD030064BDB7 /* BBSScene.cpp in Sources */,
+				BC7838BB1B0B70D7008766CE /* Simple.cpp in Sources */,
 				BC7836731B07A45A008766CE /* TeethLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				BC78365A1B04F82F008766CE /* MessageBox.cpp in Sources */,
