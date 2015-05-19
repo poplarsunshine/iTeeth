@@ -64,27 +64,44 @@ void BBSScene::loadView()
     float topY = 100.0;
     float width = visibleSize.width - offset * 2;
     float height = visibleSize.height - topY - offset;
-    float fontSize = 40.0;
-    std::string fontName = "Arial";
-    Color4B color = Color4B(255,255,255,255);
-
+    
+    auto titleLabel = Label::createWithTTF("社区论坛", Default_Font_Name, Font_Size_LargeXX);
+    titleLabel->setDimensions(visibleSize.width, topY);
+    titleLabel->setHorizontalAlignment(TextHAlignment::CENTER);
+    titleLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    titleLabel->setTextColor(Color4B::WHITE);
+    titleLabel->enableOutline(ColorT2, 6.0);
+    titleLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - topY / 2));
+    this->addChild(titleLabel, 0);
+    
     auto scrollView = ui::ScrollView::create();
     scrollView->setContentSize(Size(width, height));
     scrollView->setPosition(Vec2(offset,offset));
     this->addChild(scrollView);
     
-    auto ageLabel = Label::createWithSystemFont("    是一家“健康舒适、优质生活”的多元化公司，致力于通过及时地推出有意义的创新来改善人们的生活质量。作为全球医疗保健、优质生活和照明领域的领导者，飞利浦基于对客户需求的了解以及“精于心 简于形”的品牌承诺，将技术和设计融入到了以人为本的解决方案中。",
-                                                fontName,
+    std::string content = "    itooth是一家“健康舒适、优质生活”的多元化公司，致力于通过及时地推出有意义的创新来改善人们的生活质量。作为全球医疗保健、优质生活和照明领域的领导者，基于对客户需求的了解以及“精于心 简于形”的品牌承诺，将技术和设计融入到了以人为本的解决方案中。\n\n    作为全球医疗保健、优质生活和照明领域的领导者，基于对客户需求的了解以及“精于心 简于形”的品牌承诺，将技术和设计融入到了以人为本的解决方案中。";
+    float lineHeight = 46.0;
+    float fontSize = Font_Size_Small;
+
+    auto tempLabel = Label::createWithSystemFont(content,
+                                                Default_Font_Name,
                                                 fontSize,
                                                 cocos2d::Size(width, 0),
                                                 TextHAlignment::LEFT,
                                                 TextVAlignment::CENTER
                                                 );
-    ageLabel->setTextColor(color);
-    float lbHeight = ageLabel->getContentSize().height;
+    int numOfline = tempLabel->getContentSize().height / fontSize;
+    
+    auto contentLabel = Label::createWithTTF(content, Default_Font_Name, fontSize);
+    contentLabel->setDimensions(width, numOfline * lineHeight);
+    contentLabel->setHorizontalAlignment(TextHAlignment::LEFT);
+    contentLabel->setVerticalAlignment(TextVAlignment::CENTER);
+    contentLabel->setLineHeight(lineHeight);
+    contentLabel->setTextColor(ColorT1);
+    float lbHeight = contentLabel->getContentSize().height;
     float scrollViewConHeight = lbHeight > height ? lbHeight : height;
-    ageLabel->setPosition(Vec2(ageLabel->getContentSize().width/2, scrollViewConHeight - ageLabel->getContentSize().height/2));
-    scrollView->addChild(ageLabel,0);
+    contentLabel->setPosition(Vec2(contentLabel->getContentSize().width/2, scrollViewConHeight - contentLabel->getContentSize().height/2));
+    scrollView->addChild(contentLabel,0);
     
     scrollView->setInnerContainerSize(Size(scrollView->getContentSize().width, lbHeight));
     
