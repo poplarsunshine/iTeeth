@@ -96,13 +96,10 @@ bool CMessageBox::init(int type,
         
         m_leftCallback = leftBtnSel;
         
-        auto label = Label::createWithSystemFont(leftLabelTitle.c_str(),
-                                                     "Arial",
-                                                     40,
-                                                     btnSize,
-                                                     TextHAlignment::CENTER,
-                                                     TextVAlignment::CENTER
-                                                     );
+        auto label = Label::createWithTTF(leftLabelTitle.c_str(), Default_Font_Name, Font_Size_Large);
+        label->setDimensions(btnSize.width, btnSize.height);
+        label->setHorizontalAlignment(TextHAlignment::CENTER);
+        label->setVerticalAlignment(TextVAlignment::CENTER);
         label->setPosition(Vec2(m_pLeftSpr->getPosition().x, m_pLeftSpr->getPosition().y));
         this->addChild(label,0);
     }
@@ -117,13 +114,10 @@ bool CMessageBox::init(int type,
 
         m_rightCallback = rightBtnSel;
         
-        auto label = Label::createWithSystemFont(rightLabelTitle.c_str(),
-                                                 "Arial",
-                                                 40,
-                                                 btnSize,
-                                                 TextHAlignment::CENTER,
-                                                 TextVAlignment::CENTER
-                                                 );
+        auto label = Label::createWithTTF(rightLabelTitle.c_str(), Default_Font_Name, Font_Size_Large);
+        label->setDimensions(btnSize.width, btnSize.height);
+        label->setHorizontalAlignment(TextHAlignment::CENTER);
+        label->setVerticalAlignment(TextVAlignment::CENTER);
         label->setPosition(Vec2(m_pRightSpr->getPosition().x, m_pRightSpr->getPosition().y));
         this->addChild(label,0);
     }

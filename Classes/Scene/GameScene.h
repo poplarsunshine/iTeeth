@@ -63,16 +63,15 @@ public:
     
     void setGameStart(bool isStart);
     
-    void update(float dt);
+    //void update(float dt);
 
     void updateCustom(float dt);
-    
-    void menuUpCallback(cocos2d::Ref* pSender);
-    void menuDownCallback(cocos2d::Ref* pSender);
 
     void backToMain();
     void goonGame();
 
+    void menuUpCallback(cocos2d::Ref* pSender);
+    void menuDownCallback(cocos2d::Ref* pSender);
 private:
     
     cocos2d::EventListenerTouchOneByOne* listener;

@@ -38,7 +38,12 @@ bool CoachScene::init()
         return false;
     }
     
+    i_limit_time = 60;
+    i_cur_time = i_limit_time;
+    
     this->loadView();
+    
+    this->updateTimeAndTooth(i_cur_time);
 
     return true;
 }
@@ -77,14 +82,11 @@ void CoachScene::loadView()
     timerBgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, timerY));
     this->addChild(timerBgSprite, 0);
     
-    p_timerLb = Label::createWithSystemFont("01:34",
-                                            "Arial",
-                                              40,
-                                              timerBgSprite->getContentSize(),
-                                              TextHAlignment::CENTER,
-                                              TextVAlignment::CENTER
-                                              );
-    p_timerLb->setTextColor(Color4B(233,0,32,255));
+    p_timerLb = Label::createWithTTF("", Default_Font_Name, Font_Size_Large);
+    p_timerLb->setDimensions(timerBgSprite->getContentSize().width, timerBgSprite->getContentSize().height);
+    p_timerLb->setHorizontalAlignment(TextHAlignment::CENTER);
+    p_timerLb->setVerticalAlignment(TextVAlignment::CENTER);
+    p_timerLb->setTextColor(Color4B::WHITE);
     p_timerLb->setPosition(Vec2(timerBgSprite->getContentSize().width / 2, timerBgSprite->getContentSize().height/2));
     timerBgSprite->addChild(p_timerLb,0);
     
@@ -114,27 +116,110 @@ void CoachScene::onEnter()
     
     listener->onTouchEnded = [=](Touch* touch, Event* event){
         log("sprite onTouchesEnded.. ");
-        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
-
-        model++;
-        
-        m_teethLy->setCurTooth((E_Tooth_SPACE)(model % Tooth_Space_Type_Max));
+//        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+//
+//        model++;
+//        
+//        m_teethLy->setCurTooth((E_Tooth_SPACE)(model % Tooth_Space_Type_Max));
     };
     
     cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    
+    //
+    schedule(schedule_selector(CoachScene::updateCustom), 1.0f, kRepeatForever, 0);
+    setGameStart(true);
 }
 
 void CoachScene::onExit()
 {
     cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(listener);
 
+    unschedule(schedule_selector(CoachScene::updateCustom));
+
     Layer::onExit();
+}
+
+void CoachScene::setGameStart(bool isStart)
+{
+    if (b_gameIsFinished)
+    {
+        resume();
+        return;
+    }
+    b_gameIsStart = isStart;
+    if (isStart) {
+        resume();
+    }
+    else{
+        pause();
+    }
+}
+
+
+void CoachScene::updateCustom(float dt)
+{
+    if (i_cur_time <= 0) {
+        this->setGameStart(false);
+        b_gameIsFinished = true;
+    }
+    else
+    {
+        i_cur_time--;
+    }
+    this->updateTimeAndTooth(i_cur_time);
+}
+
+void CoachScene::updateTimeAndTooth(int time)
+{
+    int curModel = Tooth_Space_Type_Max * time / (i_limit_time + 1);
+    if (curModel != model) {
+        model = curModel;
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+        m_teethLy->setCurTooth((E_Tooth_SPACE)(model));
+    }
+    
+    int m = time/60;
+    int s = time%60;
+    std::string mStr = "";
+    if (m < 10)
+        mStr = StringUtils::format("0%d",m);
+    else
+        mStr = StringUtils::format("%d",m);
+
+    std::string sStr = "";
+    if (s < 10)
+        sStr = StringUtils::format("0%d",s);
+    else
+        sStr = StringUtils::format("%d",s);
+    std::string timeStr = StringUtils::format("%s:%s", mStr.c_str(), sStr.c_str());
+    p_timerLb->setString(timeStr);
 }
 
 void CoachScene::menuCallback(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
 
+    this->setGameStart(false);
+    CMessageBox* pBox = CMessageBox::createBy(0,
+                                              this,
+                                              "",
+                                              "",
+                                              "退出",
+                                              "继续",
+                                              boxHandler_selector(CoachScene::backToMain),
+                                              boxHandler_selector(CoachScene::goonGame),
+                                              NULL);
+    this->addChild(pBox, 2);
+}
+
+
+void CoachScene::backToMain()
+{
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), true);
+}
+
+void CoachScene::goonGame()
+{
+    this->setGameStart(true);
 }

@@ -30,12 +30,28 @@ public:
     
     TeethLayer * m_teethLy;
 
+    bool b_gameIsStart;
+    bool b_gameIsFinished;
+
+    void setGameStart(bool isStart);
+    
+    //void update(float dt);
+    
+    void updateCustom(float dt);
+    void updateTimeAndTooth(int time);
+    
+    void backToMain();
+    void goonGame();
+    
 private:
     
     cocos2d::EventListenerTouchOneByOne* listener;
 
     int model;
     
+    int i_limit_time;
+    int i_cur_time;
+
     cocos2d::Label *p_timerLb;
 };
 #endif /* defined(__MyTeeth__CoachScene__) */

@@ -229,10 +229,10 @@ void GameScene::setGameStart(bool isStart)
     }
 }
 
-void GameScene::update(float dt)
-{
-    log("update dt=%f", dt);
-}
+//void GameScene::update(float dt)
+//{
+//    log("update dt=%f", dt);
+//}
 
 void GameScene::updateCustom(float dt)
 {
