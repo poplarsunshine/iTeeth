@@ -74,16 +74,35 @@ void GameScene::loadView()
     bg_c->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(bg_c, 0);
     
+    //score
+    auto sBgSprite = Scale9Sprite::create(cocos2d::Rect(80, 30, 12, 10), "star-bg.png");
+    sBgSprite->setContentSize(Size(visibleSize.width / 4, 70));
+    
+    sBgSprite->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, visibleSize.height - 50));
+    this->addChild(sBgSprite, 0);
+    
+    auto starSprite = Sprite::create("big-star.png");
+    starSprite->setPosition(Vec2(sBgSprite->getContentSize().width * 0.2, sBgSprite->getContentSize().height/2));
+    sBgSprite->addChild(starSprite, 0);
+    
+    p_scoreLb = Label::createWithTTF("234", Default_Font_Name, Font_Size_LargeX);
+    p_scoreLb->setDimensions(sBgSprite->getContentSize().width * 0.6, sBgSprite->getContentSize().height);
+    p_scoreLb->setHorizontalAlignment(TextHAlignment::CENTER);
+    p_scoreLb->setVerticalAlignment(TextVAlignment::CENTER);
+    p_scoreLb->setTextColor(Color4B::WHITE);
+    p_scoreLb->setPosition(Vec2(sBgSprite->getContentSize().width * 0.6, sBgSprite->getContentSize().height/2));
+    sBgSprite->addChild(p_scoreLb,0);
+    
     //add star
     m_starList = cocos2d::Vector<Sprite*>();
-    float beginX = visibleSize.width / 2;
-    float beginY = f_mid_y;
-    for (int i=0; i<10; i++) {
-        auto star = Sprite::create("star.png");
-        star->setPosition(Vec2(beginX + f_starOffsetX * i, beginY));
-        this->addChild(star, 0);
-        m_starList.pushBack(star);
-    }
+//    float beginX = visibleSize.width;
+//    float beginY = this->getStarY(level);
+//    for (int i=0; i<10; i++) {
+//        auto star = Sprite::create("star.png");
+//        star->setPosition(Vec2(beginX + f_starOffsetX * i, beginY));
+//        this->addChild(star, 0);
+//        m_starList.pushBack(star);
+//    }
     
     //panda
     p_panda = Sprite::create("panda-02.png");
@@ -91,7 +110,7 @@ void GameScene::loadView()
     f_offset_y = p_panda->getContentSize().height;
     
     p_panda->setPosition(Vec2(visibleSize.width * 0.26 + origin.x, f_mid_y));
-    this->addChild(p_panda, 0);
+    this->addChild(p_panda, 1);
     
     Animation*animation = Animation::create();
     for(int i=1; i<= 2; i++)
@@ -236,18 +255,84 @@ void GameScene::setGameStart(bool isStart)
 
 void GameScene::updateCustom(float dt)
 {
+    cocos2d::Vector<Sprite*> tempSprites = cocos2d::Vector<Sprite*>();
+
     //log("updateCustom dt=%f", dt);
     for (int i=0; i<m_starList.size(); i++) {
-        Sprite *star = m_starList.at(i);
+        cocos2d::Sprite *star = m_starList.at(i);
         //如果出左边界 置于末尾
         float curx = star->getPosition().x;
+        float cury = star->getPosition().y;
+
         if (curx < -80) {
-            star->setPosition(curx + m_starList.size() * f_starOffsetX, star->getPosition().y);
+            tempSprites.pushBack(star);
+//            star->removeFromParent();
+//            m_starList.eraseObject(star, false);
         }
         else
         {
             star->setPosition(curx - f_starSpeed, star->getPosition().y);
+
+            bool isHit = false;
+            float leftX = p_panda->getPosition().x + p_panda->getContentSize().width / 2 - star->getContentSize().width / 2;
+            float rightX = p_panda->getPosition().x + p_panda->getContentSize().width / 2 + star->getContentSize().width / 2;
+            float panda_y = p_panda->getPosition().y;
+            if (cury==panda_y && leftX < curx && curx < rightX) {
+                isHit = true;
+            }
+            if (isHit) {
+                score ++;
+                tempSprites.pushBack(star);
+
+//                star->removeFromParent();
+//                m_starList.eraseObject(star, false);
+            }
         }
+    }
+    
+    for (int i=0; i<tempSprites.size(); i++) {
+        cocos2d::Sprite *star = tempSprites.at(i);
+        star->removeFromParent();
+        tempSprites.eraseObject(star, false);
+        m_starList.eraseObject(star, false);
+    }
+    p_scoreLb->setString(StringUtils::format("%d", score));
+    
+    if (times >= 10) {
+        Size visibleSize = Director::getInstance()->getVisibleSize();
+        auto star = Sprite::create("star.png");
+        star->setPosition(Vec2(visibleSize.width, this->getStarY(level)));
+        this->addChild(star, 0);
+        m_starList.pushBack(star);
+        times = 0;
+    }
+    else{
+        times++;
+    }
+    
+    //brush
+    if (f_brushTimes >= 30) {
+        b_isBrushing = false;
+    }
+    else
+    {
+        f_brushTimes++;
+        b_isBrushing = true;
+    }
+    if (!b_isBrushing) {
+        p_panda->setPosition(p_panda->getPosition().x, f_mid_y);
+    }
+}
+
+float GameScene::getStarY(int level)
+{
+    float random = CCRANDOM_MINUS1_1();
+    if (random > 0) {
+        return f_mid_y + f_offset_y;
+    }
+    else
+    {
+        return f_mid_y - f_offset_y;
     }
 }
 
@@ -290,6 +375,7 @@ void GameScene::menuUpCallback(Ref* pSender)
         cocos2d::Blink *action = cocos2d::Blink::create(0.2, 1);
         p_panda->runAction(action);
     }
+    f_brushTimes = 0;
 }
 
 void GameScene::menuDownCallback(Ref* pSender)
@@ -303,6 +389,7 @@ void GameScene::menuDownCallback(Ref* pSender)
         cocos2d::Blink *action = cocos2d::Blink::create(0.2, 1);
         p_panda->runAction(action);
     }
+    f_brushTimes = 0;
 }
 
 void GameScene::setGameModel(E_GAME_MODEL model)

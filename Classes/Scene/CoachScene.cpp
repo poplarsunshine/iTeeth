@@ -75,6 +75,25 @@ void CoachScene::loadView()
     //m_teethLy->setDelegate(this);
     this->addChild(m_teethLy, 0);
     
+    //score
+    auto sBgSprite = Scale9Sprite::create(cocos2d::Rect(80, 30, 12, 10), "star-bg.png");
+    sBgSprite->setContentSize(Size(visibleSize.width / 4, 70));
+
+    sBgSprite->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, visibleSize.height - 50));
+    this->addChild(sBgSprite, 0);
+    
+    auto starSprite = Sprite::create("big-star.png");
+    starSprite->setPosition(Vec2(sBgSprite->getContentSize().width * 0.2, sBgSprite->getContentSize().height/2));
+    sBgSprite->addChild(starSprite, 0);
+    
+    p_scoreLb = Label::createWithTTF("234", Default_Font_Name, Font_Size_LargeX);
+    p_scoreLb->setDimensions(sBgSprite->getContentSize().width * 0.6, sBgSprite->getContentSize().height);
+    p_scoreLb->setHorizontalAlignment(TextHAlignment::CENTER);
+    p_scoreLb->setVerticalAlignment(TextVAlignment::CENTER);
+    p_scoreLb->setTextColor(Color4B::WHITE);
+    p_scoreLb->setPosition(Vec2(sBgSprite->getContentSize().width * 0.6, sBgSprite->getContentSize().height/2));
+    sBgSprite->addChild(p_scoreLb,0);
+    
     //timer
     auto timerBgSprite = Scale9Sprite::create(cocos2d::Rect(80, 50, 12, 6), "countdown-bg.png");
     timerBgSprite->setContentSize(Size(visibleSize.width / 2, 100));
@@ -82,12 +101,16 @@ void CoachScene::loadView()
     timerBgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, timerY));
     this->addChild(timerBgSprite, 0);
     
-    p_timerLb = Label::createWithTTF("", Default_Font_Name, Font_Size_Large);
-    p_timerLb->setDimensions(timerBgSprite->getContentSize().width, timerBgSprite->getContentSize().height);
+    auto clockSprite = Sprite::create("clock.png");
+    clockSprite->setPosition(Vec2(timerBgSprite->getContentSize().width * 0.33 / 2, timerBgSprite->getContentSize().height/2));
+    timerBgSprite->addChild(clockSprite, 0);
+    
+    p_timerLb = Label::createWithTTF("", Default_Font_Name, Font_Size_LargeXX);
+    p_timerLb->setDimensions(timerBgSprite->getContentSize().width * 0.6, timerBgSprite->getContentSize().height);
     p_timerLb->setHorizontalAlignment(TextHAlignment::CENTER);
     p_timerLb->setVerticalAlignment(TextVAlignment::CENTER);
     p_timerLb->setTextColor(Color4B::WHITE);
-    p_timerLb->setPosition(Vec2(timerBgSprite->getContentSize().width / 2, timerBgSprite->getContentSize().height/2));
+    p_timerLb->setPosition(Vec2(timerBgSprite->getContentSize().width * 0.6, timerBgSprite->getContentSize().height/2));
     timerBgSprite->addChild(p_timerLb,0);
     
     //add backBtn

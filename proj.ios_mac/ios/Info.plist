@@ -58,7 +58,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
-	<array/>
+	<array>
+		<string>FZEJW</string>
+	</array>
 	<key>UILaunchImages</key>
 	<array>
 		<dict>

@@ -127,6 +127,10 @@
 		BC7838B61B0B6FAD008766CE /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC7838B41B0B6FAD008766CE /* arial.ttf */; };
 		BC7838B71B0B6FAD008766CE /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC7838B51B0B6FAD008766CE /* Marker Felt.ttf */; };
 		BC7838BB1B0B70D7008766CE /* Simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7838B91B0B70D7008766CE /* Simple.cpp */; };
+		BC7838BE1B0CF5BB008766CE /* FZSEJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = BC7838BD1B0CF5BB008766CE /* FZSEJW.TTF */; };
+		BC7838C51B123171008766CE /* big-star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838C21B123171008766CE /* big-star.png */; };
+		BC7838C61B123171008766CE /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838C31B123171008766CE /* clock.png */; };
+		BC7838C71B123171008766CE /* star-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838C41B123171008766CE /* star-bg.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -302,9 +306,12 @@
 		BC7836B11B090D94008766CE /* AccountData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountData.h; sourceTree = "<group>"; };
 		BC7838B41B0B6FAD008766CE /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
 		BC7838B51B0B6FAD008766CE /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
-		BC7838B81B0B6FBA008766CE /* FZSEJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZSEJW.TTF; sourceTree = "<group>"; };
 		BC7838B91B0B70D7008766CE /* Simple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simple.cpp; sourceTree = "<group>"; };
 		BC7838BA1B0B70D7008766CE /* Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simple.h; sourceTree = "<group>"; };
+		BC7838BD1B0CF5BB008766CE /* FZSEJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZSEJW.TTF; sourceTree = "<group>"; };
+		BC7838C21B123171008766CE /* big-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "big-star.png"; sourceTree = "<group>"; };
+		BC7838C31B123171008766CE /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		BC7838C41B123171008766CE /* star-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-bg.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -537,6 +544,9 @@
 		AFF509D41AF7AEB40064BDB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BC7838C21B123171008766CE /* big-star.png */,
+				BC7838C31B123171008766CE /* clock.png */,
+				BC7838C41B123171008766CE /* star-bg.png */,
 				BC7836981B07CFEF008766CE /* panda-01.png */,
 				BC7836991B07CFEF008766CE /* panda-02.png */,
 				BC7836961B07BEF0008766CE /* countdown-bg.png */,
@@ -649,7 +659,7 @@
 		BC7838B31B0B6FAD008766CE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				BC7838B81B0B6FBA008766CE /* FZSEJW.TTF */,
+				BC7838BD1B0CF5BB008766CE /* FZSEJW.TTF */,
 				BC7838B41B0B6FAD008766CE /* arial.ttf */,
 				BC7838B51B0B6FAD008766CE /* Marker Felt.ttf */,
 			);
@@ -774,6 +784,7 @@
 				BC7836891B07A8FC008766CE /* tooth-10.png in Resources */,
 				BC7836911B07A8FC008766CE /* tooth-2.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				BC7838C61B123171008766CE /* clock.png in Resources */,
 				BC7836631B0653FD008766CE /* button-yellow-press.png in Resources */,
 				BC78368B1B07A8FC008766CE /* tooth-8.png in Resources */,
 				BC7836931B07A8FC008766CE /* tooth-3.png in Resources */,
@@ -798,6 +809,7 @@
 				AFF50A3E1AF92B0E0064BDB7 /* record.png in Resources */,
 				BC78369B1B07CFEF008766CE /* panda-02.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				BC7838BE1B0CF5BB008766CE /* FZSEJW.TTF in Resources */,
 				BC7836681B079587008766CE /* bg-b.png in Resources */,
 				BC7836A71B07DF5E008766CE /* background.mp3 in Resources */,
 				AFF509F21AF7CDCC0064BDB7 /* play.png in Resources */,
@@ -808,6 +820,7 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				BC78366F1B079EC4008766CE /* tooth-bg-c.png in Resources */,
 				BC78368D1B07A8FC008766CE /* tooth-5.png in Resources */,
+				BC7838C71B123171008766CE /* star-bg.png in Resources */,
 				BC7836871B07A8FC008766CE /* tooth-12.png in Resources */,
 				AFF50A6E1AFBA46C0064BDB7 /* boy.png in Resources */,
 				AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */,
@@ -829,6 +842,7 @@
 				BC7836691B079587008766CE /* bg-c.png in Resources */,
 				AFF50A421AF92B0E0064BDB7 /* setting.png in Resources */,
 				AFF50A341AF92B0E0064BDB7 /* bluetooth-close.png in Resources */,
+				BC7838C51B123171008766CE /* big-star.png in Resources */,
 				BC7836841B07A8FC008766CE /* tooth-15.png in Resources */,
 				AFF50A6F1AFBA46C0064BDB7 /* girl.png in Resources */,
 				BC78368C1B07A8FC008766CE /* tooth-4.png in Resources */,

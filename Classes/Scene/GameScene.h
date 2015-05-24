@@ -58,6 +58,9 @@ public:
     TeethLayer *m_teethLy;
     
     bool b_gameIsStart;
+    
+    bool b_isBrushing;
+    float f_brushTimes;
 
     void setGameModel(E_GAME_MODEL);
     
@@ -72,11 +75,16 @@ public:
 
     void menuUpCallback(cocos2d::Ref* pSender);
     void menuDownCallback(cocos2d::Ref* pSender);
+    
+    float getStarY(int level);
+
 private:
     
     cocos2d::EventListenerTouchOneByOne* listener;
 
     cocos2d::Vector<cocos2d::Sprite*> m_starList;
+    
+    cocos2d::Label *p_scoreLb;
     
     float f_mid_y;
     float f_offset_y;
@@ -84,5 +92,8 @@ private:
     float f_starOffsetX;
     
     int model;
+    int level;
+    int times;
+    int score;
 };
 #endif /* defined(__MyTeeth__GameScene__) */

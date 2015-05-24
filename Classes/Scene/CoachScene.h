@@ -53,5 +53,7 @@ private:
     int i_cur_time;
 
     cocos2d::Label *p_timerLb;
+    cocos2d::Label *p_scoreLb;
+
 };
 #endif /* defined(__MyTeeth__CoachScene__) */
