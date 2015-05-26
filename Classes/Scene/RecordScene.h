@@ -22,11 +22,23 @@ public:
     
     void loadView();
 
+    void leftMenuTouch(cocos2d::Ref* pSender);
+
+    void rightMenuTouch(cocos2d::Ref* pSender);
+
     void menuCallback(cocos2d::Ref* pSender);
     
     CREATE_FUNC(RecordScene);
     
+public:
+    virtual void onEnter();
+    virtual void onExit();
+    
+    virtual void myTouchEnded(cocos2d::Touch *pTouch, cocos2d::Event *pEvent);
+    
 private:
+    EventListenerTouchOneByOne* listener;
+
     cocos2d::Sprite* manSprite;
     cocos2d::Sprite* womSprite;
     
@@ -38,5 +50,23 @@ private:
     cocos2d::Label* month_lb;
 
     void updateAccountView();
+    
+    //record
+private:
+    Scale9Sprite* recordInfoBg;
+    cocos2d::Vector<cocos2d::Label*> m_dayLabels;
+
+    int min_y;
+    int min_m;
+    int max_y;
+    int max_m;
+    
+    long beginDate;
+    long nowDate;
+    
+    int cur_year;
+    int cur_month;
+    
+    void updateRecordViewWithDate(int y, int m);
 };
 #endif /* defined(__MyTeeth__RecordScene__) */

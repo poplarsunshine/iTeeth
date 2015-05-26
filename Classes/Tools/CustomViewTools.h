@@ -26,6 +26,8 @@ public:
                                                    int spriteCount = 10);
     
     static cocos2d::Label * creatTitleWith(GLfloat height, const std::string& title);
+    
+    static bool checkBounding( cocos2d::Node* pNode, cocos2d::Point& point );
 };
 
 #endif /* defined(__MyTeeth__CustomViewTools__) */

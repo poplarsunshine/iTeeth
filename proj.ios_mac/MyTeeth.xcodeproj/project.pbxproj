@@ -131,6 +131,14 @@
 		BC7838C51B123171008766CE /* big-star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838C21B123171008766CE /* big-star.png */; };
 		BC7838C61B123171008766CE /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838C31B123171008766CE /* clock.png */; };
 		BC7838C71B123171008766CE /* star-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838C41B123171008766CE /* star-bg.png */; };
+		BC7838D41B138D16008766CE /* DateUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC7838D21B138D16008766CE /* DateUtils.cpp */; };
+		BC7838D91B13A5B5008766CE /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838D51B13A5B5008766CE /* left.png */; };
+		BC7838DA1B13A5B5008766CE /* record_moon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838D61B13A5B5008766CE /* record_moon.png */; };
+		BC7838DB1B13A5B5008766CE /* record_sun.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838D71B13A5B5008766CE /* record_sun.png */; };
+		BC7838DC1B13A5B5008766CE /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7838D81B13A5B5008766CE /* right.png */; };
+		BCF212C81B14EF6600276D1A /* RecordDayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCF212C61B14EF6600276D1A /* RecordDayScene.cpp */; };
+		BCF212CA1B14F6A200276D1A /* small-round.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212C91B14F6A200276D1A /* small-round.png */; };
+		BCF212CC1B14F76C00276D1A /* round.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212CB1B14F76C00276D1A /* round.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -312,6 +320,16 @@
 		BC7838C21B123171008766CE /* big-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "big-star.png"; sourceTree = "<group>"; };
 		BC7838C31B123171008766CE /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		BC7838C41B123171008766CE /* star-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-bg.png"; sourceTree = "<group>"; };
+		BC7838D21B138D16008766CE /* DateUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateUtils.cpp; sourceTree = "<group>"; };
+		BC7838D31B138D16008766CE /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		BC7838D51B13A5B5008766CE /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		BC7838D61B13A5B5008766CE /* record_moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_moon.png; sourceTree = "<group>"; };
+		BC7838D71B13A5B5008766CE /* record_sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_sun.png; sourceTree = "<group>"; };
+		BC7838D81B13A5B5008766CE /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		BCF212C61B14EF6600276D1A /* RecordDayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecordDayScene.cpp; sourceTree = "<group>"; };
+		BCF212C71B14EF6600276D1A /* RecordDayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDayScene.h; sourceTree = "<group>"; };
+		BCF212C91B14F6A200276D1A /* small-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-round.png"; sourceTree = "<group>"; };
+		BCF212CB1B14F76C00276D1A /* round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -533,6 +551,8 @@
 				AF53BC4E1AF1393300348AE1 /* GameScene.h */,
 				AFF509E51AF7B95B0064BDB7 /* RecordScene.cpp */,
 				AFF509E61AF7B95B0064BDB7 /* RecordScene.h */,
+				BCF212C61B14EF6600276D1A /* RecordDayScene.cpp */,
+				BCF212C71B14EF6600276D1A /* RecordDayScene.h */,
 				AFF509EC1AF7BD030064BDB7 /* SettingScene.cpp */,
 				AFF509ED1AF7BD030064BDB7 /* SettingScene.h */,
 				AFF509E81AF7BD030064BDB7 /* BBSScene.cpp */,
@@ -544,6 +564,12 @@
 		AFF509D41AF7AEB40064BDB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BCF212C91B14F6A200276D1A /* small-round.png */,
+				BCF212CB1B14F76C00276D1A /* round.png */,
+				BC7838D51B13A5B5008766CE /* left.png */,
+				BC7838D61B13A5B5008766CE /* record_moon.png */,
+				BC7838D71B13A5B5008766CE /* record_sun.png */,
+				BC7838D81B13A5B5008766CE /* right.png */,
 				BC7838C21B123171008766CE /* big-star.png */,
 				BC7838C31B123171008766CE /* clock.png */,
 				BC7838C41B123171008766CE /* star-bg.png */,
@@ -614,6 +640,8 @@
 				AFF50A4D1AFA689D0064BDB7 /* CustomViewTools.h */,
 				BC7836B01B090D94008766CE /* AccountData.cpp */,
 				BC7836B11B090D94008766CE /* AccountData.h */,
+				BC7838D21B138D16008766CE /* DateUtils.cpp */,
+				BC7838D31B138D16008766CE /* DateUtils.h */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -772,6 +800,7 @@
 				BC7836601B0653FD008766CE /* button-green-default.png in Resources */,
 				BC78366D1B079EC4008766CE /* tooth-bg-a.png in Resources */,
 				BC78362B1B03ACEB008766CE /* calendar-bg.png in Resources */,
+				BCF212CC1B14F76C00276D1A /* round.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				AFF50A581AFA79A60064BDB7 /* bbs_bg.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
@@ -789,6 +818,7 @@
 				BC78368B1B07A8FC008766CE /* tooth-8.png in Resources */,
 				BC7836931B07A8FC008766CE /* tooth-3.png in Resources */,
 				BC7836671B079587008766CE /* bg-a.png in Resources */,
+				BC7838DA1B13A5B5008766CE /* record_moon.png in Resources */,
 				AFF50A3F1AF92B0E0064BDB7 /* return.png in Resources */,
 				AFF50A5E1AFA79A60064BDB7 /* set_bg.png in Resources */,
 				BC78369F1B07D715008766CE /* flyPanda.plist in Resources */,
@@ -798,6 +828,7 @@
 				AFF50A671AFB96930064BDB7 /* white-background.png in Resources */,
 				BC7836851B07A8FC008766CE /* tooth-14.png in Resources */,
 				AFF50A631AFA79B30064BDB7 /* background-icon01.png in Resources */,
+				BC7838DB1B13A5B5008766CE /* record_sun.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				AFF50A721AFBA8430064BDB7 /* right-boy.png in Resources */,
 				BC7838B61B0B6FAD008766CE /* arial.ttf in Resources */,
@@ -814,6 +845,7 @@
 				BC7836A71B07DF5E008766CE /* background.mp3 in Resources */,
 				AFF509F21AF7CDCC0064BDB7 /* play.png in Resources */,
 				BC78368F1B07A8FC008766CE /* tooth-7.png in Resources */,
+				BC7838D91B13A5B5008766CE /* left.png in Resources */,
 				BC78369A1B07CFEF008766CE /* panda-01.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				AFF50A5C1AFA79A60064BDB7 /* play_bg.png in Resources */,
@@ -822,6 +854,7 @@
 				BC78368D1B07A8FC008766CE /* tooth-5.png in Resources */,
 				BC7838C71B123171008766CE /* star-bg.png in Resources */,
 				BC7836871B07A8FC008766CE /* tooth-12.png in Resources */,
+				BCF212CA1B14F6A200276D1A /* small-round.png in Resources */,
 				AFF50A6E1AFBA46C0064BDB7 /* boy.png in Resources */,
 				AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */,
 				AFF50A351AF92B0E0064BDB7 /* bluetooth-open.png in Resources */,
@@ -829,6 +862,7 @@
 				BC7836A81B07DF5E008766CE /* rotate.wav in Resources */,
 				AFF50A5A1AFA79A60064BDB7 /* data_bg.png in Resources */,
 				BC78368A1B07A8FC008766CE /* tooth-9.png in Resources */,
+				BC7838DC1B13A5B5008766CE /* right.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -877,6 +911,7 @@
 				AFF509EF1AF7BD030064BDB7 /* CoachScene.cpp in Sources */,
 				BC7836B21B090D94008766CE /* AccountData.cpp in Sources */,
 				AF53BC491AF133C800348AE1 /* SceneManager.cpp in Sources */,
+				BC7838D41B138D16008766CE /* DateUtils.cpp in Sources */,
 				AFF509EE1AF7BD030064BDB7 /* BBSScene.cpp in Sources */,
 				BC7838BB1B0B70D7008766CE /* Simple.cpp in Sources */,
 				BC7836731B07A45A008766CE /* TeethLayer.cpp in Sources */,
@@ -886,6 +921,7 @@
 				AFF509F01AF7BD030064BDB7 /* SettingScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				AFF509E71AF7B95B0064BDB7 /* RecordScene.cpp in Sources */,
+				BCF212C81B14EF6600276D1A /* RecordDayScene.cpp in Sources */,
 				AF53BC4F1AF1393300348AE1 /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				AFF50A4E1AFA689D0064BDB7 /* CustomViewTools.cpp in Sources */,

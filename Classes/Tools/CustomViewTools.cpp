@@ -63,3 +63,19 @@ cocos2d::Label * CustomViewTools::creatTitleWith(GLfloat height, const std::stri
     titleLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - height / 2));
     return titleLabel;
 }
+
+bool CustomViewTools::checkBounding( Node* pNode, Point& point )
+{
+    if (pNode == NULL) {
+        return false;
+    }
+    int x = pNode->getPositionX();
+    int y = pNode->getPositionY();
+    int w = pNode->getContentSize().width;
+    int h = pNode->getContentSize().height;
+    if ( point.x < x - w/2 || point.x > x + w/2 || point.y < y -h/2 || point.y > y + h/2 )
+    {
+        return false;
+    }
+    return true;
+}

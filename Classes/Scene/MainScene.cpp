@@ -162,7 +162,7 @@ void MainScene::setCurMusicPlay(bool play)
     if (play)
     {
         soundItem->setSelectedIndex(1);
-        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(FileName_AudioBg);
+        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(FileName_AudioBg, true);
     }
     else
     {

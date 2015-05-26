@@ -166,13 +166,13 @@ void CMessageBox::myTouchEnded( Touch *pTouch, Event *pEvent )
     Point point = pTouch->getLocation() - this->getPosition();
     bool needDis = false;
     
-    if ( !checkBounding( m_pBackgroundSpr, point ) )
+    if ( ! CustomViewTools::checkBounding( m_pBackgroundSpr, point ) )
     {
         needDis = true;
     }
     else
     {
-        if ( checkBounding( m_pLeftSpr, point ) )
+        if ( CustomViewTools::checkBounding( m_pLeftSpr, point ) )
         {
             if ( NULL != m_leftCallback && NULL != m_pTarget)
             {
@@ -181,7 +181,7 @@ void CMessageBox::myTouchEnded( Touch *pTouch, Event *pEvent )
                 needDis = true;
             }
         }
-        else if ( checkBounding( m_pRightSpr, point )  )
+        else if ( CustomViewTools::checkBounding( m_pRightSpr, point )  )
         {
             if ( NULL != m_rightCallback && NULL != m_pTarget)
             {
@@ -206,19 +206,19 @@ void CMessageBox::dismissThisLayer()
     this->removeFromParent();
     //CMyMusic::sharedMyMusic()->playEffect("buttonT.mp3");
 }
-
-bool CMessageBox::checkBounding( Node* pNode, Point& point )
-{
-    if (pNode == NULL) {
-        return false;
-    }
-    int x = pNode->getPositionX();
-    int y = pNode->getPositionY();
-    int w = pNode->getContentSize().width;
-    int h = pNode->getContentSize().height;
-    if ( point.x < x - w/2 || point.x > x + w/2 || point.y < y -h/2 || point.y > y + h/2 )
-    {
-        return false;
-    }
-    return true;
-}
+//
+//bool CMessageBox::checkBounding( Node* pNode, Point& point )
+//{
+//    if (pNode == NULL) {
+//        return false;
+//    }
+//    int x = pNode->getPositionX();
+//    int y = pNode->getPositionY();
+//    int w = pNode->getContentSize().width;
+//    int h = pNode->getContentSize().height;
+//    if ( point.x < x - w/2 || point.x > x + w/2 || point.y < y -h/2 || point.y > y + h/2 )
+//    {
+//        return false;
+//    }
+//    return true;
+//}

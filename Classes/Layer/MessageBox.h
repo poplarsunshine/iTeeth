@@ -64,7 +64,7 @@ public:
     virtual void myTouchEnded(cocos2d::Touch *pTouch, cocos2d::Event *pEvent);
     
 public:
-    bool checkBounding( cocos2d::Node* pNode, cocos2d::Point& point );
+    //bool checkBounding( cocos2d::Node* pNode, cocos2d::Point& point );
     void dismissThisLayer();
 
 };

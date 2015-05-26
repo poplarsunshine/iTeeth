@@ -39,9 +39,13 @@ public:
     
     void updateCustom(float dt);
     void updateTimeAndTooth(int time);
-    
+    void setTimeMax(cocos2d::Ref* pSender);
+    void startTimer(float dt);
+
     void backToMain();
     void goonGame();
+    
+    int GetDayOfWeek();
     
 private:
     
@@ -49,11 +53,12 @@ private:
 
     int model;
     
+    float ready_time = 2.0f;
+    
     int i_limit_time;
     int i_cur_time;
 
     cocos2d::Label *p_timerLb;
     cocos2d::Label *p_scoreLb;
-
 };
 #endif /* defined(__MyTeeth__CoachScene__) */

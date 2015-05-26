@@ -38,11 +38,10 @@ bool CoachScene::init()
         return false;
     }
     
-    i_limit_time = 60;
-    i_cur_time = i_limit_time;
-    
     this->loadView();
     
+    i_limit_time = 60;
+    i_cur_time = i_limit_time;
     this->updateTimeAndTooth(i_cur_time);
 
     return true;
@@ -99,7 +98,12 @@ void CoachScene::loadView()
     timerBgSprite->setContentSize(Size(visibleSize.width / 2, 100));
     float timerY = toothBgSprite->getPosition().y + toothBgSprite->getContentSize().height / 2 + timerBgSprite->getContentSize().height;
     timerBgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, timerY));
-    this->addChild(timerBgSprite, 0);
+    this->addChild(timerBgSprite, 2);
+    
+    auto timerMenu = Scale9Sprite::create(cocos2d::Rect(80, 50, 12, 6), "countdown-bg.png");
+    timerMenu->setContentSize(Size(visibleSize.width / 2, 100));
+    auto timerItem = MenuItemSprite::create(timerMenu, timerMenu, nullptr, CC_CALLBACK_1(CoachScene::setTimeMax, this));
+    timerItem->setPosition(Vec2(visibleSize.width/2 + origin.x, timerY));
     
     auto clockSprite = Sprite::create("clock.png");
     clockSprite->setPosition(Vec2(timerBgSprite->getContentSize().width * 0.33 / 2, timerBgSprite->getContentSize().height/2));
@@ -117,7 +121,7 @@ void CoachScene::loadView()
     auto backItem = CustomViewTools::creatMyMenuItemSprite("return.png", CC_CALLBACK_1(CoachScene::menuCallback, this));
     backItem->setPosition(Vec2(origin.x + backItem->getContentSize().width ,
                                  origin.y + visibleSize.height - backItem->getContentSize().height));
-    auto menu = Menu::create(backItem, NULL);
+    auto menu = Menu::create(backItem, timerItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
 }
@@ -149,8 +153,7 @@ void CoachScene::onEnter()
     cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     //
-    schedule(schedule_selector(CoachScene::updateCustom), 1.0f, kRepeatForever, 0);
-    setGameStart(true);
+    schedule(schedule_selector(CoachScene::startTimer), ready_time);
 }
 
 void CoachScene::onExit()
@@ -158,6 +161,7 @@ void CoachScene::onExit()
     cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(listener);
 
     unschedule(schedule_selector(CoachScene::updateCustom));
+    unschedule(schedule_selector(CoachScene::startTimer));
 
     Layer::onExit();
 }
@@ -178,6 +182,31 @@ void CoachScene::setGameStart(bool isStart)
     }
 }
 
+void CoachScene::setTimeMax(Ref* pSender)
+{
+    if (b_gameIsStart) {
+        return;
+    }
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+
+    unschedule(schedule_selector(CoachScene::startTimer));
+
+    i_limit_time += 60;
+    if (i_limit_time > 180) {
+        i_limit_time = 60;
+    }
+    i_cur_time = i_limit_time;
+    this->updateTimeAndTooth(i_cur_time);
+    
+    schedule(schedule_selector(CoachScene::startTimer), ready_time);
+}
+
+void CoachScene::startTimer(float dt)
+{
+    schedule(schedule_selector(CoachScene::updateCustom), 1.0f, kRepeatForever, 0);
+    setGameStart(true);
+}
 
 void CoachScene::updateCustom(float dt)
 {

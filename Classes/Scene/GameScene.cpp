@@ -266,8 +266,6 @@ void GameScene::updateCustom(float dt)
 
         if (curx < -80) {
             tempSprites.pushBack(star);
-//            star->removeFromParent();
-//            m_starList.eraseObject(star, false);
         }
         else
         {
@@ -283,9 +281,6 @@ void GameScene::updateCustom(float dt)
             if (isHit) {
                 score ++;
                 tempSprites.pushBack(star);
-
-//                star->removeFromParent();
-//                m_starList.eraseObject(star, false);
             }
         }
     }
@@ -293,9 +288,10 @@ void GameScene::updateCustom(float dt)
     for (int i=0; i<tempSprites.size(); i++) {
         cocos2d::Sprite *star = tempSprites.at(i);
         star->removeFromParent();
-        tempSprites.eraseObject(star, false);
         m_starList.eraseObject(star, false);
     }
+    tempSprites.clear();
+
     p_scoreLb->setString(StringUtils::format("%d", score));
     
     if (times >= 10) {
