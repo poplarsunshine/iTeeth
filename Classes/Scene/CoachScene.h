@@ -53,7 +53,7 @@ private:
 
     int model;
     
-    float ready_time = 2.0f;
+    float ready_time = 4.0f;
     
     int i_limit_time;
     int i_cur_time;

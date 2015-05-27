@@ -41,9 +41,17 @@ public:
     virtual void onExit();
     
     //
-    cocos2d::Sprite *bg_a;
-    cocos2d::Sprite *bg_b;
-    cocos2d::Sprite *bg_c;
+    cocos2d::Layer *layer_a;
+    cocos2d::Layer *layer_b;
+    cocos2d::Layer *layer_c;
+
+    cocos2d::Vector<cocos2d::Sprite*> m_cloudList;
+
+    cocos2d::Sprite *cityBg1;
+    cocos2d::Sprite *cityBg2;
+
+//    cocos2d::Sprite *bg_b;
+//    cocos2d::Sprite *bg_c;
 
     cocos2d::LayerColor *colorLy_a;
     cocos2d::LayerColor *colorLy_b;

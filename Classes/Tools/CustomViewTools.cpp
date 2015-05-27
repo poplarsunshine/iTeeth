@@ -53,6 +53,7 @@ cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B&
 cocos2d::Label * CustomViewTools::creatTitleWith(GLfloat height, const std::string &title)
 {
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
+    cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
 
     auto titleLabel = cocos2d::Label::createWithTTF(title, Default_Font_Name, Font_Size_LargeXX);
     titleLabel->setDimensions(visibleSize.width, height);
@@ -60,7 +61,7 @@ cocos2d::Label * CustomViewTools::creatTitleWith(GLfloat height, const std::stri
     titleLabel->setVerticalAlignment(TextVAlignment::CENTER);
     titleLabel->setTextColor(Color4B::WHITE);
     titleLabel->enableOutline(ColorT2, 6.0);
-    titleLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - height / 2));
+    titleLabel->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height - height / 2));
     return titleLabel;
 }
 
@@ -78,4 +79,30 @@ bool CustomViewTools::checkBounding( Node* pNode, Point& point )
         return false;
     }
     return true;
+}
+
+void CustomViewTools::addAnimationAction(Node* pNode, int type)
+{
+    switch (type) {
+        case 0:
+        {
+            cocos2d::ScaleTo *action1 = cocos2d::ScaleTo::create(0.8, 1.0);
+            cocos2d::ScaleTo *action2 = cocos2d::ScaleTo::create(0.8, 0.9);
+            cocos2d::Sequence *salceAction = cocos2d::Sequence::create(action1, action2, NULL);
+            pNode->runAction(RepeatForever::create(salceAction));
+        }
+            break;
+        case 1:
+        {
+            cocos2d::ScaleTo *action1 = cocos2d::ScaleTo::create(0.4, 1.2);
+            cocos2d::ScaleTo *action2 = cocos2d::ScaleTo::create(0.4, 0.8);
+            cocos2d::Sequence *salceAction = cocos2d::Sequence::create(action1, action2, NULL);
+            cocos2d::RotateBy *rotate = cocos2d::RotateBy::create(0.8, 30);
+            cocos2d::Spawn *spawnAction = cocos2d::Spawn::create(rotate, salceAction, NULL);
+            pNode->runAction(RepeatForever::create(spawnAction));
+        }
+            break;
+        default:
+            break;
+    }
 }

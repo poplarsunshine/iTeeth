@@ -139,6 +139,14 @@
 		BCF212C81B14EF6600276D1A /* RecordDayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCF212C61B14EF6600276D1A /* RecordDayScene.cpp */; };
 		BCF212CA1B14F6A200276D1A /* small-round.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212C91B14F6A200276D1A /* small-round.png */; };
 		BCF212CC1B14F76C00276D1A /* round.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212CB1B14F76C00276D1A /* round.png */; };
+		BCF212D61B16222900276D1A /* bg-b-lou.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212D31B16222900276D1A /* bg-b-lou.png */; };
+		BCF212D71B16222900276D1A /* bg-c-cao.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212D41B16222900276D1A /* bg-c-cao.png */; };
+		BCF212D81B16222900276D1A /* bg-c-woniu.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212D51B16222900276D1A /* bg-c-woniu.png */; };
+		BCF212DE1B1629DD00276D1A /* bg-c-yuan3.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212D91B1629DD00276D1A /* bg-c-yuan3.png */; };
+		BCF212DF1B1629DD00276D1A /* bg-c-yuan12.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DA1B1629DD00276D1A /* bg-c-yuan12.png */; };
+		BCF212E01B1629DD00276D1A /* yanhua-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DB1B1629DD00276D1A /* yanhua-1.png */; };
+		BCF212E11B1629DD00276D1A /* yanhua-2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DC1B1629DD00276D1A /* yanhua-2.png */; };
+		BCF212E21B1629DD00276D1A /* yanhua-3.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DD1B1629DD00276D1A /* yanhua-3.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -330,6 +338,14 @@
 		BCF212C71B14EF6600276D1A /* RecordDayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDayScene.h; sourceTree = "<group>"; };
 		BCF212C91B14F6A200276D1A /* small-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-round.png"; sourceTree = "<group>"; };
 		BCF212CB1B14F76C00276D1A /* round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round.png; sourceTree = "<group>"; };
+		BCF212D31B16222900276D1A /* bg-b-lou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-b-lou.png"; sourceTree = "<group>"; };
+		BCF212D41B16222900276D1A /* bg-c-cao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-c-cao.png"; sourceTree = "<group>"; };
+		BCF212D51B16222900276D1A /* bg-c-woniu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-c-woniu.png"; sourceTree = "<group>"; };
+		BCF212D91B1629DD00276D1A /* bg-c-yuan3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-c-yuan3.png"; sourceTree = "<group>"; };
+		BCF212DA1B1629DD00276D1A /* bg-c-yuan12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-c-yuan12.png"; sourceTree = "<group>"; };
+		BCF212DB1B1629DD00276D1A /* yanhua-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yanhua-1.png"; sourceTree = "<group>"; };
+		BCF212DC1B1629DD00276D1A /* yanhua-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yanhua-2.png"; sourceTree = "<group>"; };
+		BCF212DD1B1629DD00276D1A /* yanhua-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yanhua-3.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -564,6 +580,9 @@
 		AFF509D41AF7AEB40064BDB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BCF212D31B16222900276D1A /* bg-b-lou.png */,
+				BCF212D41B16222900276D1A /* bg-c-cao.png */,
+				BCF212D51B16222900276D1A /* bg-c-woniu.png */,
 				BCF212C91B14F6A200276D1A /* small-round.png */,
 				BCF212CB1B14F76C00276D1A /* round.png */,
 				BC7838D51B13A5B5008766CE /* left.png */,
@@ -577,6 +596,11 @@
 				BC7836991B07CFEF008766CE /* panda-02.png */,
 				BC7836961B07BEF0008766CE /* countdown-bg.png */,
 				BC7836941B07BE65008766CE /* center-bg.png */,
+				BCF212D91B1629DD00276D1A /* bg-c-yuan3.png */,
+				BCF212DA1B1629DD00276D1A /* bg-c-yuan12.png */,
+				BCF212DB1B1629DD00276D1A /* yanhua-1.png */,
+				BCF212DC1B1629DD00276D1A /* yanhua-2.png */,
+				BCF212DD1B1629DD00276D1A /* yanhua-3.png */,
 				BC78366A1B079EC4008766CE /* tooth-bg-a.png */,
 				BC78366B1B079EC4008766CE /* tooth-bg-b.png */,
 				BC78366C1B079EC4008766CE /* tooth-bg-c.png */,
@@ -821,6 +845,7 @@
 				BC7838DA1B13A5B5008766CE /* record_moon.png in Resources */,
 				AFF50A3F1AF92B0E0064BDB7 /* return.png in Resources */,
 				AFF50A5E1AFA79A60064BDB7 /* set_bg.png in Resources */,
+				BCF212D61B16222900276D1A /* bg-b-lou.png in Resources */,
 				BC78369F1B07D715008766CE /* flyPanda.plist in Resources */,
 				AFF50A651AFA79B30064BDB7 /* background-icon03.png in Resources */,
 				AFF50A331AF92B0E0064BDB7 /* BBS.png in Resources */,
@@ -836,6 +861,7 @@
 				AFF50A371AF92B0E0064BDB7 /* cloud.png in Resources */,
 				BC78368E1B07A8FC008766CE /* tooth-6.png in Resources */,
 				BC7836881B07A8FC008766CE /* tooth-11.png in Resources */,
+				BCF212E21B1629DD00276D1A /* yanhua-3.png in Resources */,
 				BC7836611B0653FD008766CE /* button-green-press.png in Resources */,
 				AFF50A3E1AF92B0E0064BDB7 /* record.png in Resources */,
 				BC78369B1B07CFEF008766CE /* panda-02.png in Resources */,
@@ -848,15 +874,19 @@
 				BC7838D91B13A5B5008766CE /* left.png in Resources */,
 				BC78369A1B07CFEF008766CE /* panda-01.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				BCF212D81B16222900276D1A /* bg-c-woniu.png in Resources */,
 				AFF50A5C1AFA79A60064BDB7 /* play_bg.png in Resources */,
+				BCF212D71B16222900276D1A /* bg-c-cao.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				BC78366F1B079EC4008766CE /* tooth-bg-c.png in Resources */,
 				BC78368D1B07A8FC008766CE /* tooth-5.png in Resources */,
 				BC7838C71B123171008766CE /* star-bg.png in Resources */,
+				BCF212DF1B1629DD00276D1A /* bg-c-yuan12.png in Resources */,
 				BC7836871B07A8FC008766CE /* tooth-12.png in Resources */,
 				BCF212CA1B14F6A200276D1A /* small-round.png in Resources */,
 				AFF50A6E1AFBA46C0064BDB7 /* boy.png in Resources */,
 				AFF50A731AFBA8430064BDB7 /* right-girl.png in Resources */,
+				BCF212E01B1629DD00276D1A /* yanhua-1.png in Resources */,
 				AFF50A351AF92B0E0064BDB7 /* bluetooth-open.png in Resources */,
 				AFF50A3B1AF92B0E0064BDB7 /* music-open.png in Resources */,
 				BC7836A81B07DF5E008766CE /* rotate.wav in Resources */,
@@ -868,12 +898,14 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				BC7836861B07A8FC008766CE /* tooth-13.png in Resources */,
 				AFF50A5F1AFA79A60064BDB7 /* tooth_bg.png in Resources */,
+				BCF212DE1B1629DD00276D1A /* bg-c-yuan3.png in Resources */,
 				BC7836901B07A8FC008766CE /* tooth-1.png in Resources */,
 				AFF50A591AFA79A60064BDB7 /* chooseModle.png in Resources */,
 				BC7836951B07BE65008766CE /* center-bg.png in Resources */,
 				AFF50A3A1AF92B0E0064BDB7 /* music-close.png in Resources */,
 				AFF50A431AF92B0E0064BDB7 /* sun.png in Resources */,
 				BC7836691B079587008766CE /* bg-c.png in Resources */,
+				BCF212E11B1629DD00276D1A /* yanhua-2.png in Resources */,
 				AFF50A421AF92B0E0064BDB7 /* setting.png in Resources */,
 				AFF50A341AF92B0E0064BDB7 /* bluetooth-close.png in Resources */,
 				BC7838C51B123171008766CE /* big-star.png in Resources */,

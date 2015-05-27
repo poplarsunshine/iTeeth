@@ -61,24 +61,90 @@ void GameScene::loadView()
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 //    this->addChild(bgSprite, 0);
     
-    //bg
-    bg_a = Sprite::create("bg-a.png");
+    layer_a = Layer::create();
+    this->addChild(layer_a, 0);
+    
+    layer_b = Layer::create();
+    this->addChild(layer_b, 0);
+    
+    layer_c = Layer::create();
+    this->addChild(layer_c, 0);
+
+    //bg a
+    Sprite *bg_a = Sprite::create("bg-a.png");
     bg_a->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    this->addChild(bg_a, 0);
+    layer_a->addChild(bg_a, 0);
     
-    bg_b = Sprite::create("bg-b.png");
+    m_cloudList = cocos2d::Vector<Sprite*>();
+    for (int i=0; i<3; i++) {
+        float randomx = CCRANDOM_0_1();
+        Sprite *cloud = Sprite::create("cloud.png");
+        cloud->setPosition(Vec2(visibleSize.width * randomx + origin.x, visibleSize.height * (1 + randomx) / 2 + origin.y));
+        cloud->setOpacity(200 + 55 * randomx);
+        cloud->setScale(0.5 + 0.5 * randomx);
+        layer_a->addChild(cloud, 0);
+        m_cloudList.pushBack(cloud);
+    }
+    
+    //bg b
+    Sprite *bg_b = Sprite::create("bg-b.png");
     bg_b->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    this->addChild(bg_b, 0);
+    layer_b->addChild(bg_b, 0);
     
-    bg_c = Sprite::create("bg-c.png");
+    cityBg1 = Sprite::create("bg-b-lou.png");
+    cityBg1->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    layer_b->addChild(cityBg1, 0);
+    cityBg2 = Sprite::create("bg-b-lou.png");
+    cityBg2->setPosition(Vec2(cityBg1->getPosition().x + cityBg1->getContentSize().width, cityBg1->getPosition().y));
+    layer_b->addChild(cityBg2, 0);
+    
+    //bg c
+    Sprite *bg_c = Sprite::create("bg-c.png");
     bg_c->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    this->addChild(bg_c, 0);
+    layer_c->addChild(bg_c, 0);
+    
+    Sprite *light1 = Sprite::create("yanhua-3.png");
+    light1->setPosition(Vec2(visibleSize.width * 0.9 + origin.x, visibleSize.height * 0.9 + origin.y));
+    layer_c->addChild(light1, 0);
+    CustomViewTools::addAnimationAction(light1, 1);
+    
+    Sprite *subBg1 = Sprite::create("bg-c-yuan3.png");
+    subBg1->setPosition(Vec2(visibleSize.width * 0.5 + origin.x, visibleSize.height * 0.7 + origin.y));
+    layer_c->addChild(subBg1, 0);
+    
+    Sprite *light2 = Sprite::create("yanhua-2.png");
+    light2->setPosition(Vec2(visibleSize.width * 0.25 + origin.x, visibleSize.height * 0.8 + origin.y));
+    layer_c->addChild(light2, 0);
+    CustomViewTools::addAnimationAction(light2, 1);
+
+    Sprite *light3 = Sprite::create("yanhua-1.png");
+    light3->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, visibleSize.height * 0.8 + origin.y));
+    layer_c->addChild(light3, 0);
+    CustomViewTools::addAnimationAction(light3, 1);
+
+    Sprite *subBg2 = Sprite::create("bg-c-yuan12.png");
+    subBg2->setPosition(Vec2(subBg1->getPosition().x, subBg1->getPosition().y));
+    layer_c->addChild(subBg2, 0);
+    
+    Sprite *item1 = Sprite::create("bg-c-cao.png");
+    item1->setPosition(Vec2(visibleSize.width * 0.25 + origin.x, visibleSize.height * 0.45 + origin.y));
+    item1->setScale(1.1);
+    layer_c->addChild(item1, 0);
+    
+    Sprite *item2 = Sprite::create("bg-c-cao.png");
+    item2->setPosition(Vec2(visibleSize.width * 0.75 + origin.x, visibleSize.height * 0.45 + origin.y));
+    item2->setFlippedX(true);
+    layer_c->addChild(item2, 0);
+    
+    Sprite *wall = Sprite::create("bg-c-woniu.png");
+    wall->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height * 0.45 + origin.y));
+    layer_c->addChild(wall, 0);
     
     //score
     auto sBgSprite = Scale9Sprite::create(cocos2d::Rect(80, 30, 12, 10), "star-bg.png");
     sBgSprite->setContentSize(Size(visibleSize.width / 4, 70));
     
-    sBgSprite->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, visibleSize.height - 50));
+    sBgSprite->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, origin.y + visibleSize.height - 50));
     this->addChild(sBgSprite, 0);
     
     auto starSprite = Sprite::create("big-star.png");
@@ -125,7 +191,6 @@ void GameScene::loadView()
     
     Animate*action = Animate::create(animation);
     p_panda->runAction(RepeatForever::create(action));
-    
 
     //tooth bg
     float toothBgWidth = visibleSize.width;
@@ -255,6 +320,7 @@ void GameScene::setGameStart(bool isStart)
 
 void GameScene::updateCustom(float dt)
 {
+    //star
     cocos2d::Vector<Sprite*> tempSprites = cocos2d::Vector<Sprite*>();
 
     //log("updateCustom dt=%f", dt);
@@ -317,6 +383,36 @@ void GameScene::updateCustom(float dt)
     }
     if (!b_isBrushing) {
         p_panda->setPosition(p_panda->getPosition().x, f_mid_y);
+    }
+    
+    
+    //bg a
+    for (int i=0; i<m_cloudList.size(); i++) {
+        Sprite *cloud = m_cloudList.at(i);
+        float curx = cloud->getPosition().x;
+        if (curx < -cloud->getContentSize().width) {
+            cloud->setPosition(this->getContentSize().width + cloud->getContentSize().width, this->getContentSize().height * (1 + CCRANDOM_0_1()) / 2);
+        }
+        else{
+            cloud->setPosition(curx - f_starSpeed / (10 - i), cloud->getPosition().y);
+        }
+    }
+    
+    //bg b
+    float citySpeed = f_starSpeed / 6;
+    float city1x = cityBg1->getPosition().x;
+    if (city1x <= -cityBg1->getContentSize().width / 2) {
+        cityBg1->setPosition(cityBg2->getPosition().x + cityBg2->getContentSize().width - citySpeed, cityBg2->getPosition().y);
+    }
+    else{
+        cityBg1->setPosition(city1x - citySpeed, cityBg1->getPosition().y);
+    }
+    float city2x = cityBg2->getPosition().x;
+    if (city2x <= -cityBg2->getContentSize().width / 2) {
+        cityBg2->setPosition(cityBg1->getPosition().x + cityBg1->getContentSize().width - citySpeed, cityBg1->getPosition().y);
+    }
+    else{
+        cityBg2->setPosition(city2x - citySpeed, cityBg2->getPosition().y);
     }
 }
 
@@ -390,9 +486,10 @@ void GameScene::menuDownCallback(Ref* pSender)
 
 void GameScene::setGameModel(E_GAME_MODEL model)
 {
-    bg_a->setVisible(false);
-    bg_b->setVisible(false);
-    bg_c->setVisible(false);
+    layer_a->setVisible(false);
+    layer_b->setVisible(false);
+    layer_c->setVisible(false);
+
     colorLy_a->setVisible(false);
     colorLy_b->setVisible(false);
     colorLy_c->setVisible(false);
@@ -403,21 +500,21 @@ void GameScene::setGameModel(E_GAME_MODEL model)
     switch (model) {
         case GAME_STATE_DAY:
         {
-            bg_a->setVisible(true);
+            layer_a->setVisible(true);
             colorLy_a->setVisible(true);
             tooth_bg_a->setVisible(true);
             break;
         }
         case GAME_STATE_NIGHT:
         {
-            bg_b->setVisible(true);
+            layer_b->setVisible(true);
             colorLy_b->setVisible(true);
             tooth_bg_c->setVisible(true);
             break;
         }
         case GAME_STATE_SUPER:
         {
-            bg_c->setVisible(true);
+            layer_c->setVisible(true);
             colorLy_c->setVisible(true);
             tooth_bg_c->setVisible(true);
             break;

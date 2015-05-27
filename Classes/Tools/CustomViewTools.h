@@ -28,6 +28,8 @@ public:
     static cocos2d::Label * creatTitleWith(GLfloat height, const std::string& title);
     
     static bool checkBounding( cocos2d::Node* pNode, cocos2d::Point& point );
+    
+    static void addAnimationAction(cocos2d::Node* pNode, int type);
 };
 
 #endif /* defined(__MyTeeth__CustomViewTools__) */

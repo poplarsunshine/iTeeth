@@ -65,18 +65,21 @@ void MainScene::loadView()
     cloudSprite1->setPosition(Vec2(visibleSize.width * 0.2 + origin.x, visibleSize.height * 0.85 + origin.y));
     cloudSprite1->setOpacity(140);
     this->addChild(cloudSprite1, 0);
-    
+    //CustomViewTools::addAnimationAction(cloudSprite1, 0);
+
     auto cloudSprite2 = Sprite::create("cloud.png");
     cloudSprite2->setPosition(Vec2(visibleSize.width * 0.9 + origin.x, visibleSize.height * 0.88 + origin.y));
     cloudSprite2->setScale(0.4);
     cloudSprite2->setOpacity(40);
     this->addChild(cloudSprite2, 0);
-    
+    //CustomViewTools::addAnimationAction(cloudSprite2, 0);
+
     //sun
     auto sunSprite = Sprite::create("sun.png");
     sunSprite->setPosition(Vec2(visibleSize.width*0.78 + origin.x, visibleSize.height*0.8 + origin.y));
     this->addChild(sunSprite, 0);
-    
+    //CustomViewTools::addAnimationAction(sunSprite, 0);
+
     //tooth
     auto toothSprite = Sprite::create("tooth.png");
     toothSprite->setPosition(Vec2(visibleSize.width + origin.x - toothSprite->getContentSize().width * 2.4, origin.y + toothSprite->getContentSize().height * 0.7));
@@ -102,7 +105,8 @@ void MainScene::loadView()
     auto playItem = CustomViewTools::creatMyMenuItemSprite("play.png", CC_CALLBACK_1(MainScene::menuGoPlay, this));
     playItem->setPosition(Vec2(origin.x + visibleSize.width * 0.84,
                                  origin.y + visibleSize.height * 0.3));
-    
+    CustomViewTools::addAnimationAction(playItem, 0);
+
     //musice----_ ——
     auto openSprite = Sprite::create("music-open.png");
     auto closeSprite = Sprite::create("music-close.png");
@@ -112,7 +116,8 @@ void MainScene::loadView()
                                                         closeToggleMenuItem,
                                                         openToggleMenuItem,
                                                         NULL);
-    
+    CustomViewTools::addAnimationAction(soundItem, 0);
+
     bool bgMusicOn = UserDefault::getInstance()->getBoolForKey(MusicIsPlayKey);
     this->setCurMusicPlay(bgMusicOn);
     
@@ -127,10 +132,12 @@ void MainScene::loadView()
                                            CC_CALLBACK_1(MainScene::menuGoBlueTooth, this));
     blueToothItem->setPosition(Vec2(origin.x + visibleSize.width * 0.62,
                                 origin.y + visibleSize.height * 0.18));
+    CustomViewTools::addAnimationAction(blueToothItem, 0);
+
     auto bbsItem = CustomViewTools::creatMyMenuItemSprite("BBS.png", CC_CALLBACK_1(MainScene::menuGoBBS, this));
     bbsItem->setPosition(Vec2(origin.x + bbsItem->getContentSize().width/2,
                                  origin.y + bbsItem->getContentSize().height * 0.9));
-    
+
     auto menu = Menu::create(recordItem,
                              settingItem,
                              playItem,

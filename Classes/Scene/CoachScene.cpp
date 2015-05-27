@@ -78,7 +78,7 @@ void CoachScene::loadView()
     auto sBgSprite = Scale9Sprite::create(cocos2d::Rect(80, 30, 12, 10), "star-bg.png");
     sBgSprite->setContentSize(Size(visibleSize.width / 4, 70));
 
-    sBgSprite->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, visibleSize.height - 50));
+    sBgSprite->setPosition(Vec2(visibleSize.width * 0.8 + origin.x, origin.y + visibleSize.height - 50));
     this->addChild(sBgSprite, 0);
     
     auto starSprite = Sprite::create("big-star.png");

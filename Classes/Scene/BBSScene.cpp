@@ -48,10 +48,6 @@ void BBSScene::loadView()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-//    auto bgSprite = Sprite::create("bbs_bg.png");
-//    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-//    this->addChild(bgSprite, 0);
-    
     auto colorLy = CustomViewTools::creatMyLayerColor(Color4B(255, 219, 8, 255),
                                                       visibleSize.width,
                                                       visibleSize.height,
@@ -61,7 +57,7 @@ void BBSScene::loadView()
     
     //add scroll text
     float offset = 20.0;
-    float topY = 100.0;
+    float topY = 100;
     float width = visibleSize.width - offset * 2;
     float height = visibleSize.height - topY - offset;
     

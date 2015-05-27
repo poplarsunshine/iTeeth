@@ -68,7 +68,7 @@ void RecordDayScene::loadView()
     //info
     auto accountInfoBg = Sprite::create("round.png");
     accountInfoBg->setContentSize(cocos2d::Size(visibleSize.width * 0.6, visibleSize.width * 0.6));
-    accountInfoBg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height + origin.y - accountInfoBg->getContentSize().height / 2 - infobgY - offsetY));
+    accountInfoBg->setPosition(Vec2(visibleSize.width/2, visibleSize.height + origin.y - accountInfoBg->getContentSize().height / 2 - infobgY - offsetY));
     this->addChild(accountInfoBg, 0);
     
     date_lb = Label::createWithTTF("", Default_Font_Name, Font_Size_Large);
