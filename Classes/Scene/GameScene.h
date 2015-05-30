@@ -37,6 +37,8 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(GameScene);
     
+    void brushNotification(cocos2d::Ref* obj);
+
     virtual void onEnter();
     virtual void onExit();
     
@@ -103,5 +105,6 @@ private:
     int level;
     int times;
     int score;
+    
 };
 #endif /* defined(__MyTeeth__GameScene__) */

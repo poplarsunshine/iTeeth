@@ -45,6 +45,7 @@ bool RecordScene::init()
     
     this->updateAccountView();
 
+    DateUtils::getCurrentTime();
     //recode
     m_dayLabels = cocos2d::Vector<Label*>();
 

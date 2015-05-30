@@ -22,7 +22,7 @@ std::string DateUtils::getCurrentDate()
     
     char date1[32] = {0};
     sprintf(date1, "%d%02d%02d", (int)time->tm_year + 1900, (int)time->tm_mon + 1, (int)time->tm_mday);
-    //log("%s", date1);        //显示年月日
+    log("date1=%s", date1);        //显示年月日
     
     return date1;
 }
@@ -39,7 +39,7 @@ std::string DateUtils::getCurrentTime()
     
     char date2[50] = {0};
     sprintf(date2, "%02d%02d", (int)time->tm_hour, (int)time->tm_min);
-    //log("%s", date2);       //显示时分
+    log("date2=%s", date2);       //显示时分
     return date2;
 }
 

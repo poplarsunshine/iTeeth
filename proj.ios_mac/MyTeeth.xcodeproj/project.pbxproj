@@ -147,6 +147,9 @@
 		BCF212E01B1629DD00276D1A /* yanhua-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DB1B1629DD00276D1A /* yanhua-1.png */; };
 		BCF212E11B1629DD00276D1A /* yanhua-2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DC1B1629DD00276D1A /* yanhua-2.png */; };
 		BCF212E21B1629DD00276D1A /* yanhua-3.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212DD1B1629DD00276D1A /* yanhua-3.png */; };
+		BCF212EA1B18CC7D00276D1A /* ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCF212E81B18CC7D00276D1A /* ios.cpp */; };
+		BCF212EE1B18CE3000276D1A /* XBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = BCF212EC1B18CE3000276D1A /* XBridge.mm */; };
+		BCF212F01B18E86C00276D1A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF212EF1B18E86C00276D1A /* CoreBluetooth.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -346,6 +349,12 @@
 		BCF212DB1B1629DD00276D1A /* yanhua-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yanhua-1.png"; sourceTree = "<group>"; };
 		BCF212DC1B1629DD00276D1A /* yanhua-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yanhua-2.png"; sourceTree = "<group>"; };
 		BCF212DD1B1629DD00276D1A /* yanhua-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yanhua-3.png"; sourceTree = "<group>"; };
+		BCF212E71B18CBB100276D1A /* API_Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_Interface.h; sourceTree = "<group>"; };
+		BCF212E81B18CC7D00276D1A /* ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ios.cpp; sourceTree = "<group>"; };
+		BCF212E91B18CC7D00276D1A /* ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios.h; sourceTree = "<group>"; };
+		BCF212EC1B18CE3000276D1A /* XBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XBridge.mm; sourceTree = "<group>"; };
+		BCF212ED1B18CE3000276D1A /* XBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBridge.h; sourceTree = "<group>"; };
+		BCF212EF1B18E86C00276D1A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -360,6 +369,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF212F01B18E86C00276D1A /* CoreBluetooth.framework in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
@@ -402,6 +412,7 @@
 				5087E77117EB970100C73F5D /* Icons */,
 				503AE0FA17EB989F00D1A890 /* AppController.h */,
 				503AE0FB17EB989F00D1A890 /* AppController.mm */,
+				BCF212EB1B18CDB700276D1A /* Class */,
 				503AE0FC17EB989F00D1A890 /* main.m */,
 				503AE0FD17EB989F00D1A890 /* Prefix.pch */,
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
@@ -446,6 +457,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCF212EF1B18E86C00276D1A /* CoreBluetooth.framework */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
 				52B47A461A53D09B004E4C60 /* Security.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
@@ -491,6 +503,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BCF212E51B18CB8E00276D1A /* platform */,
 				BC7838B91B0B70D7008766CE /* Simple.cpp */,
 				BC7838BA1B0B70D7008766CE /* Simple.h */,
 				BC7836A91B07E040008766CE /* config */,
@@ -717,6 +730,34 @@
 			);
 			path = fonts;
 			sourceTree = "<group>";
+		};
+		BCF212E51B18CB8E00276D1A /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				BCF212E61B18CB8E00276D1A /* ios */,
+				BCF212E71B18CBB100276D1A /* API_Interface.h */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		BCF212E61B18CB8E00276D1A /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				BCF212E81B18CC7D00276D1A /* ios.cpp */,
+				BCF212E91B18CC7D00276D1A /* ios.h */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		BCF212EB1B18CDB700276D1A /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				BCF212EC1B18CE3000276D1A /* XBridge.mm */,
+				BCF212ED1B18CE3000276D1A /* XBridge.h */,
+			);
+			name = Class;
+			path = ios/Class;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -952,6 +993,8 @@
 				AF53BC4C1AF1372100348AE1 /* MainScene.cpp in Sources */,
 				AFF509F01AF7BD030064BDB7 /* SettingScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				BCF212EE1B18CE3000276D1A /* XBridge.mm in Sources */,
+				BCF212EA1B18CC7D00276D1A /* ios.cpp in Sources */,
 				AFF509E71AF7B95B0064BDB7 /* RecordScene.cpp in Sources */,
 				BCF212C81B14EF6600276D1A /* RecordDayScene.cpp in Sources */,
 				AF53BC4F1AF1393300348AE1 /* GameScene.cpp in Sources */,
@@ -989,7 +1032,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: lipeng wang (JZ3MZWR6S5)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1010,15 +1054,16 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
-				PROVISIONING_PROFILE = "0f42f412-5db2-41b1-a09d-3e446a7fc61b";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -1026,7 +1071,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: lipeng wang (JZ3MZWR6S5)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1045,15 +1091,16 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
-				PROVISIONING_PROFILE = "0f42f412-5db2-41b1-a09d-3e446a7fc61b";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Release;
 		};
@@ -1155,7 +1202,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: lipeng wang (JZ3MZWR6S5)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1178,11 +1226,11 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
-				PROVISIONING_PROFILE = "0f42f412-5db2-41b1-a09d-3e446a7fc61b";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = AD_HOC;
 		};

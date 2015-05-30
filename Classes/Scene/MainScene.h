@@ -11,6 +11,8 @@
 
 #include "Header.h"
 
+extern int BluetoothConnect;
+
 class MainScene : public cocos2d::Layer
 {
 public:
@@ -35,9 +37,15 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(MainScene);
     
+    void blueConnectNotification(cocos2d::Ref* obj);
+    
+    virtual void onEnter();
+    virtual void onExit();
+    
     //
     cocos2d::MenuItemToggle *soundItem;
-    
+    cocos2d::MenuItemToggle *blueToothItem;
+
     void goToPlay();
     void goToLearn();
     

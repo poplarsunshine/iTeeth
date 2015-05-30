@@ -14,8 +14,12 @@
 #include "SettingScene.h"
 #include "BBSScene.h"
 
+#include "API_Interface.h"
+
 USING_NS_CC;
 USING_NS_CC_EXT;
+
+int BluetoothConnect = 0;
 
 Scene* MainScene::createScene()
 {
@@ -116,23 +120,27 @@ void MainScene::loadView()
                                                         closeToggleMenuItem,
                                                         openToggleMenuItem,
                                                         NULL);
+    soundItem->setPosition(Vec2(origin.x + visibleSize.width * 0.11,
+                                origin.y + visibleSize.height * 0.30));
     CustomViewTools::addAnimationAction(soundItem, 0);
 
     bool bgMusicOn = UserDefault::getInstance()->getBoolForKey(MusicIsPlayKey);
     this->setCurMusicPlay(bgMusicOn);
     
-//    auto soundItem = MenuItemImage::create("music-open.png",
-//                                            "music-open.png",
-//                                            CC_CALLBACK_1(MainScene::menuGoSound, this));
-    soundItem->setPosition(Vec2(origin.x + visibleSize.width * 0.11,
-                                 origin.y + visibleSize.height * 0.30));
-    
-    auto blueToothItem = MenuItemImage::create("bluetooth-close.png",
-                                           "bluetooth-close.png",
-                                           CC_CALLBACK_1(MainScene::menuGoBlueTooth, this));
+
+    //bluetoothItem
+    auto bopenSprite = Sprite::create("bluetooth-open.png");
+    auto bcloseSprite = Sprite::create("bluetooth-close.png");
+    auto bopenToggleMenuItem = MenuItemSprite::create(bopenSprite, bopenSprite);
+    auto bcloseToggleMenuItem = MenuItemSprite::create(bcloseSprite,bcloseSprite);
+    blueToothItem = MenuItemToggle::createWithCallback(CC_CALLBACK_1(MainScene::menuGoBlueTooth, this),
+                                                       bcloseToggleMenuItem,
+                                                       bopenToggleMenuItem,
+                                                       NULL);
     blueToothItem->setPosition(Vec2(origin.x + visibleSize.width * 0.62,
                                 origin.y + visibleSize.height * 0.18));
     CustomViewTools::addAnimationAction(blueToothItem, 0);
+    blueToothItem->setSelectedIndex(BluetoothConnect);
 
     auto bbsItem = CustomViewTools::creatMyMenuItemSprite("BBS.png", CC_CALLBACK_1(MainScene::menuGoBBS, this));
     bbsItem->setPosition(Vec2(origin.x + bbsItem->getContentSize().width/2,
@@ -161,6 +169,29 @@ void MainScene::loadView()
 //    auto mn = Menu::create(toggleMenuItem, NULL);
 //    mn->setPosition(Point::ZERO);
 //    this->addChild(mn);
+}
+
+void MainScene::onEnter()
+{
+    Layer::onEnter();
+    
+    NotificationCenter::getInstance()->addObserver(this, CC_CALLFUNCO_SELECTOR(MainScene::blueConnectNotification), "bluetoothConnectNotification", NULL);
+}
+
+void MainScene::onExit()
+{
+    NotificationCenter::getInstance()->removeObserver(this, "bluetoothConnectNotification");
+
+    Layer::onExit();
+}
+
+
+void MainScene::blueConnectNotification(cocos2d::Ref* obj)
+{
+    cocos2d::String *value = (cocos2d::String *)obj;
+    int tag = atoi(value->getCString());
+    BluetoothConnect = tag;
+    blueToothItem->setSelectedIndex(tag);
 }
 
 void MainScene::setCurMusicPlay(bool play)
@@ -208,6 +239,11 @@ void MainScene::menuGoSound(cocos2d::Ref* pSender)
 void MainScene::menuGoBlueTooth(cocos2d::Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
+    
+    setBluetoothEnable(isPlaying);
+    
+    blueToothItem->setSelectedIndex(0);
+    BluetoothConnect = 0;
 }
 
 void MainScene::menuGoBBS(cocos2d::Ref* pSender)

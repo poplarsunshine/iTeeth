@@ -252,7 +252,8 @@ void GameScene::loadView()
     auto backItem = CustomViewTools::creatMyMenuItemSprite("return.png", CC_CALLBACK_1(GameScene::menuCallback, this));
     backItem->setPosition(Vec2(origin.x + backItem->getContentSize().width ,
                                origin.y + visibleSize.height - backItem->getContentSize().height));
-    auto menu = Menu::create(backItem, upItem, downItem, NULL);
+    //auto menu = Menu::create(backItem, upItem, downItem, NULL);
+    auto menu = Menu::create(backItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
     
@@ -283,7 +284,7 @@ void GameScene::onEnter()
         
         this->setGameModel(E_GAME_MODEL((model/4) % GAME_STATE_MAX));
         
-        m_teethLy->setCurTooth(E_Tooth_SPACE(model % Tooth_Space_Type_Max));
+        //m_teethLy->setCurTooth(E_Tooth_SPACE(model % Tooth_Space_Type_Max));
     };
     
     cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
@@ -291,15 +292,34 @@ void GameScene::onEnter()
     //
     schedule(schedule_selector(GameScene::updateCustom), 1.0f / 30.0, kRepeatForever, 0);
     setGameStart(true);
+    
+    //
+    NotificationCenter::getInstance()->addObserver(this, CC_CALLFUNCO_SELECTOR(GameScene::brushNotification), "bluetoothBrushNotification", NULL);
 }
 
 void GameScene::onExit()
 {
+    NotificationCenter::getInstance()->removeObserver(this, "bluetoothBrushNotification");
+    
     unschedule(schedule_selector(GameScene::updateCustom));
 
     cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(listener);
 
     Layer::onExit();
+}
+
+void GameScene::brushNotification(cocos2d::Ref* obj)
+{
+    cocos2d::String *value = (cocos2d::String *)obj;
+    int tag = atoi(value->getCString());
+    if (tag < 8) {
+        this->menuUpCallback(NULL);
+    }
+    else
+    {
+        this->menuDownCallback(NULL);
+    }
+    m_teethLy->setCurTooth(E_Tooth_SPACE(tag));
 }
 
 void GameScene::setGameStart(bool isStart)
@@ -460,13 +480,12 @@ void GameScene::menuUpCallback(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     
-    float curY = p_panda->getPosition().y;
-    if (curY != f_mid_y + f_offset_y) {
-        p_panda->setPosition(Vec2(p_panda->getPosition().x, curY + f_offset_y));
-        
-        cocos2d::Blink *action = cocos2d::Blink::create(0.2, 1);
-        p_panda->runAction(action);
-    }
+//    float curY = this->p_panda->getPosition().y;
+//    if (curY != f_mid_y + f_offset_y) {
+//        p_panda->setPosition(Vec2(p_panda->getPosition().x, curY + f_offset_y));
+//    }
+    
+    p_panda->setPosition(Vec2(p_panda->getPosition().x, f_mid_y + f_offset_y));
     f_brushTimes = 0;
 }
 
@@ -474,18 +493,21 @@ void GameScene::menuDownCallback(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     
-    float curY = p_panda->getPosition().y;
-    if (curY != f_mid_y - f_offset_y) {
-        p_panda->setPosition(Vec2(p_panda->getPosition().x, curY - f_offset_y));
-        
-        cocos2d::Blink *action = cocos2d::Blink::create(0.2, 1);
-        p_panda->runAction(action);
-    }
+//    float curY = p_panda->getPosition().y;
+//    if (curY != f_mid_y - f_offset_y) {
+//        p_panda->setPosition(Vec2(p_panda->getPosition().x, curY - f_offset_y));
+//    }
+    
+    p_panda->setPosition(Vec2(p_panda->getPosition().x, f_mid_y - f_offset_y));
     f_brushTimes = 0;
 }
 
 void GameScene::setGameModel(E_GAME_MODEL model)
 {
+    if (model >= GAME_STATE_MAX) {
+        return;
+    }
+    
     layer_a->setVisible(false);
     layer_b->setVisible(false);
     layer_c->setVisible(false);
