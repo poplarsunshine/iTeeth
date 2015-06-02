@@ -24,8 +24,8 @@ cocos2d::MenuItemSprite * CustomViewTools::creatMyMenuItemSprite(const std::stri
 }
 
 cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B& color,
-                                                         GLfloat width,
-                                                         GLfloat height,
+                                                         float width,
+                                                         float height,
                                                          bool showSprites,
                                                          int spriteCount)
 {

@@ -9,7 +9,8 @@
 #include "API_Interface.h"
 #include <stdio.h>
 
-#include "GameScene.h"
+#include "Header.h"
+//#include "GameScene.h"
 
 #if defined(CC_TARGET_OS_IPHONE)
 

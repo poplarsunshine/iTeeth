@@ -1,0 +1,20 @@
+#ifndef   _SSANDROID_H_
+#define  _SSANDROID_H_
+
+#include "../PAIInerface.h"
+#include "../../common/Singleton.h"
+
+class CAndroid/* : public Singleton<CAndroid>*/
+{
+
+	//DECLARE_SINGLETON(CAndroid);
+public:
+	void toast(const char *msg);
+
+	
+};
+
+
+void sendString(std::string str);
+
+#endif   //_SSANDROID_H_

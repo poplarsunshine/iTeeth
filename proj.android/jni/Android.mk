@@ -19,7 +19,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/Layer/MessageBox.cpp\
 ../../Classes/Layer/TeethLayer.cpp\
 ../../Classes/Manager/SceneManager.cpp\
-../../Classes/platform/ios/ios.cpp\
+../../Classes/platform/android/android.cpp\
 ../../Classes/Scene/BBSScene.cpp\
 ../../Classes/Scene/CoachScene.cpp\
 ../../Classes/Scene/GameScene.cpp\
@@ -36,7 +36,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes\
                     $(LOCAL_PATH)/../../Classes/config\
                     $(LOCAL_PATH)/../../Classes/Layer\
                     $(LOCAL_PATH)/../../Classes/platform\
-                    $(LOCAL_PATH)/../../Classes/platform/ios\
+                    $(LOCAL_PATH)/../../Classes/platform/android\
                     $(LOCAL_PATH)/../../Classes/Scene\
                     $(LOCAL_PATH)/../../Classes/Manager\
                     $(LOCAL_PATH)/../../Classes/Tools

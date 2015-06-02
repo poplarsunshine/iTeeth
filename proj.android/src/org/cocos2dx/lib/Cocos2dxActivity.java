@@ -27,7 +27,10 @@ import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.egl.EGLDisplay;
 
+import jni.JniApi;
+
 import org.cocos2dx.lib.Cocos2dxHelper.Cocos2dxHelperListener;
+
 import com.chukong.cocosplay.client.CocosPlayClient;
 
 import android.app.Activity;
@@ -236,6 +239,11 @@ public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelpe
         if(mWebViewHelper == null){
             mWebViewHelper = new Cocos2dxWebViewHelper(mFrameLayout);
         }
+        
+        //
+        Log.d("ccccccccccccccccc", "dddddddd");
+        JniApi.androidBluetoothConnected(true);
+        JniApi.androidBluetoothEvent(1, 16);
     }
 
     //native method,call GLViewImpl::getGLContextAttrs() to get the OpenGL ES context attributions

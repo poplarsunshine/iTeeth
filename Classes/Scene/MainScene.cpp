@@ -14,7 +14,7 @@
 #include "SettingScene.h"
 #include "BBSScene.h"
 
-#include "API_Interface.h"
+#include "../platform/API_Interface.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -240,7 +240,7 @@ void MainScene::menuGoBlueTooth(cocos2d::Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     
-    //setBluetoothEnable(isPlaying);
+    setBluetoothEnable(true);
     
     blueToothItem->setSelectedIndex(0);
     BluetoothConnect = 0;

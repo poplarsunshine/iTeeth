@@ -9,6 +9,7 @@
 #ifndef MyTeeth_API_Interface_h
 #define MyTeeth_API_Interface_h
 
+// to platform
 void setBluetoothEnable(bool btEnable);
 
 //

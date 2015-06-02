@@ -1,0 +1,283 @@
+#include "android.h"
+#include "cocos2d.h"
+
+USING_NS_CC;
+
+//IMPLEMENT_SINGLETON(CAndroid)
+
+#if defined(ANDROID)
+
+
+
+#include "jni.h"
+#include "platform/android/jni/JniHelper.h"
+#include <android/log.h>
+
+
+extern "C"
+{
+	//java 调用C++
+	JNIEXPORT jboolean JNICALL Java_org_cocos2d_jnidemo_JniDemos_click(JNIEnv *env, jobject thiz, jstring key, jstring message)
+	{
+
+		
+
+		return true;
+
+	}
+};
+
+
+int testJNI()
+{
+	JniMethodInfo method;
+	//C++调用java
+	bool b = JniHelper::getStaticMethodInfo(method, "org.cocos2d.jnidemo.JniDemos", "add", "(II)I");
+	if(b) {
+		jint square = method.env->CallStaticIntMethod(method.classID, method.methodID, 50, 60);
+		CCLog("result: %d", square);
+		
+		method.env->DeleteLocalRef(method.classID);
+		
+		return square;
+	}
+
+	return 0;
+}
+
+void sendString(std::string url)
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "sendString", "(Ljava/lang/String;)V");
+	jstring stringArg = method.env->NewStringUTF(url.c_str());
+	if(b) {
+
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, stringArg);
+
+		method.env->DeleteLocalRef(method.classID);
+		method.env->DeleteLocalRef(stringArg);
+	}
+}
+
+std::string getCacheDir()
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "getCacheDir", "()Ljava/lang/String;");
+	if(b) {
+		jobject z = method.env->CallStaticObjectMethod(method.classID, method.methodID);
+		std::string result = method.env->GetStringUTFChars((jstring)z, 0);
+		
+		method.env->DeleteLocalRef(method.classID);
+		method.env->DeleteLocalRef(z);
+		return result;
+	}
+}
+
+void CAndroid::toast( const char *msg )
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "toast", "(Ljava/lang/String;)V");
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, msg);
+		
+		//const char *result=method.env->GetStringUTFChars((jstring)z, 0);
+		
+		method.env->DeleteLocalRef(method.classID);
+		//return result;
+	}
+}
+
+
+char* getPlatformMark()
+{
+	return "asdf";
+}
+
+
+//播放视频
+void  playMovie()
+{
+
+}
+
+//开始视频录像
+void startUseCamera()
+{
+
+}
+
+//获得MAC 地址
+std::string getMacAddress()
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "getMacAddress", "()Ljava/lang/String;");
+	if(b) {
+		jobject z = method.env->CallStaticObjectMethod(method.classID, method.methodID);
+
+		const char *result=method.env->GetStringUTFChars((jstring)z, 0);
+		std::string mac(result);
+		
+		method.env->DeleteLocalRef(method.classID);
+		method.env->DeleteLocalRef(z);
+
+		return mac;
+	}
+	return "0000000000";
+}
+
+//获得设备号ID
+int getDeviceID()
+{
+	JniMethodInfo method;
+	//C++调用java
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "getDeviceID", "()I");
+	if(b) {
+		jint deviceId = method.env->CallStaticIntMethod(method.classID, method.methodID);
+		CCLog("result: %d", deviceId);
+		method.env->DeleteLocalRef(method.classID);
+		return deviceId;
+	}
+
+	return 2;
+}
+
+//获得平台号ID
+int getPlatID()
+{
+	JniMethodInfo method;
+	//C++调用java
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "getPlatID", "()I");
+	if(b) {
+		jint platId = method.env->CallStaticIntMethod(method.classID, method.methodID);
+		CCLog("result: %d", platId);
+		method.env->DeleteLocalRef(method.classID);
+		return platId;
+	}
+
+	return 0;
+}
+
+//获得版本号
+std::string getVersion()
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "getVersion", "()Ljava/lang/String;");
+	if(b) {
+		jobject z = method.env->CallStaticObjectMethod(method.classID, method.methodID);
+
+		const char *result=method.env->GetStringUTFChars((jstring)z, 0);
+		std::string version(result);
+		
+		method.env->DeleteLocalRef(method.classID);
+		method.env->DeleteLocalRef(z);
+		return version;
+	}
+	return "1.0.0.0.0";
+}
+
+void playVideo(std::string filePath)
+{
+	JniMethodInfo method;
+	
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "playVideo", "(Ljava/lang/String;)V");
+	jstring stringArg = method.env->NewStringUTF(filePath.c_str());   
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, stringArg);
+
+		method.env->DeleteLocalRef(method.classID);
+		
+	}
+	method.env->DeleteLocalRef(method.classID);
+	method.env->DeleteLocalRef(stringArg);
+}
+
+void stopVideo()
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "stopVideo", "()V");
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID);
+
+		//const char *result=method.env->GetStringUTFChars((jstring)z, 0);
+
+		method.env->DeleteLocalRef(method.classID);
+		//return result;
+	}
+}
+
+void setVideoPause(bool pause)
+{
+	JniMethodInfo method;
+
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "setVideoPause", "(Z)V");
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, pause);
+
+		//const char *result=method.env->GetStringUTFChars((jstring)z, 0);
+
+		method.env->DeleteLocalRef(method.classID);
+		//return result;
+	}
+}
+
+void shareMessage(std::string mess, int toPlat, int type)
+{
+	JniMethodInfo method;
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "shareMessage", "(Ljava/lang/String;)V");
+	jstring stringArg = method.env->NewStringUTF(mess.c_str());   
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, stringArg);
+
+		method.env->DeleteLocalRef(method.classID);
+		method.env->DeleteLocalRef(stringArg);
+	}
+}
+
+
+void openUrl (std::string url)
+{
+	JniMethodInfo method;
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "openUrl", "(Ljava/lang/String;)V");
+	jstring stringArg = method.env->NewStringUTF(url.c_str());
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, stringArg);
+	}
+	method.env->DeleteLocalRef(method.classID);
+	method.env->DeleteLocalRef(stringArg);
+
+}
+
+//init jf
+void initJF(std::string userid)
+{
+	JniMethodInfo method;
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "initJf", "(Ljava/lang/String;)V");
+	jstring stringArg = method.env->NewStringUTF(userid.c_str());
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID, stringArg);
+	}
+	method.env->DeleteLocalRef(method.classID);
+	method.env->DeleteLocalRef(stringArg);
+
+}
+
+//open jf
+void openJF()
+{
+	JniMethodInfo method;
+	bool b = JniHelper::getStaticMethodInfo(method, "com.app.OneTwoThree.jni.JniApi", "openJf", "()V");
+	
+	if(b) {
+		method.env->CallStaticVoidMethod(method.classID, method.methodID);
+	}
+	method.env->DeleteLocalRef(method.classID);
+	
+}
+
+#endif

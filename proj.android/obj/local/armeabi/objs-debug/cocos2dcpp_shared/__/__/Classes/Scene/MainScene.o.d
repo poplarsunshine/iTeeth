@@ -441,7 +441,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/Scene/MainScene.o: 
  jni/../../Classes/Scene/RecordScene.h \
  jni/../../Classes/Scene/SettingScene.h \
  jni/../../Classes/Scene/BBSScene.h \
- jni/../../Classes/platform/API_Interface.h
+ jni/../../Classes/Scene/../platform/API_Interface.h
 
 jni/../../Classes/Scene/MainScene.h:
 
@@ -1329,4 +1329,4 @@ jni/../../Classes/Scene/SettingScene.h:
 
 jni/../../Classes/Scene/BBSScene.h:
 
-jni/../../Classes/platform/API_Interface.h:
+jni/../../Classes/Scene/../platform/API_Interface.h:

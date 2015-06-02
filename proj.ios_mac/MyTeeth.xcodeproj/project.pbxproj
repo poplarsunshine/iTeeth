@@ -128,6 +128,7 @@
 		BCA3FD871B1CD65A00035B19 /* background_icon01.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA3FD841B1CD65A00035B19 /* background_icon01.png */; };
 		BCA3FD881B1CD65A00035B19 /* background_icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA3FD851B1CD65A00035B19 /* background_icon02.png */; };
 		BCA3FD891B1CD65A00035B19 /* background_icon03.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA3FD861B1CD65A00035B19 /* background_icon03.png */; };
+		BCC045191B1E048300E90139 /* android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCC045171B1E048300E90139 /* android.cpp */; };
 		BCF212C81B14EF6600276D1A /* RecordDayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCF212C61B14EF6600276D1A /* RecordDayScene.cpp */; };
 		BCF212CA1B14F6A200276D1A /* small-round.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212C91B14F6A200276D1A /* small-round.png */; };
 		BCF212CC1B14F76C00276D1A /* round.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF212CB1B14F76C00276D1A /* round.png */; };
@@ -321,6 +322,8 @@
 		BCA3FD841B1CD65A00035B19 /* background_icon01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_icon01.png; sourceTree = "<group>"; };
 		BCA3FD851B1CD65A00035B19 /* background_icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_icon02.png; sourceTree = "<group>"; };
 		BCA3FD861B1CD65A00035B19 /* background_icon03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_icon03.png; sourceTree = "<group>"; };
+		BCC045171B1E048300E90139 /* android.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = android.cpp; sourceTree = "<group>"; };
+		BCC045181B1E048300E90139 /* android.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = android.h; sourceTree = "<group>"; };
 		BCF212C61B14EF6600276D1A /* RecordDayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecordDayScene.cpp; sourceTree = "<group>"; };
 		BCF212C71B14EF6600276D1A /* RecordDayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDayScene.h; sourceTree = "<group>"; };
 		BCF212C91B14F6A200276D1A /* small-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-round.png"; sourceTree = "<group>"; };
@@ -707,9 +710,19 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		BCC045161B1E048300E90139 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				BCC045171B1E048300E90139 /* android.cpp */,
+				BCC045181B1E048300E90139 /* android.h */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
 		BCF212E51B18CB8E00276D1A /* platform */ = {
 			isa = PBXGroup;
 			children = (
+				BCC045161B1E048300E90139 /* android */,
 				BCF212E61B18CB8E00276D1A /* ios */,
 				BCF212E71B18CBB100276D1A /* API_Interface.h */,
 			);
@@ -954,6 +967,7 @@
 				AF53BC491AF133C800348AE1 /* SceneManager.cpp in Sources */,
 				BC7838D41B138D16008766CE /* DateUtils.cpp in Sources */,
 				AFF509EE1AF7BD030064BDB7 /* BBSScene.cpp in Sources */,
+				BCC045191B1E048300E90139 /* android.cpp in Sources */,
 				BC7838BB1B0B70D7008766CE /* Simple.cpp in Sources */,
 				BC7836731B07A45A008766CE /* TeethLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
@@ -1027,7 +1041,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "92548372-319f-42fd-98ec-cf33a71eb504";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -1064,7 +1078,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "92548372-319f-42fd-98ec-cf33a71eb504";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -1171,7 +1185,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lipeng wang (JZ3MZWR6S5)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1194,7 +1208,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "92548372-319f-42fd-98ec-cf33a71eb504";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";

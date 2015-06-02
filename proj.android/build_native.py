@@ -23,14 +23,14 @@ def build(build_mode):
     elif build_mode != 'release':
         build_mode = 'debug'
     
-    try:
-        COCOS_CONSOLE_ROOT = os.environ['COCOS_CONSOLE_ROOT']
-    except Exception:
-        print "COCOS_CONSOLE_ROOT not define. Please define COCOS_CONSOLE_ROOT in your environment!"
-    sys.exit(1)
-    command = '%s/cocos compile -p android -s %s -m %s' % (COCOS_CONSOLE_ROOT, app_android_root, build_mode)
+#    try:
+#        COCOS_CONSOLE_ROOT = os.environ['COCOS_CONSOLE_ROOT']
+#    except Exception:
+#        print "COCOS_CONSOLE_ROOT not define. Please define COCOS_CONSOLE_ROOT in your environment!"
+#    sys.exit(1)
+#    command = '%s/cocos compile -p android -s %s -m %s' % (COCOS_CONSOLE_ROOT, app_android_root, build_mode)
 
-#command = 'cocos compile -p android -s %s -m %s' % (app_android_root, build_mode)
+    command = 'cocos compile -p android -s %s -m %s' % (app_android_root, build_mode)
     if os.system(command) != 0:
         raise Exception("Build dynamic library for project [ " + app_android_root + " ] fails!")
 

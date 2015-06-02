@@ -1,0 +1,185 @@
+package com.app.OneTwoThree.jni;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import com.app.OneTwoThree.Global;
+import com.app.OneTwoThree.OneTwoThree;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.util.Log;
+
+public class Utils
+{
+	/**
+	 * 获取手机mac地址 需要配置一下权限 <uses-permission
+	 * android:name="android.permission.ACCESS_WIFI_STATE" />
+	 * */
+	public static String getLocalMacAddress(Context context)
+	{
+		WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+		WifiInfo info = wifi.getConnectionInfo();
+		return info.getMacAddress();
+	}
+	
+	
+	/**
+	 * 分享功能
+	 * 
+	 * @param context
+	 *            上下文
+	 * @param activityTitle
+	 *            Activity的名字
+	 * @param msgTitle
+	 *            消息标题
+	 * @param msgText
+	 *            消息内容
+	 * @param imgPath
+	 *            图片路径，不分享图片则传null
+	 */
+	public static void shareMsg(Context context, String activityTitle,
+			String msgTitle, String msgText, String imgPath)
+	{
+		Intent intent = new Intent(Intent.ACTION_SEND);
+		if (imgPath == null || imgPath.equals(""))
+		{
+			intent.setType("text/plain"); // 纯文本
+			
+		}
+		else
+		{
+			File f = new File(imgPath);
+			if (f != null && f.exists() && f.isFile())
+			{
+				intent.setType("image/png");
+				Uri u = Uri.fromFile(f);
+				intent.putExtra(Intent.EXTRA_STREAM, u);
+			}
+		}
+		intent.putExtra(Intent.EXTRA_SUBJECT, msgTitle);
+		intent.putExtra(Intent.EXTRA_TEXT, msgText);
+		
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(Intent.createChooser(intent, activityTitle));
+	}
+	
+	
+	
+	
+	// 分享照片 
+	public static void share(String message, String photoUri,final Activity activity){
+	    Intent shareIntent = new Intent(Intent.ACTION_SEND); 
+	    if( photoUri != null )
+	    {
+	    	File file = new File(photoUri); 
+	    	shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+	    }
+	    if( message != null && message.length() > 0)
+	    {
+	    	shareIntent.putExtra(Intent.EXTRA_TEXT, "" + message);
+	    	Log.e("abc", "abc:: " + message);
+	    }
+	    shareIntent.setType("image/jpeg"); 
+	    shareIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    Global.oneThree.startActivity(Intent.createChooser(shareIntent, activity.getTitle())); 
+	} 
+	
+	 public static void share(final Activity acty, final String path, final String message, final String title) {
+	        new Thread(new Runnable(){
+	            @Override
+	            public void run() {
+	                Intent intent = new Intent("android.intent.action.SEND");  
+			        intent.setType("image/*");      
+			        intent.putExtra(Intent.EXTRA_SUBJECT, "" + title);      
+			        intent.putExtra(Intent.EXTRA_TEXT, "" + message);
+			        intent.putExtra(Intent.EXTRA_STREAM,Uri.parse("" + path));
+			        //Log.i("debug", "/data/data/" + acty.getApplicationInfo().packageName+ "/share.png");
+			        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);     
+			        acty.startActivity(Intent.createChooser(intent, "" + title)); 
+	        }
+	        
+	    }).start();
+	}
+
+	
+	
+	// 分享ICON
+	public static void share(String message, final Activity activity) { 
+		Intent shareIntent = new Intent(Intent.ACTION_SEND); 
+		try
+		{
+			InputStream inputStream = activity.getResources().getAssets().open("icon.png");
+			BufferedInputStream inp = new BufferedInputStream(inputStream);
+			
+			BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("" + Global.cacheDir + "icon.png"));
+			byte b[] = new byte[1024];
+			int len = 0;
+			while (( len = inp.read(b)) > 0) {
+				out.write(b, 0, len);
+			}
+			inp.close();
+			out.close();
+			
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File("" + Global.cacheDir + "icon.png")));
+		if(message != null )
+			shareIntent.putExtra(Intent.EXTRA_TEXT, "" + message);
+		shareIntent.setType("image/jpeg"); 
+		Global.context.startActivity(Intent.createChooser(shareIntent, activity.getTitle())); 
+	} 
+	
+	
+	
+	public static void shareIcon(String message)
+	{
+		Utils.share(message, Global.oneThree);
+	}
+	
+	
+	public static void extIcon()
+	{
+		try
+		{
+			InputStream inputStream = Global.oneThree.getResources().getAssets().open("icon.png");
+			BufferedInputStream inp = new BufferedInputStream(inputStream);
+			
+			BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("" + Global.cacheDir + "icon.png"));
+			byte b[] = new byte[1024];
+			int len = 0;
+			while (( len = inp.read(b)) > 0) {
+				out.write(b, 0, len);
+			}
+			inp.close();
+			out.close();
+			
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+}

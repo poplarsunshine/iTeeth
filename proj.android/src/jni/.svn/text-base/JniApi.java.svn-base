@@ -1,0 +1,183 @@
+package com.app.OneTwoThree.jni;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Message;
+import android.util.Log;
+
+import com.app.OneTwoThree.Global;
+import com.app.OneTwoThree.Param;
+
+
+public class JniApi {
+
+
+	
+	public static void toast(String message)
+	{
+		MsgObj msgObj = new MsgObj();
+		msgObj.msg = message;
+		Message msg = Message.obtain();
+		msg.what = 0;
+		msg.obj = msgObj;
+		Global.oneThree.mHandler.sendMessage(msg);
+
+	}
+	
+	//获得本地缓存路径
+	public static String getCacheDir()
+	{
+		Log.e("---getCacheDir------", "" + Global.cacheDir);
+		return Global.cacheDir;
+	}
+	
+	
+	//获得mac地址
+	public static String getMacAddress()
+	{
+		Log.e( "--------", "add: " + Global.macAddress );
+		return Global.macAddress;
+	}
+	
+	
+	//获得设备号ID
+	public static int getDeviceID()
+	{
+		return Global.DEVICE_ID;
+	}
+
+	//获得平台号ID
+	public static int getPlatID()
+	{
+		return Global.PLAT_ID;
+	}
+
+	//获得版本号
+	public static String getVersion()
+	{
+		return Global.VERSION;
+	}
+	
+	public static void sendString(String arg)
+	{
+		System.out.println("--------str:" + arg);
+		System.out.println("--------str:" + arg);
+		System.out.println("--------str:" + arg);
+		System.out.println("--------str:" + arg);
+		System.out.println("--------str:" + arg);
+	}
+	
+	//播放视频
+	public static void playVideo( String path )
+	{
+		try {
+			
+			System.out.println("-------path:" + path);
+			System.out.println("-------path:" + path);
+			System.out.println("-------path:" + path);
+			System.out.println("-------path:" + path);
+			
+			Message msg = Message.obtain();
+			msg.what = Global.EM_PLAYVIDEO;
+			Param param = new Param();
+			param.sArg1 = path;
+			msg.obj = param;
+			Global.oneThree.mHandler.sendMessage(msg);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	//停止视频
+	public static void stopVideo()
+	{
+		try {
+			
+			Message msg = Message.obtain();
+			msg.what = Global.EM_STOPVIDEO;
+			Global.oneThree.mHandler.sendMessage(msg);
+		
+		} catch (Exception e) {
+			Log.d("stopVideo", "stopVideo   error");
+		}
+	}
+	
+	//设置视频是否暂停
+	public static void setVideoPause( boolean b )
+	{
+		try {
+			Message msg = Message.obtain();
+			msg.what = Global.EM_SETVIDEOPAUSE;
+			Param param = new Param();
+			param.bArg1 = b;
+			msg.obj = param;
+			Global.oneThree.mHandler.sendMessage(msg);
+		} catch (Exception e) {
+			Log.d("set video pause ", "set video pause " + b + "   error");
+		}
+	}
+	
+	//分享
+	public static void shareMessage( String message )
+	{
+		try {
+//			Message msg = Message.obtain();
+//			msg.what = Global.EM_SHAREMESSAGE;
+//			Param param = new Param();
+//			param.sArg1 = message;
+//			msg.obj = param;
+//			Global.oneThree.mHandler.sendMessage(msg);
+			
+			Utils.share(Global.oneThree, Global.cacheDir + "icon.png", message, "分享");
+			
+		} catch (Exception e) {
+			Log.d("shareMessage", "shareMessage " + message + "   error");
+		}
+	}
+	
+	//打开网页
+	public static void openUrl( String url )
+	{
+		try 
+		{
+			
+			Uri uri = Uri.parse("" + url);     
+
+			Intent it = new Intent(Intent.ACTION_VIEW, uri);     
+			it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			Global.oneThree.startActivity(it);   
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+	
+	
+//	public static Handler mHandler = new Handler()
+//	{
+//		public void handleMessage(Message msg) 
+//		{
+//			super.handleMessage(msg);
+//			
+//			Toast.makeText(context, "" + msg.obj.toString(), Toast.LENGTH_SHORT).show();
+//			
+//		};
+//	};
+	//JNI ERROR (app bug): accessed stale local reference 0x51e3aeb9 (index 60334 in a table of size 2)
+
+	static class MsgObj
+	{
+		
+		public String msg;
+
+		@Override
+		public String toString() {
+			String str = "" + msg;
+			return str.toString();
+		}
+		
+	}
+	
+
+}
