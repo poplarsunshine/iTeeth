@@ -32,6 +32,7 @@ static int register_all_packages()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
+
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
@@ -56,11 +57,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
-//    // create a scene. it's an autorelease object
-//    auto scene = HelloWorld::createScene();
-//
-//    // run
-//    director->runWithScene(scene);
+    // set searching path
+    std::vector<std::string> searchPaths;
+    searchPaths.push_back("fonts");
+    searchPaths.push_back("audio");
+    searchPaths.push_back("plistImage");
+    searchPaths.push_back("images");
+    CCFileUtils::getInstance()->setSearchPaths(searchPaths);
     
     SceneManager *sManager = SceneManager::sharedSceneManager();
     sManager->runScene(MainScene::createScene(), false);
