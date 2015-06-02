@@ -35,7 +35,7 @@ cocos2d::LayerColor * CustomViewTools::creatMyLayerColor(const cocos2d::Color4B&
             int index = i % 3 + 1;
             float randomx = CCRANDOM_0_1();
             float randomy = CCRANDOM_0_1();
-            std::string filename = StringUtils::format("background-icon0%d.png", index);
+            std::string filename = StringUtils::format("background_icon0%d.png", index);
             auto sprite = Sprite::create(filename);
             float y = (height / spriteCount) * (i + randomy);
             sprite->setPosition(Vec2(width * randomx, y));

@@ -113,7 +113,7 @@ void MainScene::loadView()
 
     //musice----_ ——
     auto openSprite = Sprite::create("music-open.png");
-    auto closeSprite = Sprite::create("music-close.png");
+    auto closeSprite = Sprite::create("music-close.png");
     auto openToggleMenuItem = MenuItemSprite::create(openSprite, openSprite);
     auto closeToggleMenuItem = MenuItemSprite::create(closeSprite,closeSprite);
     soundItem = MenuItemToggle::createWithCallback(CC_CALLBACK_1(MainScene::menuGoSound, this),
@@ -240,7 +240,7 @@ void MainScene::menuGoBlueTooth(cocos2d::Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(FileName_AudioEffect);
     
-    setBluetoothEnable(isPlaying);
+    //setBluetoothEnable(isPlaying);
     
     blueToothItem->setSelectedIndex(0);
     BluetoothConnect = 0;

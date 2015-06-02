@@ -1,6 +1,8 @@
 #ifndef  __SSSCENEMANGAGER_H_
 #define  __SSSCENEMANGAGER_H_
 
+#include "Header.h"
+
 class SceneManager
 {
 	

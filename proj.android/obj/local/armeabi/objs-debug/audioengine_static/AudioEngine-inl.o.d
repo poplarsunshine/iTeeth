@@ -1,284 +1,284 @@
 obj/local/armeabi/objs-debug/audioengine_static/AudioEngine-inl.o: \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/AudioEngine-inl.cpp \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/AudioEngine-inl.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/string \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCRef.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccConfig.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformConfig.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/log.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccUtils.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCNode.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccMacros.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCConsole.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/sys/select.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/thread \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCStdC.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCStdC-android.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/math.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/stdlib.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/alloca.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/strings.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/memory.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccRandom.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/random \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCVector.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCProtocols.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccTypes.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCGeometry.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMath.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMathBase.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.inl \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.inl \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.inl \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.inl \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.inl \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGL.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCGL-android.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../renderer/CCTexture2D.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScriptSupport.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCCommon.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCTouch.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventTouch.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEvent.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventKeyboard.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/list \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCAffineTransform.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/unistd.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/sys/sysconf.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/linux/capability.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/pathconf.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/jni.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/AudioEngine.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/Export.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCDirector.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/stack \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCScene.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGLView.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScheduler.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/set \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/uthash.h \
- /Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/inttypes.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCFileUtils-android.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCFileUtils.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCValue.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCData.h \
- /Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/CocosPlayClient.h
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/AudioEngine-inl.cpp \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/AudioEngine-inl.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCRef.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccConfig.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformConfig.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccUtils.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCNode.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccMacros.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCConsole.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCStdC.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCStdC-android.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccRandom.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCVector.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCProtocols.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccTypes.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCGeometry.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMath.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMathBase.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.inl \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.inl \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.inl \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.inl \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.inl \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGL.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCGL-android.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../renderer/CCTexture2D.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScriptSupport.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCCommon.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCTouch.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventTouch.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEvent.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventKeyboard.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCAffineTransform.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/unistd.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/sysconf.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/capability.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/pathconf.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/AudioEngine.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/Export.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCDirector.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCScene.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGLView.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScheduler.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/uthash.h \
+ /Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCFileUtils-android.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCFileUtils.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCValue.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCData.h \
+ /Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/CocosPlayClient.h
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/AudioEngine-inl.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/AudioEngine-inl.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_Android.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidConfiguration.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES_AndroidMetadata.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/SLES/OpenSLES.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/string:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCRef.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCRef.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformMacros.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccConfig.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccConfig.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformConfig.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformConfig.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCPlatformDefine.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/log.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccUtils.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccUtils.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCNode.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCNode.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccMacros.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccMacros.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCConsole.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCConsole.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/sys/select.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/select.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/thread:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/map:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCStdC.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCStdC.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCStdC-android.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCStdC-android.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/math.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/math.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/stdlib.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/stdlib.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/alloca.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/alloca.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/strings.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/strings.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/memory.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/memory.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccRandom.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccRandom.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/random:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/random:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCVector.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCVector.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCProtocols.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCProtocols.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccTypes.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/ccTypes.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCGeometry.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCGeometry.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMath.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMath.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMathBase.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCMathBase.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.inl:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.inl:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec2.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.inl:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.inl:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec3.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.inl:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.inl:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.inl:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.inl:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Vec4.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Mat4.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.inl:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/Quaternion.inl:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGL.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGL.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCGL-android.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCGL-android.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../renderer/CCTexture2D.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../renderer/CCTexture2D.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScriptSupport.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScriptSupport.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCCommon.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCCommon.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCTouch.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCTouch.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventTouch.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventTouch.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEvent.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEvent.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventKeyboard.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCEventKeyboard.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/list:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCAffineTransform.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../math/CCAffineTransform.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/unistd.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/unistd.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/sys/sysconf.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/sys/sysconf.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/linux/capability.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/linux/capability.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/pathconf.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/pathconf.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/android/asset_manager_jni.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/jni.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/jni.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/AudioEngine.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/AudioEngine.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/Export.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../audio/include/Export.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCDirector.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCDirector.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/stack:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCScene.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../2d/CCScene.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGLView.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCGLView.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScheduler.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCScheduler.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/include/set:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/uthash.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/uthash.h:
 
-/Users/wanglipeng/Desktop/javaSoft/AndroidRootPath/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/inttypes.h:
+/Users/Penny/Documents/Fat-workspace/project/Android/android-ndk-r10b/platforms/android-19/arch-arm/usr/include/inttypes.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCFileUtils-android.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/CCFileUtils-android.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCFileUtils.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/CCFileUtils.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCValue.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCValue.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCData.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../base/CCData.h:
 
-/Users/wanglipeng/Desktop/MyTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/CocosPlayClient.h:
+/Users/Penny/Documents/Fat-workspace/project/iTeeth/proj.android/../cocos2d/cocos/audio/android/../../platform/android/jni/CocosPlayClient.h:

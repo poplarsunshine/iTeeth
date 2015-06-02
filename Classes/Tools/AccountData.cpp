@@ -8,17 +8,17 @@
 
 #include "AccountData.h"
 
-std::string AccountData::getSexWithInt(int index)
-{
-    switch (index) {
-        case 0:
-            return "女";
-            break;
-        case 1:
-            return "男";
-            break;
-        default:
-            break;
-    }
-    return "";
-}
+//string AccountData::getSexWithInt(int index)
+//{
+//    switch (index) {
+//        case 0:
+//            return "女";
+//            break;
+//        case 1:
+//            return "男";
+//            break;
+//        default:
+//            break;
+//    }
+//    return "";
+//}

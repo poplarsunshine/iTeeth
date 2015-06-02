@@ -73,7 +73,8 @@ void RecordScene::loadView()
     std::string age  = UserDefault::getInstance()->getStringForKey(User_Age_Key);
     std::string score = UserDefault::getInstance()->getStringForKey(User_Score_Key);
     int sexIndex = UserDefault::getInstance()->getIntegerForKey(User_Sex_Key);
-    std::string sex = AccountData::getSexWithInt(sexIndex);
+    //std::string sex = AccountData::getSexWithInt(sexIndex);
+    std::string sex = "男";
     
 //    auto bgSprite = Sprite::create("score_bg.png");
 //    bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));

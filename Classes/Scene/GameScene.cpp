@@ -240,11 +240,11 @@ void GameScene::loadView()
     this->addChild(m_teethLy, 0);
 
     //temp contrl
-    auto upItem = CustomViewTools::creatMyMenuItemSprite("background-icon01.png", CC_CALLBACK_1(GameScene::menuUpCallback, this));
+    auto upItem = CustomViewTools::creatMyMenuItemSprite("background_icon01.png", CC_CALLBACK_1(GameScene::menuUpCallback, this));
     upItem->setPosition(Vec2(origin.x + upItem->getContentSize().width / 2,
                                origin.y + visibleSize.height * 0.3));
     
-    auto downItem = CustomViewTools::creatMyMenuItemSprite("background-icon01.png", CC_CALLBACK_1(GameScene::menuDownCallback, this));
+    auto downItem = CustomViewTools::creatMyMenuItemSprite("background_icon01.png", CC_CALLBACK_1(GameScene::menuDownCallback, this));
     downItem->setPosition(Vec2(origin.x + downItem->getContentSize().width / 2,
                              origin.y + visibleSize.height * 0.15));
     

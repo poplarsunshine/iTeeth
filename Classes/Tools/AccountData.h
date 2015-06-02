@@ -9,12 +9,14 @@
 #ifndef __MyTeeth__AccountData__
 #define __MyTeeth__AccountData__
 
-#include <stdio.h>
+#include <string.h>
+
+using namespace std;
 
 class AccountData
 {
 public:
-    static std::string getSexWithInt(int index);
+    //static string getSexWithInt(int index);
 };
 
 #endif /* defined(__MyTeeth__AccountData__) */
