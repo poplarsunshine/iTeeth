@@ -28,6 +28,8 @@ public:
     virtual void onEnter();
     virtual void onExit();
     
+    void brushNotification(cocos2d::Ref* obj);
+
     TeethLayer * m_teethLy;
 
     bool b_gameIsStart;
@@ -35,7 +37,7 @@ public:
 
     void setGameStart(bool isStart);
     
-    //void update(float dt);
+    void startTimeLbAnimation();
     
     void updateCustom(float dt);
     void updateTimeAndTooth(int time);
@@ -47,6 +49,9 @@ public:
     
     int GetDayOfWeek();
     
+    cocos2d::Vector<cocos2d::Sprite*> m_starNormalList;
+    cocos2d::Vector<cocos2d::Sprite*> m_starSelectList;
+
 private:
     
     cocos2d::EventListenerTouchOneByOne* listener;
@@ -58,6 +63,7 @@ private:
     int i_limit_time;
     int i_cur_time;
 
+    int i_score;
     cocos2d::Label *p_timerLb;
     cocos2d::Label *p_scoreLb;
 };

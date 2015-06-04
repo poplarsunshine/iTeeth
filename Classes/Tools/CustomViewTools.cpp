@@ -86,6 +86,8 @@ void CustomViewTools::addAnimationAction(Node* pNode, int type)
     switch (type) {
         case 0:
         {
+            //scale
+            //repeatForever
             cocos2d::ScaleTo *action1 = cocos2d::ScaleTo::create(0.8, 1.0);
             cocos2d::ScaleTo *action2 = cocos2d::ScaleTo::create(0.8, 0.9);
             cocos2d::Sequence *salceAction = cocos2d::Sequence::create(action1, action2, NULL);
@@ -94,6 +96,8 @@ void CustomViewTools::addAnimationAction(Node* pNode, int type)
             break;
         case 1:
         {
+            //scale & rotate
+            //repeatForever
             cocos2d::ScaleTo *action1 = cocos2d::ScaleTo::create(0.4, 1.2);
             cocos2d::ScaleTo *action2 = cocos2d::ScaleTo::create(0.4, 0.8);
             cocos2d::Sequence *salceAction = cocos2d::Sequence::create(action1, action2, NULL);
